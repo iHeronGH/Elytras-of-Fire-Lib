@@ -1,0 +1,105 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poisonous_potato",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"name": {
+								"text": "Ricardo the Error Potato",
+								"color": "red",
+								"italic": false
+							}
+						},
+						{
+							"function": "minecraft:set_lore",
+							"entity": "this",
+							"lore": [
+								[
+									{
+										"text": "1",
+										"color": "gold",
+										"italic": false
+									},
+									{
+										"text": " Incoming Transmission:",
+										"color": "aqua"
+									}
+								],
+								" ",
+								{
+									"text": "\"Hi! I'm the Error Potato from",
+									"color": "gray"
+								},
+								{
+									"text": "Elytras of Fire. If you are",
+									"color": "gray"
+								},
+								{
+									"text": "reading this message, it means",
+									"color": "gray"
+								},
+								{
+									"text": "something has gone terribly",
+									"color": "gray"
+								},
+								{
+									"text": "wrong.",
+									"color": "gray"
+								},
+								" ",
+								{
+									"text": "\"I'll paste a link in your chat",
+									"color": "gray"
+								},
+								{
+									"text": "so you can report this bug,",
+									"color": "gray"
+								},
+								{
+									"text": "but... you'll have to either ",
+									"color": "gray"
+								},
+								[
+									{
+										"text": "eat me ",
+										"color": "gold"
+									},
+									{
+										"text": "or ",
+										"color": "gray"
+									},
+									{
+										"text": "throw me.",
+										"color": "gold"
+									}
+								],
+								" ",
+								{
+									"text": "\"Thanks! I think.\"",
+									"color": "gray"
+								},
+								" ",
+								{
+									"text": "- Ricardo",
+									"color": "red",
+									"italic": false
+								}
+							],
+							"replace": true
+						},
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{CustomModelData:473646,eoflib:{dummy:1b}}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

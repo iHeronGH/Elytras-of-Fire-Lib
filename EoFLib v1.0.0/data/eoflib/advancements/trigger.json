@@ -1,0 +1,84 @@
+{
+	"parent": "eoflib:root",
+	"criteria": {
+		"abilities_trigger": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "entity_scores",
+							"entity": "this",
+							"scores": {
+								"eof.abilities": 0
+							}
+						}
+					}
+				]
+			}
+		},
+		"attributes_trigger": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "entity_scores",
+							"entity": "this",
+							"scores": {
+								"eof.attributes": 0
+							}
+						}
+					}
+				]
+			}
+		},
+		"settings_trigger": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "entity_scores",
+							"entity": "this",
+							"scores": {
+								"eof.settings": 0
+							}
+						}
+					}
+				]
+			}
+		},
+		"other_trigger": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "entity_scores",
+							"entity": "this",
+							"scores": {
+								"eof.trigger": 0
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"abilities_trigger",
+			"attributes_trigger",
+			"settings_trigger",
+			"other_trigger"
+		]
+	],
+	"rewards": {
+		"function": "eoflib:load/triggers"
+	}
+}

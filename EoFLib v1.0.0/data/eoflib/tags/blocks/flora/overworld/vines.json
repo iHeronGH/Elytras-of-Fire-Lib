@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:glow_lichen",
+		"minecraft:hanging_roots",
+		"minecraft:vine",
+		"#minecraft:cave_vines"
+	]
+}

@@ -1,0 +1,7 @@
+{
+	"criteria": {
+		"eof_root": {
+			"trigger": "minecraft:tick"
+		}
+	}
+}

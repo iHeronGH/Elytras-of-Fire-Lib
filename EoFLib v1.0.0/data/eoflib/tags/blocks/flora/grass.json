@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"#eoflib:flora/nether/grass",
+		"#eoflib:flora/overworld/grass"
+	]
+}

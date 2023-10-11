@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"#minecraft:corals",
+		"#eoflib:minecraft/coral_fans"
+	]
+}
