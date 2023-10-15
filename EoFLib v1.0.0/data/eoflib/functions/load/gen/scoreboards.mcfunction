@@ -23,6 +23,9 @@ scoreboard objectives add eoflib.worldtime dummy
 	#define objective eoflib.leave_game Tracks players who have left the game.
 scoreboard objectives add eoflib.leave_game minecraft.custom:minecraft.leave_game
 
+	#define objective eoflib.death Tracks players who have died.
+scoreboard objectives add eoflib.death minecraft.custom:minecraft.deaths
+
 		## Trigger Objectives
 	#define objective eof.abilities Allows players to toggle hotbar abilities.
 scoreboard objectives add eof.abilities trigger
@@ -36,9 +39,9 @@ scoreboard players enable @a eof.attributes
 scoreboard objectives add eof.settings trigger
 scoreboard players enable @a eof.settings
 
-	#define objective eof.trigger Simulates function access for non-operator players.
-scoreboard objectives add eof.trigger trigger
-scoreboard players enable @a eof.trigger
+	#define objective eoflib.trigger Simulates function access for non-operator players.
+scoreboard objectives add eoflib.trigger trigger
+scoreboard players enable @a eoflib.trigger
 
 		## Miscellaneous Objectives
 	#define objective eoflib.dropped_ability_item Tracks players who have dropped an Elytras of Fire ability item.

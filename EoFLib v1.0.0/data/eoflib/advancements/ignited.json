@@ -1,0 +1,15 @@
+{
+	"criteria": {
+		"ignited": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "eoflib:on_fire"
+					}
+				]
+			}
+		}
+	}
+}

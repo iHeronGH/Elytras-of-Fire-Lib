@@ -62,7 +62,7 @@
 							"condition": "entity_scores",
 							"entity": "this",
 							"scores": {
-								"eof.trigger": 0
+								"eoflib.trigger": 0
 							}
 						}
 					}
