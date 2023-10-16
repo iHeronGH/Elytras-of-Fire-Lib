@@ -1,7 +1,6 @@
 #> eoflib:config/settings/player/attributes/toggle
 #
 # Toggle on or off tribe attributes.
-# @within #eoflib:timers/1t
 
 #region
 	# Disable Attributes
