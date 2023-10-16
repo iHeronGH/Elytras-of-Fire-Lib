@@ -37,19 +37,15 @@
 									"color": "gray"
 								},
 								{
-									"text": "Elytras of Fire. If you are",
+									"text": "Elytras of Fire. If you're reading",
 									"color": "gray"
 								},
 								{
-									"text": "reading this message, it means",
+									"text": "this message, it means something",
 									"color": "gray"
 								},
 								{
-									"text": "something has gone terribly",
-									"color": "gray"
-								},
-								{
-									"text": "wrong.",
+									"text": "has gone terribly wrong.",
 									"color": "gray"
 								},
 								" ",
@@ -58,14 +54,14 @@
 									"color": "gray"
 								},
 								{
-									"text": "so you can report this bug,",
-									"color": "gray"
-								},
-								{
-									"text": "but... you'll have to either ",
+									"text": "so you can report this bug, but...",
 									"color": "gray"
 								},
 								[
+									{
+										"text": "you'll have to either ",
+										"color": "gray"
+									},
 									{
 										"text": "eat me ",
 										"color": "gold"
@@ -73,12 +69,12 @@
 									{
 										"text": "or ",
 										"color": "gray"
-									},
-									{
-										"text": "throw me.",
-										"color": "gold"
 									}
 								],
+								{
+									"text": "throw me.",
+									"color": "gold"
+								},
 								" ",
 								{
 									"text": "\"Thanks! I think.\"",
@@ -87,7 +83,7 @@
 								" ",
 								{
 									"text": "- Ricardo",
-									"color": "red",
+									"color": "aqua",
 									"italic": false
 								}
 							],
