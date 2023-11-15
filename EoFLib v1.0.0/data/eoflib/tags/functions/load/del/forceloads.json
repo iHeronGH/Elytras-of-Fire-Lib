@@ -1,6 +1,6 @@
 {
-	"replace": false,
-	"values": [
-		"eoflib:load/del/forceloads"
-	]
+    "replace": false,
+    "values": [
+        "eoflib:load/del/forceloads"
+    ]
 }

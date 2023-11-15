@@ -1,8 +1,8 @@
 #region
-	# Remove Tag
+    # Remove Tag
 tag @s add eoflib.ah_item
 
-	# Launch Settings
+    # Launch Settings
 trigger eof.settings set 1
 
 #endregion

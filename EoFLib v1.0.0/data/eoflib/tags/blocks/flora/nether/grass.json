@@ -1,10 +1,10 @@
 {
-	"replace": false,
-	"values": [
-		"minecraft:crimson_fungus",
-		"minecraft:crimson_roots",
-		"minecraft:nether_sprouts",
-		"minecraft:warped_fungus",
-		"minecraft:warped_roots"
-	]
+    "replace": false,
+    "values": [
+        "minecraft:crimson_fungus",
+        "minecraft:crimson_roots",
+        "minecraft:nether_sprouts",
+        "minecraft:warped_fungus",
+        "minecraft:warped_roots"
+    ]
 }

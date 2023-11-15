@@ -1,7 +1,7 @@
 {
-	"replace": false,
-	"values": [
-		"#minecraft:corals",
-		"#eoflib:minecraft/coral_fans"
-	]
+    "replace": false,
+    "values": [
+        "#minecraft:corals",
+        "#eoflib:minecraft/coral_fans"
+    ]
 }

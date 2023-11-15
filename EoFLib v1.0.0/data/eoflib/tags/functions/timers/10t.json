@@ -1,6 +1,6 @@
 {
-	"values": [
-		"eoflib:loop/time/10t/world_timer",
-		"eoflib:loop/time/10t/kill_items"
-	]
+    "values": [
+        "eoflib:loop/time/10t/world_timer",
+        "eoflib:loop/time/10t/kill_items"
+    ]
 }

@@ -3,7 +3,7 @@
 # Initialise players on datapack load.
 
 #region
-	# Initialise
+    # Initialise
 scoreboard players set @a eof.trigger 0
 scoreboard players set @a eof.settings 0
 scoreboard players set @a eof.abilities 0

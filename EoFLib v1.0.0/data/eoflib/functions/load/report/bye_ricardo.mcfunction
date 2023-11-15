@@ -1,5 +1,5 @@
 #region
-	# Bye Ricardo!
+    # Bye Ricardo!
 tellraw @s [{"text": "Buh-bye, ", "color": "gray"}, {"selector": "@s", "color": "aqua"}, "!"]
 
 #endregion

@@ -3,10 +3,10 @@
 # Run commands when a player rejoins the game.
 
 #region
-	# Rejoin commands
+    # Rejoin commands
 function #eoflib:rejoin
 
-	# Reset
+    # Reset
 scoreboard players reset @s eoflib.leave_game
 advancement revoke @s only eoflib:rejoin
 

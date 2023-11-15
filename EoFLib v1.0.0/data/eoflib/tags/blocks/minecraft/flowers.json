@@ -1,7 +1,7 @@
 {
-	"replace": false,
-	"values": [
-		"#minecraft:flowers",
-		"minecraft:spore_blossom"
-	]
+    "replace": false,
+    "values": [
+        "#minecraft:flowers",
+        "minecraft:spore_blossom"
+    ]
 }

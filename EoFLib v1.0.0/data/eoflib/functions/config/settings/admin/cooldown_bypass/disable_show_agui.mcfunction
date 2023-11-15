@@ -3,10 +3,10 @@
 # Disable the ability to bypass cooldowns from Elytras of Fire abilities.
 
 #region
-	# Disable Cooldown Bypass
+    # Disable Cooldown Bypass
 function eoflib:config/settings/admin/cooldown_bypass/disable
 
-	# Relaunch Settings
+    # Relaunch Settings
 function eoflib:config/settings/admin/confirm_admin_status
 
 #endregion

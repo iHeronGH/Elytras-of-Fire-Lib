@@ -1,7 +1,7 @@
 {
-	"replace": false,
-	"values": [
-		"#eoflib:flora/nether/vines",
-		"#eoflib:flora/overworld/vines"
-	]
+    "replace": false,
+    "values": [
+        "#eoflib:flora/nether/vines",
+        "#eoflib:flora/overworld/vines"
+    ]
 }

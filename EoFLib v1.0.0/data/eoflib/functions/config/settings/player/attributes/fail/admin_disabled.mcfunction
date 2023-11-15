@@ -5,7 +5,7 @@
 #region
 tellraw @s [{"text": "", "color": "red"}, {"text": "\n[", "color": "gray"}, "E", {"text": "o", "color": "gold"}, "F", {"text": "]", "color": "gray"}, " Attributes are globally disabled! Contact an administrator if this is incorrect."]
 
-	# Cancel attribute enable request
+    # Cancel attribute enable request
 scoreboard players set @s eof.attributes 0
 
 

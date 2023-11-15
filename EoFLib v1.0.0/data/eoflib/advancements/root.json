@@ -1,10 +1,10 @@
 {
-	"criteria": {
-		"eof_root": {
-			"trigger": "minecraft:tick"
-		}
-	},
-	"rewards": {
-		"function": "eoflib:load/initialise"
-	}
+    "criteria": {
+        "eof_root": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "rewards": {
+        "function": "eoflib:load/initialise"
+    }
 }

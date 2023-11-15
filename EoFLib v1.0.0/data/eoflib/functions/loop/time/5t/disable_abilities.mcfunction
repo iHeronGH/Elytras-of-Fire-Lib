@@ -3,8 +3,8 @@
 # Disables abilities and enabling of abilities for non-operator players.
 
 #region
-	# Disable Abilities
-execute if data storage eoflib:config Settings[{allow_abilities: off}] if entity @a[tag=!eoflib.admin, tag=eoflib.abils] run tag @a[tag=!eoflib.admin, tag=eoflib.abils] remove eoflib.abils
+    # Disable Abilities
+execute unless predicate eoflib:settings/allow_abilities if entity @a[tag=eoflib.abils, tag=!eoflib.admin] run tag @a[tag=eoflib.abils, tag=!eoflib.admin] remove eoflib.abils
 clear @a[tag=!eoflib.abils] #eoflib:items{eoflib: {}}
 
 #endregion

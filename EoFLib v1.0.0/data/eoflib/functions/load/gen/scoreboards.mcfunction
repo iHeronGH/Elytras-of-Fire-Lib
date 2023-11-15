@@ -3,8 +3,11 @@
 # Generates essential scoreboards for EoFLib.
 
 #region
-	# Scoreboards
-		## Global Objectives
+    # Scoreboards
+        ## Global Objectives
+#define objective eoflib.death Tracks players who have died.
+scoreboard objectives add eoflib.death minecraft.custom:minecraft.deaths
+
 #define objective eoflib.dlcs Detects and labels every Elytras of Fire DLC.
 scoreboard objectives add eoflib.dlcs dummy
 
@@ -14,51 +17,84 @@ scoreboard objectives add eoflib.id dummy
 #define objective eoflib.health Tracks player health.
 scoreboard objectives add eoflib.health health
 
+#define objective eoflib.health Tracks player hunger.
+scoreboard objectives add eoflib.hunger food
+
+#define objective eoflib.leave_game Tracks players who have left the game.
+scoreboard objectives add eoflib.leave_game minecraft.custom:minecraft.leave_game
+
 #define objective eoflib.numbers Contains constants and variables for math operations.
 scoreboard objectives add eoflib.numbers dummy
 
 #define objective eoflib.worldtime Contains variables to track major worldtime events.
 scoreboard objectives add eoflib.worldtime dummy
 
-#define objective eoflib.leave_game Tracks players who have left the game.
-scoreboard objectives add eoflib.leave_game minecraft.custom:minecraft.leave_game
-
-#define objective eoflib.death Tracks players who have died.
-scoreboard objectives add eoflib.death minecraft.custom:minecraft.deaths
-
-		## Trigger Objectives
-#define objective eof.abilities Allows players to toggle hotbar abilities.
+        ## Trigger Objectives
+#define objective eof.abilities Toggles hotbar abilities.
 scoreboard objectives add eof.abilities trigger
 scoreboard players enable @a eof.abilities
+scoreboard players set @s eof.abilities 0
 
-#define objective eof.attributes Allows players to toggle tribe attributes.
+#define objective eof.attributes Toggles tribe attributes.
 scoreboard objectives add eof.attributes trigger
 scoreboard players enable @a eof.attributes
+scoreboard players set @s eof.attributes 0
 
-#define objective eof.settings Allows players to edit personal settings.
+#define objective eof.settings Activates settings.
 scoreboard objectives add eof.settings trigger
 scoreboard players enable @a eof.settings
+scoreboard players set @s eof.settings 0
 
 #define objective eoflib.trigger Simulates function access for non-operator players.
 scoreboard objectives add eoflib.trigger trigger
 scoreboard players enable @a eoflib.trigger
+scoreboard players set @s eoflib.trigger 0
 
-		## Miscellaneous Objectives
+        ## Settings Objectives
+#define objective eoflib.admin_settings Contains settings in scoreboard format.
+scoreboard objectives add eoflib.admin_settings dummy
+
+        ## Miscellaneous Objectives
 #define objective eoflib.dropped_ability_item Tracks players who have dropped an Elytras of Fire ability item.
 scoreboard objectives add eoflib.dropped_ability_item minecraft.dropped:minecraft.knowledge_book
 
 #define objective eoflib.dropped_ricardo Tracks players who have dropped Ricardo. What the heck, dude?
 scoreboard objectives add eoflib.dropped_ricardo minecraft.dropped:minecraft.poisonous_potato
 
-	# Variables
-		## Global Vars
+    # Variables
+        ## Global Vars
 #define score_holder _eoflib.dlc.eoflib The load status of this datapack.
 execute unless score _eoflib.dlc.eoflib eoflib.dlcs = _eoflib.dlc.eoflib eoflib.dlcs run scoreboard players set _eoflib.dlc.eoflib eoflib.dlcs 1
 
 #define score_holder #eoflib.new_id The next available ID to give a player.
 execute unless score #eoflib.new_id eoflib.id = #eoflib.new_id eoflib.id run scoreboard players set #eoflib.new_id eoflib.id 0
 
-		## Number Vars
+        ## Settings Vars
+#define score_holder _eoflib.admin_settings.ability_timer Toggles the ability timer.
+scoreboard players set _eoflib.admin_settings.ability_timer eoflib.admin_settings 1
+
+#define score_holder _eoflib.admin_settings.allow_abilities Allows players to toggle tribe abilities.
+scoreboard players set _eoflib.admin_settings.allow_abilities eoflib.admin_settings 1
+
+#define score_holder _eoflib.admin_settings.allow_attributes Allows players to toggle tribe attributes.
+scoreboard players set _eoflib.admin_settings.allow_attributes eoflib.admin_settings 1
+
+#define score_holder _eoflib.admin_settings.allow_range_display Allows players to toggle their abilities' range display.
+scoreboard players set _eoflib.admin_settings.allow_range_display eoflib.admin_settings 0
+
+#define score_holder _eoflib.admin_settings.destructive_abilities Toggles the destructive effects of some abilities.
+scoreboard players set _eoflib.admin_settings.destructive_abilities eoflib.admin_settings 0
+
+#define score_holder _eoflib.admin_settings.custom_deaths Toggles custom death messages.
+scoreboard players set _eoflib.admin_settings.custom_deaths eoflib.admin_settings 0
+
+#define score_holder _eoflib.admin_settings.friendly_fire Toggles friendly fire.
+scoreboard players set _eoflib.admin_settings.friendly_fire eoflib.admin_settings 0
+
+#define score_holder _eoflib.admin_settings.save_settings Toggles admin setting persistance on world reload.
+scoreboard players set _eoflib.admin_settings.save_settings eoflib.admin_settings 1
+
+        ## Number Vars
 #define score_holder #eoflib.-1 Equal to -1.
 execute unless score #eoflib.-1 eoflib.numbers = #eoflib.-1 eoflib.numbers run scoreboard players set #eoflib.-1 eoflib.numbers -1
 
@@ -89,7 +125,7 @@ execute unless score #eoflib.23999 eoflib.numbers = #eoflib.23999 eoflib.numbers
 #define score_holder #eoflib.24000 Equal to 24000.
 execute unless score #eoflib.24000 eoflib.numbers = #eoflib.24000 eoflib.numbers run scoreboard players set #eoflib.24000 eoflib.numbers 24000
 
-		## Worldtime Vars
+        ## Worldtime Vars
 #define score_holder #eoflib.worldtime.current Tracks the current time on the world.
 execute store result score #eoflib.worldtime.current eoflib.worldtime run time query daytime
 

@@ -3,7 +3,7 @@
 # Disable Debug Mode.
 
 #region
-	# Disable Debug Mode
+    # Disable Debug Mode
 execute if entity @s[tag=eoflib.admin] run tag @s remove eoflib.debug
 
 #endregion

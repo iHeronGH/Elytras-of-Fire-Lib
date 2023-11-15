@@ -1,6 +1,6 @@
 {
-	"replace": false,
-	"values": [
-		"#minecraft:snow"
-	]
+    "replace": false,
+    "values": [
+        "#minecraft:snow"
+    ]
 }

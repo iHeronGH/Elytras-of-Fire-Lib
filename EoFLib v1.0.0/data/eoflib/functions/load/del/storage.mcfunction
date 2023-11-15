@@ -3,7 +3,7 @@
 # Delete all Elytras of Fire storages.
 
 #region
-	# Remove Settings container
-data remove storage eoflib:config Settings
+    # Remove settings container
+# data remove storage eoflib:config Settings
 
 #endregion

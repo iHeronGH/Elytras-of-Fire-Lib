@@ -1,25 +1,25 @@
 {
-	"condition": "minecraft:all_of",
-	"terms": [
-		{
-			"condition": "minecraft:location_check",
-			"offsetY": 0,
-			"entity": "this",
-			"predicate": {
-				"fluid": {
-					"tag": "minecraft:water"
-				}
-			}
-		},
-		{
-			"condition": "minecraft:location_check",
-			"offsetY": 1,
-			"entity": "this",
-			"predicate": {
-				"fluid": {
-					"tag": "minecraft:water"
-				}
-			}
-		}
-	]
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:location_check",
+            "offsetY": 0,
+            "entity": "this",
+            "predicate": {
+                "fluid": {
+                    "tag": "minecraft:water"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetY": 1,
+            "entity": "this",
+            "predicate": {
+                "fluid": {
+                    "tag": "minecraft:water"
+                }
+            }
+        }
+    ]
 }

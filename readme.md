@@ -171,7 +171,7 @@ Elytras of Fire Lib comes with 8 advancements:
 {
   "replace": false,
   "values": [
-    "your:function/path/here",
+    "namespace:function/path/here",
     ...
   ]
 }
@@ -376,7 +376,7 @@ Elytras of Fire Lib comes with dozens of tags for blocks, entities, functions, a
 
 ```text
 📦 eoflib:tags
-└ 📄 blocks
+└ 📁 blocks
   └ 📄 earth_blocks.json
 ```
 
@@ -392,7 +392,7 @@ Elytras of Fire Lib comes with dozens of tags for blocks, entities, functions, a
 
 #### eoflib:snow.json
 
-**`ice.json`** groups blocks associated with snow.
+**`snow.json`** groups blocks associated with snow.
 
 ```text
 📦 eoflib:tags
@@ -402,7 +402,7 @@ Elytras of Fire Lib comes with dozens of tags for blocks, entities, functions, a
 
 #### eoflib:waterlogged.json
 
-**`ice.json`** groups blocks that are able to be waterlogged.
+**`waterlogged.json`** groups blocks that are able to be waterlogged.
 
 ```text
 📦 eoflib:tags

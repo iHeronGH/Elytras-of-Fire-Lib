@@ -3,10 +3,10 @@
 # Disable Debug Mode.
 
 #region
-	# Disable Debug Mode
+    # Disable Debug Mode
 function eoflib:config/settings/admin/debug_mode/disable
 
-	# Relaunch Settings
+    # Relaunch Settings
 function eoflib:config/settings/admin/confirm_admin_status
 
 #endregion

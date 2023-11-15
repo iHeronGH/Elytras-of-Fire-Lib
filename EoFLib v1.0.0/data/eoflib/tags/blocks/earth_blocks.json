@@ -1,9 +1,9 @@
 {
-	"replace": false,
-	"values": [
-		"#eoflib:flora/moss",
-		"#eoflib:minecraft/dirt",
-		"#eoflib:minecraft/gravel",
-		"#eoflib:minecraft/sand"
-	]
+    "replace": false,
+    "values": [
+        "#eoflib:flora/moss",
+        "#eoflib:minecraft/dirt",
+        "#eoflib:minecraft/gravel",
+        "#eoflib:minecraft/sand"
+    ]
 }

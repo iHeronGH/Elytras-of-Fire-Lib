@@ -1,15 +1,15 @@
 {
-	"replace": false,
-	"values": [
-		"minecraft:brown_mushroom",
-		"minecraft:brown_mushroom_block",
-		"minecraft:crimson_fungus",
-		"minecraft:mushroom_stem",
-		"minecraft:nether_wart",
-		"minecraft:nether_wart_block",
-		"minecraft:red_mushroom",
-		"minecraft:red_mushroom_block",
-		"minecraft:warped_fungus",
-		"minecraft:warped_wart_block"
-	]
+    "replace": false,
+    "values": [
+        "minecraft:brown_mushroom",
+        "minecraft:brown_mushroom_block",
+        "minecraft:crimson_fungus",
+        "minecraft:mushroom_stem",
+        "minecraft:nether_wart",
+        "minecraft:nether_wart_block",
+        "minecraft:red_mushroom",
+        "minecraft:red_mushroom_block",
+        "minecraft:warped_fungus",
+        "minecraft:warped_wart_block"
+    ]
 }

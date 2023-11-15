@@ -1,15 +1,15 @@
 {
-	"criteria": {
-		"is_dragon": {
-			"trigger": "minecraft:tick",
-			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:reference",
-						"name": "eoflib:tribes/dragon"
-					}
-				]
-			}
-		}
-	}
+    "criteria": {
+        "is_dragon": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:tribes/dragon"
+                    }
+                ]
+            }
+        }
+    }
 }

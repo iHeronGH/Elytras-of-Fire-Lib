@@ -3,11 +3,11 @@
 # Gives every user a unique ID for Elytras of Fire.
 
 #region
-	# Generate ID
+    # Generate ID
 scoreboard players operation @s eoflib.id = #eoflib.new_id eoflib.id
 scoreboard players operation #eoflib.new_id eoflib.id += #eoflib.1 eoflib.numbers
 
-	# New ID commands
+    # New ID commands
 function #eoflib:new_id
 
 #endregion
