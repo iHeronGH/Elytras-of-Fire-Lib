@@ -1,4 +1,4 @@
-#> eoflib:config/run
+#> eoflib:config/gui/player_settings
 #
 # Displays the player settings page.
 

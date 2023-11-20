@@ -7,6 +7,6 @@
 function eoflib:config/settings/admin/cooldown_bypass/disable
 
     # Relaunch settings
-function eoflib:config/run
+function eoflib:config/gui/player_settings
 
 #endregion

@@ -1,4 +1,4 @@
-#> eoflib:config/run_admin
+#> eoflib:config/gui/admin_settings
 #
 # Displays the administrative settings page.
 

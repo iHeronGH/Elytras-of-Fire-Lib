@@ -7,6 +7,6 @@
 function eoflib:config/settings/admin/debug_mode/enable
 
     # Relaunch settings
-function eoflib:config/run
+function eoflib:config/gui/player_settings
 
 #endregion

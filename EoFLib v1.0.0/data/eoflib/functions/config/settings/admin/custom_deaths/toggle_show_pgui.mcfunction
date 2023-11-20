@@ -7,6 +7,6 @@
 function eoflib:config/settings/admin/custom_deaths/toggle
 
     # Relaunch settings
-function eoflib:config/run
+function eoflib:config/gui/player_settings
 
 #endregion
