@@ -61,6 +61,7 @@ This datapack does nothing on its own. If you are looking to use this alongside 
       - Item Tags
         - [Items](#tagsitemsitemsjson)
   - [Planned Features](#planned-features)
+    - [Uninstall Options](#uninstall-options)
     - [Abilities Support](#abilities-support)
     - [Ability Blacklist](#ability-blacklist)
     - [Custom Death Messages](#custom-death-messages)
@@ -626,6 +627,10 @@ Tags here group functions to be ran on a regular schedule. By default, 3 files a
 ## Planned Features
 
 [Back to top](#)
+
+### Uninstall Options
+
+Uninstall options are just that — settings you can use to configure what will uninstall when removing Elytras of Fire Lib and other DLCs.
 
 ### Abilities Support
 
