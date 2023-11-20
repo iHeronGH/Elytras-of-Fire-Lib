@@ -1,12 +1,12 @@
 #> eoflib:config/settings/admin/allow_attributes/toggle_show_pgui
 #
-# Disable attribute toggling for all players.
+# Toggle attribute toggling for all players.
 
 #region
-    # Globally Disable Attributes
+    # Globally toggle attributes
 function eoflib:config/settings/admin/allow_attributes/toggle
 
-    # Relaunch Settings
+    # Relaunch settings
 trigger eof.settings set 1
 
 #endregion

@@ -1,9 +1,9 @@
 #> eoflib:config/settings/admin/allow_abilities/toggle
 #
-# Disable ability toggling for all players.
+# Toggle ability toggling for all players.
 
 #region
-    # Globally Disable Abilities
+    # Globally disable abilities
 execute if entity @s[tag=eoflib.admin] store success score #eoflib.admin_settings.allow_abilities eoflib.admin_settings unless predicate eoflib:settings/allow_abilities
 
     # Begin loop to clear abilities from players who still have them

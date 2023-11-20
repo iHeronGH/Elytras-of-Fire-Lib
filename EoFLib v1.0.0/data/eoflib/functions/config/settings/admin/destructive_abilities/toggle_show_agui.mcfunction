@@ -6,7 +6,7 @@
     # Disable Destructive Effects
 function eoflib:config/settings/admin/destructive_abilities/toggle
 
-    # Relaunch Settings
+    # Relaunch settings
 function eoflib:config/settings/admin/confirm_admin_status
 
 #endregion

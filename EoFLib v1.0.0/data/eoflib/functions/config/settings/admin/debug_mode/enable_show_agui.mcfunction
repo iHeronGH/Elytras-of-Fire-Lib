@@ -6,7 +6,7 @@
     # Disable Debug Mode
 function eoflib:config/settings/admin/debug_mode/enable
 
-    # Relaunch Settings
+    # Relaunch settings
 function eoflib:config/settings/admin/confirm_admin_status
 
 #endregion

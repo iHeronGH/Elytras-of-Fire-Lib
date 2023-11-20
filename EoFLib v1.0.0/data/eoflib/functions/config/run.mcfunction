@@ -1,8 +1,6 @@
 #> eoflib:config/run
 #
-# Determine which settings pages to display to the user.
-# @reads eoflib:config Settings[]
-# @within eoflib:config/check_settings
+# Displays the player settings page.
 
 #region
     # Activate Triggers Scoreboard

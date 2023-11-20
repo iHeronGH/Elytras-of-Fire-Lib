@@ -17,6 +17,7 @@ scoreboard objectives remove eoflib.worldtime
         ## Trigger Objectives
 scoreboard objectives remove eof.abilities
 scoreboard objectives remove eof.attributes
+scoreboard objectives remove eof.settings
 scoreboard objectives remove eoflib.admin_settings
 scoreboard objectives remove eoflib.trigger
 

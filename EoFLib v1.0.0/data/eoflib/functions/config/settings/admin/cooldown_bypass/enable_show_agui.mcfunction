@@ -6,7 +6,7 @@
     # Disable Cooldown Bypass
 function eoflib:config/settings/admin/cooldown_bypass/enable
 
-    # Relaunch Settings
+    # Relaunch settings
 function eoflib:config/settings/admin/confirm_admin_status
 
 #endregion

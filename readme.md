@@ -66,6 +66,7 @@ This datapack does nothing on its own. If you are looking to use this alongside 
     - [Custom Death Messages](#custom-death-messages)
     - [Friendly Fire (A.K.A. Wings)](#friendly-fire-aka-wings)
   - [Other Qualities](#other-qualities)
+    - [Configuration Settings](#configuration-settings)
     - [IMP Compliance](#imp-compliance)
 
 ---
@@ -149,7 +150,7 @@ Elytras of Fire Lib comes with 8 advancements:
 
 #### eoflib:ignited.json
 
-**`ignited.json`** is an advancement that is rewarded when a player is ignited by any means. **`ignited.json`** can be hooked into by setting this advancement as a parent to any other advancement you'd like. **Do not overwrite/add the file to Elytras of Fire Lib.**
+**`ignited.json`** is an advancement that is rewarded when a player is damaged by fire. **`ignited.json`** can be hooked into by setting this advancement as a parent to any other advancement you'd like. **Do not overwrite/add the file to Elytras of Fire Lib.**
 
 ```json
 {
@@ -647,6 +648,46 @@ Custom Death Messages will be exactly that: custom death messages that will play
 ## Other Qualities
 
 [Back to top](#)
+
+### Configuration Settings
+
+Elytras of Fire Lib comes with many settings to fit many niches!
+
+<details>
+
+<summary> Player Settings </summary>
+
+[Back to top](#)
+
+The following entries are settings that any player can use and configure, no matter the conditions:
+
+- **Enable Tribe Abilities**: Toggle on or off your hotbar abilities. (Default: OFF)
+- **Enable Tribe Attributes**: Toggle on or off your tribe's attributes and any passive abilities. (Default: OFF)
+- **Enable Range Display**: Toggle on or off the range preview for your held ability. (Default: OFF) <!--ooooooohhh spooky its line 666 :scream:-->
+- **Ability Handling**: Choose what happens when an ability item is replaced with another item. (Default: Remove Abilities)
+
+</details>
+
+<details>
+
+<summary> Admin Settings </summary>
+
+[Back to top](#)
+
+The following entries are settings that only players with the **`eoflib.admin`** can change:
+
+- **Persistent Settings**: Keep your settings when the world is reloaded in any way. (Default: ON)
+- **Allow Abilities**: Toggle the ability for non-admin players to toggle their abilities. (Default: ON)
+- **Allow Attributes**: Toggle the ability for non-admin players to toggle their tribe attributes. (Default: ON)
+- **Allow Range Display**: Toggle the ability for non-admin players to toggle Range Display. (Default: OFF)
+- **Enable Deactiviation Timer**: The Deactivation timer automatically disables abilities for players who are not actively using them. Enable this option to decrease performance impact of Elytras of Fire Lib and any installed DLCs. (Default: ON)
+- **Enable Destructive Effects**: Toggle the destructive properties that some abilities come with. (Default: OFF)
+- **Custom Death Messages** (unreleased): Toggle custom death messages when players are killed by certain abilities. (Default: ON)
+- **Enable Friendly Fire** (unreleased): Toggle friendly fire for most abilities. (Default: OFF)
+- **Cooldown Bypass**: Cooldown Bypass allows you to bypass all tribe ability cooldowns. (Default: OFF)
+- **Debug Mode**: Debug Mode displays helpful information in-game to streamline datapack development and show function references and sources. (Default: OFF)
+
+</details>
 
 ### IMP Compliance
 

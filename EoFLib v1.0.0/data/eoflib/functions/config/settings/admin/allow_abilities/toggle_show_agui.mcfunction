@@ -1,12 +1,12 @@
 #> eoflib:config/settings/admin/allow_abilities/toggle_show_agui
 #
-# Disable ability toggling for all players.
+# Toggle ability toggling for all players.
 
 #region
-    # Globally Disable Abilities
+    # Globally toggle abilities
 function eoflib:config/settings/admin/allow_abilities/toggle
 
-    # Relaunch Settings
+    # Relaunch settings
 function eoflib:config/settings/admin/confirm_admin_status
 
 #endregion

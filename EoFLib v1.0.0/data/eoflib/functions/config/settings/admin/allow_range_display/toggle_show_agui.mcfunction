@@ -1,12 +1,12 @@
 #> eoflib:config/settings/admin/allow_range_display/toggle_show_agui
 #
-# Disable range display toggling for abilities.
+# Toggle range display toggling for abilities.
 
 #region
-    # Globally Disable Range Display
+    # Globally toggle Range Display
 function eoflib:config/settings/admin/allow_range_display/toggle
 
-    # Relaunch Settings
+    # Relaunch settings
 function eoflib:config/settings/admin/confirm_admin_status
 
 #endregion

@@ -6,7 +6,7 @@
     # Disable Friendly Fire
 function eoflib:config/settings/admin/friendly_fire/toggle
 
-    # Relaunch Settings
+    # Relaunch settings
 function eoflib:config/settings/admin/confirm_admin_status
 
 #endregion
