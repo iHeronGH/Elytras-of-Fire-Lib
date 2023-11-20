@@ -4,7 +4,7 @@
         "type": "minecraft:score",
         "target": {
             "type": "minecraft:fixed",
-            "name": "_eoflib.admin_settings.allow_range_display"
+            "name": "#eoflib.admin_settings.allow_range_display"
         },
         "score": "eoflib.admin_settings",
         "scale": 1

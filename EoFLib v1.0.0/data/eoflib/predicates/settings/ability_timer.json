@@ -4,7 +4,7 @@
         "type": "minecraft:score",
         "target": {
             "type": "minecraft:fixed",
-            "name": "_eoflib.admin_settings.ability_timer"
+            "name": "#eoflib.admin_settings.ability_timer"
         },
         "score": "eoflib.admin_settings",
         "scale": 1

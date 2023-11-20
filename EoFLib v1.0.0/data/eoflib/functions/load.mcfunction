@@ -13,9 +13,11 @@ function #eoflib:load/gen/forceloads
 schedule clear eoflib:loop/time/1t
 schedule clear eoflib:loop/time/5t
 schedule clear eoflib:loop/time/10t
+schedule clear eoflib:loop/time/20t
 function eoflib:loop/time/1t
 function eoflib:loop/time/5t
 function eoflib:loop/time/10t
+function eoflib:loop/time/20t
 
     # Successful launch message
 function eoflib:load/hw

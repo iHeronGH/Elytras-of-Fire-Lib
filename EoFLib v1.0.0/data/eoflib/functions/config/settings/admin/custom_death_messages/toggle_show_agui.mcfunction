@@ -3,7 +3,7 @@
 # Disable the custom death messages feature.
 
 #region
-      # Disable Custom Death Messages
+    # Disable Custom Death Messages
 function eoflib:config/settings/admin/custom_death_messages/toggle
 
     # Relaunch Settings

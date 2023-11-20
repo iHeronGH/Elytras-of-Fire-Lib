@@ -63,36 +63,14 @@ scoreboard objectives add eoflib.dropped_ricardo minecraft.dropped:minecraft.poi
 
     # Variables
         ## Global Vars
-#define score_holder _eoflib.dlc.eoflib The load status of this datapack.
-execute unless score _eoflib.dlc.eoflib eoflib.dlcs = _eoflib.dlc.eoflib eoflib.dlcs run scoreboard players set _eoflib.dlc.eoflib eoflib.dlcs 1
+#define score_holder #eoflib.dlc.eoflib The load status of this datapack.
+execute unless score #eoflib.dlc.eoflib eoflib.dlcs = #eoflib.dlc.eoflib eoflib.dlcs run scoreboard players set #eoflib.dlc.eoflib eoflib.dlcs 1
 
 #define score_holder #eoflib.new_id The next available ID to give a player.
 execute unless score #eoflib.new_id eoflib.id = #eoflib.new_id eoflib.id run scoreboard players set #eoflib.new_id eoflib.id 0
 
-        ## Settings Vars
-#define score_holder _eoflib.admin_settings.ability_timer Toggles the ability timer.
-scoreboard players set _eoflib.admin_settings.ability_timer eoflib.admin_settings 1
-
-#define score_holder _eoflib.admin_settings.allow_abilities Allows players to toggle tribe abilities.
-scoreboard players set _eoflib.admin_settings.allow_abilities eoflib.admin_settings 1
-
-#define score_holder _eoflib.admin_settings.allow_attributes Allows players to toggle tribe attributes.
-scoreboard players set _eoflib.admin_settings.allow_attributes eoflib.admin_settings 1
-
-#define score_holder _eoflib.admin_settings.allow_range_display Allows players to toggle their abilities' range display.
-scoreboard players set _eoflib.admin_settings.allow_range_display eoflib.admin_settings 0
-
-#define score_holder _eoflib.admin_settings.destructive_abilities Toggles the destructive effects of some abilities.
-scoreboard players set _eoflib.admin_settings.destructive_abilities eoflib.admin_settings 0
-
-#define score_holder _eoflib.admin_settings.custom_deaths Toggles custom death messages.
-scoreboard players set _eoflib.admin_settings.custom_deaths eoflib.admin_settings 0
-
-#define score_holder _eoflib.admin_settings.friendly_fire Toggles friendly fire.
-scoreboard players set _eoflib.admin_settings.friendly_fire eoflib.admin_settings 0
-
-#define score_holder _eoflib.admin_settings.save_settings Toggles admin setting persistance on world reload.
-scoreboard players set _eoflib.admin_settings.save_settings eoflib.admin_settings 1
+        ## Admin Settings Vars
+function eoflib:load/gen/scoreboards/admin_settings
 
         ## Number Vars
 #define score_holder #eoflib.-1 Equal to -1.

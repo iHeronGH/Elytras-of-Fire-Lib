@@ -4,7 +4,7 @@
         "type": "minecraft:score",
         "target": {
             "type": "minecraft:fixed",
-            "name": "_eoflib.admin_settings.custom_deaths"
+            "name": "#eoflib.admin_settings.custom_deaths"
         },
         "score": "eoflib.admin_settings",
         "scale": 1

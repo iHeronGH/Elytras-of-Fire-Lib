@@ -3,7 +3,7 @@
 # Disable the ability deactivation timer.
 
 #region
-      # Disable Ability Deactivation Timer
+    # Disable Ability Deactivation Timer
 function eoflib:config/settings/admin/deactivation_timer/toggle
 
     # Relaunch Settings

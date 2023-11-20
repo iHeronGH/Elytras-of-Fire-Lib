@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "eof_root": {
+        "eoflib_root": {
             "trigger": "minecraft:tick"
         }
     },

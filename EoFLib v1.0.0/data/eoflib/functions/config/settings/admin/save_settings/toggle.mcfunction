@@ -4,6 +4,6 @@
 
 #region
     # Toggle setting persistance
-execute if entity @s[tag=eoflib.admin] store success score _eoflib.admin_settings.save_settings eoflib.admin_settings if score _eoflib.admin_settings.save_settings eoflib.admin_settings matches 0
+execute if entity @s[tag=eoflib.admin] store success score #eoflib.admin_settings.save_settings eoflib.admin_settings unless predicate eoflib:settings/save_settings
 
 #endregion
