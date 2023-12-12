@@ -7,7 +7,7 @@
 tag @s remove eoflib.abils
 
     # Remove Abilities
-clear @s knowledge_book{eoflib: {}}
+clear @s knowledge_book{eof_data: {}}
 
     # Announce Disable
 execute if score @s eof.abilities matches 1 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, "] Abilities have been toggled ", {"text": "off", "color": "red"}, "! [", {"text": "Enable", "color": "green", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger eof.abilities set 1"}}, "]"]

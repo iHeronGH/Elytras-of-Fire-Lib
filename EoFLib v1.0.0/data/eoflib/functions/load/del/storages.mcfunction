@@ -1,4 +1,4 @@
-#> eoflib:load/del/storage
+#> eoflib:load/del/storages
 #
 # Delete all Elytras of Fire storages.
 

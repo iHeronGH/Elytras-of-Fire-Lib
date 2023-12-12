@@ -3,7 +3,11 @@
 # Prevent attribute enabling due to @s not being a dragon.
 
 #region
-tellraw @s [{"text": "", "color": "red"}, {"text": "\n[", "color": "gray"}, "E", {"text": "o", "color": "gold"}, "F", {"text": "]", "color": "gray"}, " You aren't a part of any tribes! Contact an administrator if this is incorrect."]
+    # Announce fail
+        ## Non-Admin message
+execute unless entity @s[tag=eoflib.admin] run tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " You aren't a member of any tribes! Contact an administrator if this is incorrect.", "color": "red"}]
+        ## Admin message
+execute if entity @s[tag=eoflib.admin] run tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " You aren't a member of any tribes! Please join one before enabling attributes.", "color": "red"}]
 
     # Cancel attribute enable request
 scoreboard players set @s eof.attributes 0

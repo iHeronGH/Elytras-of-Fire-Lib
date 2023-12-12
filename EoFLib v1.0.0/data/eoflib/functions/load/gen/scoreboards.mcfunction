@@ -51,8 +51,11 @@ scoreboard players enable @a eoflib.trigger
 scoreboard players set @s eoflib.trigger 0
 
         ## Settings Objectives
-#define objective eoflib.admin_settings Contains settings in scoreboard format.
+#define objective eoflib.admin_settings Contains admin settings in scoreboard format.
 scoreboard objectives add eoflib.admin_settings dummy
+
+#define objective eoflib.admin_settings Contains uninstall settings in scoreboard format.
+scoreboard objectives add eoflib.uninstall_settings dummy
 
         ## Miscellaneous Objectives
 #define objective eoflib.dropped_ability_item Tracks players who have dropped an Elytras of Fire ability item.
@@ -71,6 +74,9 @@ execute unless score #eoflib.new_id eoflib.id = #eoflib.new_id eoflib.id run sco
 
         ## Admin Settings Vars
 function eoflib:load/gen/scoreboards/admin_settings
+
+        ## Uninstall Settings Vars
+function eoflib:load/gen/scoreboards/uninstall_settings
 
         ## Number Vars
 #define score_holder #eoflib.-1 Equal to -1.

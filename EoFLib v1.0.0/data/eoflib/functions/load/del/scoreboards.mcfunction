@@ -19,6 +19,7 @@ scoreboard objectives remove eof.abilities
 scoreboard objectives remove eof.attributes
 scoreboard objectives remove eof.settings
 scoreboard objectives remove eoflib.admin_settings
+scoreboard objectives remove eoflib.uninstall_settings
 scoreboard objectives remove eoflib.trigger
 
         ## Miscellaneous Objectives

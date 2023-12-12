@@ -7,6 +7,7 @@
 function eoflib:config/settings/admin/custom_deaths/toggle
 
     # Relaunch settings
+trigger eof.settings set 2
 function eoflib:config/settings/admin/confirm_admin_status
 
 #endregion

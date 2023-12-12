@@ -4,7 +4,7 @@
 
 #region
     # Disable Abilities
-execute unless predicate eoflib:settings/allow_abilities if entity @a[tag=eoflib.abils, tag=!eoflib.admin] run tag @a[tag=eoflib.abils, tag=!eoflib.admin] remove eoflib.abils
-clear @a[tag=!eoflib.abils] #eoflib:items{eoflib: {}}
+execute unless predicate eoflib:settings/admin/allow_abilities if entity @a[tag=eoflib.abils, tag=!eoflib.admin] run tag @a[tag=eoflib.abils, tag=!eoflib.admin] remove eoflib.abils
+clear @a[tag=!eoflib.abils] #eoflib:items{eof_data: {}}
 
 #endregion

@@ -1,0 +1,50 @@
+{
+    "criteria": {
+        "primary_used": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "eoflib:primary",
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:tribes/dragon"
+                    }
+                ]
+            }
+        },
+        "secondary_used": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "eoflib:secondary",
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:tribes/dragon"
+                    }
+                ]
+            }
+        },
+        "tertiary_used": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "eoflib:tertiary",
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:tribes/dragon"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "primary_used",
+            "secondary_used",
+            "tertiary_used"
+        ]
+    ],
+    "rewards": {
+        "function": "eoflib:abilities/return/main"
+    }
+}

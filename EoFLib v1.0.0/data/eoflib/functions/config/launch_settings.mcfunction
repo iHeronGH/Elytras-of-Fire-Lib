@@ -7,10 +7,11 @@
 execute if score @s eof.settings matches 1 run function eoflib:config/gui/player_settings
 
     # Admin settings
-execute if score @s[tag=!eoflib.admin] eof.settings matches 2 run tellraw @s [{"text": "", "color": "red"}, {"text": "\n[", "color": "gray"}, "E", {"text": "o", "color": "gold"}, "F", {"text": "]", "color": "gray"}, {"text": " You do not have permission to edit the admin settings for Elytras of Fire. Contact an admin if this is incorrect.", "color": "red"}]
+execute if score @s[tag=!eoflib.admin] eof.settings matches 2 run tellraw @s [{"text": "\n[", "color": "gray"}, "E", {"text": "o", "color": "gold"}, "F", {"text": "] ", "color": "gray"}, {"text": "You do not have permission to edit the admin settings for Elytras of Fire. Contact an admin if this is incorrect.", "color": "red"}]
 execute if score @s[tag=eoflib.admin] eof.settings matches 2 run function eoflib:config/gui/admin_settings
 
     # Uninstall settings
+execute if score @s[tag=!eoflib.admin] eof.settings matches 3 run tellraw @s [{"text": "\n[", "color": "gray"}, "E", {"text": "o", "color": "gold"}, "F", {"text": "] ", "color": "gray"}, {"text": "You do not have permission to edit the uninstall settings for Elytras of Fire. Contact an admin if this is incorrect.", "color": "red"}]
 execute if score @s[tag=eoflib.admin] eof.settings matches 3 run function eoflib:config/gui/uninstall_settings
 
     # Reinitialize settings trigger
