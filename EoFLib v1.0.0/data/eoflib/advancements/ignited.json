@@ -6,10 +6,13 @@
                 "player": [
                     {
                         "condition": "minecraft:reference",
-                        "name": "eoflib:on_fire"
+                        "name": "eoflib:damage/on_fire"
                     }
                 ]
             }
         }
+    },
+    "rewards": {
+        "function": "eoflib:advancement/ignited"
     }
 }

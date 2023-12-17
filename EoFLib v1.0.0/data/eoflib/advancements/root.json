@@ -5,6 +5,7 @@
         }
     },
     "rewards": {
-        "function": "eoflib:load/initialise"
+        "function": "eoflib:advancement/initialise"
     }
 }
+

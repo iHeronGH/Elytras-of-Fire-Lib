@@ -1,10 +1,10 @@
-#> eoflib:load/death
+#> eoflib:advancement/death
 #
 # Run commands when a player dies.
 
 #region
     # Rejoin commands
-function #eoflib:death
+function #eoflib:advancement/death
 
     # Reset
 scoreboard players reset @s eoflib.death

@@ -3,7 +3,7 @@
 # Initialises uninstall settings.
 
 #region
-	# Initialise uninstall settings
+    # Initialise uninstall settings
 #define score_holder #eoflib.uninstall_settings.teams Remove all teams when the datapack is uninstalled.
 scoreboard players set #eoflib.uninstall_settings.teams eoflib.uninstall_settings 1
 

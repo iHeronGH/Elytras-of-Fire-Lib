@@ -3,7 +3,7 @@
 # Initialises admin settings.
 
 #region
-	# Initialise admin settings
+    # Initialise admin settings
 #define score_holder #eoflib.admin_settings.ability_timer Toggles the ability timer.
 scoreboard players set #eoflib.admin_settings.ability_timer eoflib.admin_settings 1
 

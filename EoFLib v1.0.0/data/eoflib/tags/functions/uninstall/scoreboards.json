@@ -1,6 +1,4 @@
 {
-	"replace": false,
-	"values": [
-		"eoflib:load/del/scoreboards"
-	]
+    "replace": false,
+    "values": ["eoflib:load/del/scoreboards"]
 }

@@ -19,6 +19,6 @@
         }
     },
     "rewards": {
-        "function": "eoflib:load/death"
+        "function": "eoflib:advancement/death"
     }
 }

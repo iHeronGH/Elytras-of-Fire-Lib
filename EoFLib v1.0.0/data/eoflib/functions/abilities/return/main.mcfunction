@@ -6,7 +6,7 @@
     # Debug
 tellraw @s "eoflib:abilities/return/main"
 
-	# Return abilities
+    # Return abilities
 trigger eof.abilities set 3
 
     # Revoke advancement
