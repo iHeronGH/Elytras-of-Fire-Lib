@@ -4,7 +4,7 @@
 
 Elytras of Fire Lib is a Minecraft datapack used by other Elytras of Fire DLCs to function properly. Without it, these DLCs will not work at all, so make sure you have this downloaded!
 
-This datapack does nothing on its own. If you are looking to use this alongside other datapacks that depend on this, [view a list of available DLCs here](#dlc-compatibility); if you would like to develop a DLC, [view this example pack](https://github.com/iHeronGH/DLC-Template) and read the documentation below.
+This datapack does nothing solely on its own. If you are looking to use this alongside other datapacks that depend on this, [view a list of available DLCs here](#dlc-compatibility); if you would like to develop a DLC, [view this example pack](https://github.com/iHeronGH/DLC-Template) and read the documentation below.
 
 ---
 
@@ -33,10 +33,13 @@ This datapack does nothing on its own. If you are looking to use this alongside 
         - [Shulker Box](#minecraftshulker_boxjson)
     - [Predicates](#predicates)
       - [On Fire](#eoflibon_firejson)
+      - [Ability Used](#abilitiespredicatejson)
       - [Inventory](#inventorypredicatejson)
       - [Location](#locationpredicatejson)
       - [Mainhand](#mainhandpredicatejson)
       - [Movement](#movementpredicatejson)
+      - [Admin Settings](#settingsadminpredicatejson)
+      - [Uninstall Settings](#settingsuninstallpredicatejson)
       - [Tribes](#tribespredicatejson)
     - [Tags](#tags)
       - Block Tags
@@ -53,9 +56,11 @@ This datapack does nothing on its own. If you are looking to use this alongside 
         - [Unaffected](#eoflibunaffectedjson)
       - Function Tags
         - [Config](#tagsfunctionsconfigjson)
+        - [Death](#tagsfunctionsdeathjson)
         - [Detect DLCs](#tagsfunctionsdetect_dlcsjson)
         - [DLC Load](#tagsfunctionsdlc_loadjson)
-        - [Uninstall](#tagsfunctionsuninstalljson)
+        - [New ID](#tagsfunctionsnew_idjson)
+        - [Rejoin](#tagsfunctionsrejoinjson)
         - [Load](#tagsfunctionsloadtagjson)
         - [Reset](#tagsfunctionsresettagjson)
         - [Timers](#tagsfunctionstimerstagjson)
@@ -195,12 +200,15 @@ Elytras of Fire Lib comes with 9 advancements:
 
 #### eoflib:rejoin.json
 
-**`rejoin.json`** is an advancement that is activated when a player rejoins the server. Most commonly, this is used to reactivate schedules that require players present on the server such as tribe effects and passive abilities. **`rejoin.json`** can be hooked into by adding your functions to your datapack's **`eoflib:tags/functions/rejoin.json`** function tag. **Do not overwrite/add the file to Elytras of Fire Lib.**
+**`rejoin.json`** is an advancement that is activated when a player rejoins the world or server. Most commonly, this is used to reactivate schedules that require players present on the server such as tribe effects and passive abilities. **`rejoin.json`** can be hooked into by adding your functions to your datapack's **`eoflib:tags/functions/rejoin.json`** function tag. **Do not overwrite/add the file to Elytras of Fire Lib.**
 
 ```json
 {
-  "parent": "eoflib:rejoin",
-  ...
+  "replace": false,
+  "values": [
+    "namespace:function/path/here",
+    ...
+  ]
 }
 ```
 
@@ -236,7 +244,7 @@ Elytras of Fire Lib comes with 9 advancements:
 
 #### eoflib:trigger.json
 
-**`trigger.json`** is an advancement that is rewarded to players who have triggered certain scoreboard events.**
+**`trigger.json`** is an advancement that is rewarded to players who have triggered certain scoreboard events.
 
 ```text
 📦 eoflib:advancements
@@ -300,6 +308,18 @@ Elytras of Fire Lib comes with many predicates for DLCs to hook into:
 └ 📄 on_fire.json
 ```
 
+#### abilities/.../\<predicate>.json
+
+Predicates located here deal with determining whether a player has used an ability item (these do NOT check if a player has *activated* an ability item, only if they have right-clicked one). By default, 3 files are included, each checking for use on either the primary, secondary, or tertiary ability.
+
+```text
+📦 eoflib:predicates
+└ 📁 abilities
+  ├ 📄 primary_used.json
+  ├ 📄 secondary_used.json
+  └ 📄 tertiary_used.json
+```
+
 #### inventory/.../\<predicate>.json
 
 Predicates located here deal with inventory checking. By default, 9 files are included, each checking a specific hotbar slot to see if it is unoccupied.
@@ -307,15 +327,16 @@ Predicates located here deal with inventory checking. By default, 9 files are in
 ```text
 📦 eoflib:predicates
 └ 📁 inventory
-  ├ 📄 slot_0_empty.json
-  ├ 📄 slot_1_empty.json
-  ├ 📄 slot_2_empty.json
-  ├ 📄 slot_3_empty.json
-  ├ 📄 slot_4_empty.json
-  ├ 📄 slot_5_empty.json
-  ├ 📄 slot_6_empty.json
-  ├ 📄 slot_7_empty.json
-  └ 📄 slot_8_empty.json
+  └ 📁 empty
+    ├ 📄 slot_0.json
+    ├ 📄 slot_1.json
+    ├ 📄 slot_2.json
+    ├ 📄 slot_3.json
+    ├ 📄 slot_4.json
+    ├ 📄 slot_5.json
+    ├ 📄 slot_6.json
+    ├ 📄 slot_7.json
+    └ 📄 slot_8.json
 ```
 
 #### location/.../\<predicate>.json
@@ -357,6 +378,38 @@ Predicates located here deal with movement checking. By default, 6 files are inc
   └ 📄 swim.json
 ```
 
+#### settings/admin/.../\<predicate>.json
+
+Predicates located here deal with resolving Admin Settings. By default, 8 files are included.
+
+```text
+📦 eoflib:predicates
+└ 📁 settings
+  └ 📁 admin
+    ├ 📄 ability_timer.json
+    ├ 📄 allow_abilities.json
+    ├ 📄 allow_attributes.json
+    ├ 📄 allow_range_display.json
+    ├ 📄 custom_deaths.json
+    ├ 📄 destructive_abilities.json
+    ├ 📄 friendly_fire.json
+    └ 📄 save_settings.json
+```
+
+#### settings/uninstall/.../\<predicate>.json
+
+Predicates located here deal with resolving Uninstall Settings. By default, 4 files are included.
+
+```text
+📦 eoflib:predicates
+└ 📁 settings
+  └ 📁 uninstall
+    ├ 📄 forceloads.json
+    ├ 📄 scoreboards.json
+    ├ 📄 storages.json
+    └ 📄 teams.json
+```
+
 #### tribes/.../\<predicate>.json
 
 Predicates located here deal with tribe checking. By default, only 1 file is included.
@@ -365,6 +418,47 @@ Predicates located here deal with tribe checking. By default, only 1 file is inc
 📦 eoflib:predicates
 └ 📁 tribes
   └ 📄 dragon.json
+```
+
+</details>
+
+---
+
+### Recipes
+
+Elytras of Fire Lib comes with 3 new recipes for ability usage:
+
+<details>
+
+<summary> View Recipes List </summary>
+
+[Back to top](#)
+
+#### eoflib:primary.json
+
+**`primary.json`** is a recipe used by Elytras of Fire Lib to determine that a player has *used* any primary ability that must be right-clicked.
+
+```text
+📦 eoflib:recipes
+  └ 📄 primary.json
+```
+
+#### eoflib:secondary.json
+
+**`secondary.json`** is a recipe used by Elytras of Fire Lib to determine that a player has *used* any secondary ability that must be right-clicked.
+
+```text
+📦 eoflib:recipes
+  └ 📄 secondary.json
+```
+
+#### eoflib:tertiary.json
+
+**`tertiary.json`** is a recipe used by Elytras of Fire Lib to determine that a player has *used* any tertiary ability that must be right-clicked.
+
+```text
+📦 eoflib:recipes
+  └ 📄 tertiary.json
 ```
 
 </details>
@@ -460,6 +554,8 @@ Tags here group blocks best described as flora. They are further grouped by dime
     ├ 📄 grass.json
     ├ 📄 moss.json
     ├ 📄 mushrooms.json
+    ├ 📄 nether.json
+    ├ 📄 overworld.json
     ├ 📄 vines.json
     └ 📁 nether
     │ ├ 📄 grass.json
@@ -528,12 +624,22 @@ Tags here group blocks that are meant to replace or add to the default Minecraft
 
 #### tags/functions/config.json
 
-**`config.json`** is used by Elytras of Fire Lib and other DLCs to run configuration settings provided by them.
+**`config.json`** is used by Elytras of Fire Lib and other DLCs to run any provided configuration settings functions.
 
 ```text
 📦 eoflib:tags
 └ 📁 functions
   └ 📄 config.json
+```
+
+#### tags/functions/death.json
+
+**`death.json`** is used by Elytras of Fire Lib and other DLCs to run functions when a player dies.
+
+```text
+📦 eoflib:tags
+└ 📁 functions
+  └ 📄 death.json
 ```
 
 #### tags/functions/detect_dlcs.json
@@ -556,14 +662,24 @@ Tags here group blocks that are meant to replace or add to the default Minecraft
   └ 📄 dlc_load.json
 ```
 
-#### tags/functions/uninstall.json
+#### tags/functions/new_id.json
 
-**`uninstall.json`** is used by Elytras of Fire Lib and other DLCs to uninstall themselves and/or other DLCs.
+**`new_id.json`** is used by Elytras of Fire Lib and other DLCs to run functions when a player receives a new ID via [the New ID advancement](#eoflibnew_idjson).
 
 ```text
 📦 eoflib:tags
 └ 📁 functions
-  └ 📄 uninstall.json
+  └ 📄 new_id.json
+```
+
+#### tags/functions/rejoin.json
+
+**`rejoin.json`** is used by Elytras of Fire Lib and other DLCs to run functions when a player rejoins the game.
+
+```text
+📦 eoflib:tags
+└ 📁 functions
+  └ 📄 dlc_load.json
 ```
 
 #### tags/functions/load/.../\<tag>.json
@@ -607,8 +723,22 @@ Tags here group functions to be ran on a regular schedule. By default, 4 files a
   └ 📁 timer
     ├ 📄 1t.json
     ├ 📄 5t.json
-    └ 📄 10t.json
+    ├ 📄 10t.json
     └ 📄 20t.json
+```
+
+#### tags/functions/uninstall/.../\<tag>.json
+
+Tags here group functions to be ran when the datapack is being uninstalled. By default, 4 files are included.
+
+```text
+📦 eoflib:tags
+└ 📁 functions
+  └ 📁 uninstall
+    ├ 📄 forceloads.json
+    ├ 📄 scoreboards.json
+    ├ 📄 storages.json
+    └ 📄 teams.json
 ```
 
 </details>

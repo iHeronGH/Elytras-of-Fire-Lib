@@ -11,10 +11,10 @@ execute if entity @s[predicate=!eoflib:tribes/dragon] run function eoflib:config
 execute unless predicate eoflib:settings/admin/allow_abilities if entity @s[tag=!eoflib.admin] run function eoflib:config/settings/player/abilities/fail/admin_disabled
 
         ## Slots Occupied
-execute if entity @s[predicate=eoflib:tribes/dragon] unless entity @s[predicate=eoflib:inventory/slot_6_empty, predicate=eoflib:inventory/slot_7_empty, predicate=eoflib:inventory/slot_8_empty] run function eoflib:config/settings/player/abilities/fail/occupied_slots
+execute if entity @s[predicate=eoflib:tribes/dragon] unless entity @s[predicate=eoflib:inventory/empty/slot_6, predicate=eoflib:inventory/empty/slot_7, predicate=eoflib:inventory/empty/slot_8] run function eoflib:config/settings/player/abilities/fail/occupied_slots
 
     # Succeed
         ## Enable Abilities
-execute if entity @s[predicate=eoflib:tribes/dragon] if entity @s[predicate=eoflib:inventory/slot_6_empty, predicate=eoflib:inventory/slot_7_empty, predicate=eoflib:inventory/slot_8_empty] run function eoflib:config/settings/player/abilities/enable
+execute if entity @s[predicate=eoflib:tribes/dragon] if entity @s[predicate=eoflib:inventory/empty/slot_6, predicate=eoflib:inventory/empty/slot_7, predicate=eoflib:inventory/empty/slot_8] run function eoflib:config/settings/player/abilities/enable
 
 #endregion

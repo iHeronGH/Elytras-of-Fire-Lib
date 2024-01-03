@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "#eoflib:flora/overworld/grass",
+        "#eoflib:flora/overworld/vines"
+    ]
+}
