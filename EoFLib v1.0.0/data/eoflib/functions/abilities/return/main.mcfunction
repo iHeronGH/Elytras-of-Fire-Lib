@@ -4,7 +4,7 @@
 
 #region
     # Debug
-tellraw @s "eoflib:abilities/return/main"
+tellraw @s "eoflib:abilities/return/main.mcf"
 
     # Return abilities
 trigger eof.abilities set 3

@@ -5,7 +5,7 @@
 #region
     # Generate vitals
 function #eoflib:load/gen/teams
-function #eoflib:load/gen/storage
+function #eoflib:load/gen/storages
 function #eoflib:load/gen/scoreboards
 function #eoflib:load/gen/forceloads
 
@@ -21,5 +21,8 @@ function eoflib:loop/time/20t
 
     # Successful launch message
 function eoflib:load/hw
+
+    # DLC load messages
+function #eoflib:detect_dlcs
 
 #endregion

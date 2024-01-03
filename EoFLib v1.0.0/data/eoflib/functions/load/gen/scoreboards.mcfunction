@@ -1,6 +1,6 @@
 #> eoflib:load/gen/scoreboards
 #
-# Generates essential scoreboards for EoFLib.
+# Generates essential scoreboards for Elytras of Fire Lib.
 
 #region
     # Scoreboards
@@ -33,22 +33,22 @@ scoreboard objectives add eoflib.worldtime dummy
 #define objective eof.abilities Toggles hotbar abilities.
 scoreboard objectives add eof.abilities trigger
 scoreboard players enable @a eof.abilities
-scoreboard players set @s eof.abilities 0
+scoreboard players set @a eof.abilities 0
 
 #define objective eof.attributes Toggles tribe attributes.
 scoreboard objectives add eof.attributes trigger
 scoreboard players enable @a eof.attributes
-scoreboard players set @s eof.attributes 0
+scoreboard players set @a eof.attributes 0
 
 #define objective eof.settings Activates settings.
 scoreboard objectives add eof.settings trigger
 scoreboard players enable @a eof.settings
-scoreboard players set @s eof.settings 0
+scoreboard players set @a eof.settings 0
 
 #define objective eoflib.trigger Simulates function access for non-operator players.
 scoreboard objectives add eoflib.trigger trigger
 scoreboard players enable @a eoflib.trigger
-scoreboard players set @s eoflib.trigger 0
+scoreboard players set @a eoflib.trigger 0
 
         ## Settings Objectives
 #define objective eoflib.admin_settings Contains admin settings in scoreboard format.
@@ -64,10 +64,13 @@ scoreboard objectives add eoflib.dropped_ability_item minecraft.dropped:minecraf
 #define objective eoflib.dropped_ricardo Tracks players who have dropped Ricardo. What the heck, dude?
 scoreboard objectives add eoflib.dropped_ricardo minecraft.dropped:minecraft.poisonous_potato
 
-    # Variables
+    # Scoreholders
         ## Global Vars
+#define score_holder #eoflib.available_dlcs The number of active DLCs currently on the world/server.
+scoreboard players set #eoflib.available_dlcs eoflib.dlcs 0
+
 #define score_holder #eoflib.dlc.eoflib The load status of this datapack.
-execute unless score #eoflib.dlc.eoflib eoflib.dlcs = #eoflib.dlc.eoflib eoflib.dlcs run scoreboard players set #eoflib.dlc.eoflib eoflib.dlcs 1
+scoreboard players set #eoflib.dlc.eoflib eoflib.dlcs 1
 
 #define score_holder #eoflib.new_id The next available ID to give a player.
 execute unless score #eoflib.new_id eoflib.id = #eoflib.new_id eoflib.id run scoreboard players set #eoflib.new_id eoflib.id 0
@@ -78,51 +81,10 @@ function eoflib:load/gen/scoreboards/admin_settings
         ## Uninstall Settings Vars
 function eoflib:load/gen/scoreboards/uninstall_settings
 
-        ## Number Vars
-#define score_holder #eoflib.-1 Equal to -1.
-execute unless score #eoflib.-1 eoflib.numbers = #eoflib.-1 eoflib.numbers run scoreboard players set #eoflib.-1 eoflib.numbers -1
+        ## Number Consts
+function eoflib:load/gen/scoreboards/numbers
 
-#define score_holder #eoflib.0 Equal to 0.
-execute unless score #eoflib.0 eoflib.numbers = #eoflib.0 eoflib.numbers run scoreboard players set #eoflib.0 eoflib.numbers 0
-
-#define score_holder #eoflib.1 Equal to 1.
-execute unless score #eoflib.1 eoflib.numbers = #eoflib.1 eoflib.numbers run scoreboard players set #eoflib.1 eoflib.numbers 1
-
-#define score_holder #eoflib.2 Equal to 2.
-execute unless score #eoflib.2 eoflib.numbers = #eoflib.2 eoflib.numbers run scoreboard players set #eoflib.2 eoflib.numbers 2
-
-#define score_holder #eoflib.3 Equal to 3.
-execute unless score #eoflib.3 eoflib.numbers = #eoflib.3 eoflib.numbers run scoreboard players set #eoflib.3 eoflib.numbers 3
-
-#define score_holder #eoflib.4 Equal to 4.
-execute unless score #eoflib.4 eoflib.numbers = #eoflib.4 eoflib.numbers run scoreboard players set #eoflib.4 eoflib.numbers 4
-
-#define score_holder #eoflib.5 Equal to 5.
-execute unless score #eoflib.5 eoflib.numbers = #eoflib.5 eoflib.numbers run scoreboard players set #eoflib.5 eoflib.numbers 5
-
-#define score_holder #eoflib.10 Equal to 10.
-execute unless score #eoflib.10 eoflib.numbers = #eoflib.10 eoflib.numbers run scoreboard players set #eoflib.10 eoflib.numbers 10
-
-#define score_holder #eoflib.23999 Equal to 23999.
-execute unless score #eoflib.23999 eoflib.numbers = #eoflib.23999 eoflib.numbers run scoreboard players set #eoflib.23999 eoflib.numbers 23999
-
-#define score_holder #eoflib.24000 Equal to 24000.
-execute unless score #eoflib.24000 eoflib.numbers = #eoflib.24000 eoflib.numbers run scoreboard players set #eoflib.24000 eoflib.numbers 24000
-
-        ## Worldtime Vars
-#define score_holder #eoflib.worldtime.current Tracks the current time on the world.
-execute store result score #eoflib.worldtime.current eoflib.worldtime run time query daytime
-
-#define score_holder #eoflib.worldtime.dusk Defines the beginning of dusk.
-execute unless score #eoflib.worldtime.dusk eoflib.worldtime = #eoflib.worldtime.dusk eoflib.worldtime run scoreboard players set #eoflib.worldtime.dusk eoflib.worldtime 12000
-
-#define score_holder #eoflib.worldtime.sunset Defines the beginning of sunset.
-execute unless score #eoflib.worldtime.sunset eoflib.worldtime = #eoflib.worldtime.sunset eoflib.worldtime run scoreboard players set #eoflib.worldtime.sunset eoflib.worldtime 14400
-
-#define score_holder #eoflib.worldtime.sunrise Defines the beginning of sunrise.
-execute unless score #eoflib.worldtime.sunrise eoflib.worldtime = #eoflib.worldtime.sunrise eoflib.worldtime run scoreboard players set #eoflib.worldtime.sunrise eoflib.worldtime 21600
-
-#define score_holder #eoflib.worldtime.dawn Defines the beginning of dawn.
-execute unless score #eoflib.worldtime.dawn eoflib.worldtime = #eoflib.worldtime.dawn eoflib.worldtime run scoreboard players set #eoflib.worldtime.dawn eoflib.worldtime 24000
+        ## Worldtime Consts
+function eoflib:load/gen/scoreboards/worldtime
 
 #endregion

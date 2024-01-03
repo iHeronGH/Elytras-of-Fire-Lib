@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:conduit",
+        "minecraft:end_rod",
+        "minecraft:lantern",
+        "minecraft:light",
+        "minecraft:soul_lantern",
+        "#eoflib:minecraft/torches",
+        "#minecraft:campfires",
+        "#minecraft:candles"
+    ]
+}

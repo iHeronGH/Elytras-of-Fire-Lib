@@ -3,7 +3,8 @@
 # Prevent ability enabling due to abilities being disabled in the settings.
 
 #region
-tellraw @s [{"text": "", "color": "red"}, {"text": "\n[", "color": "gray"}, "E", {"text": "o", "color": "gold"}, "F", {"text": "]", "color": "gray"}, " Abilities are globally disabled! Contact an administrator if this is incorrect."]
+    # Announce fail
+tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Abilities are globally disabled! Contact an administrator if this is incorrect.", "color": "red"}]
 
     # Cancel ability toggle request
 scoreboard players set @s eof.abilities 0

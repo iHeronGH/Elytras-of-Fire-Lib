@@ -1,6 +1,6 @@
 #> eoflib:load/gen/scoreboards/admin_settings
 #
-# Initialises admin settings.
+# Initialises admin settings variables.
 
 #region
     # Initialise admin settings

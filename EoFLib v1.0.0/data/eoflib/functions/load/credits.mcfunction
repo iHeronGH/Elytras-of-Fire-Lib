@@ -1,3 +1,7 @@
+#> eoflib:load/credits
+#
+# Display credits to individuals who have helped with the development of Elytras of Fire. Thank you!
+
 #region
     # Credits for Elytras of Fire
 tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Credits for Elytras of Fire", "color": "gold"}]

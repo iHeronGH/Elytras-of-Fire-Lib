@@ -1,6 +1,6 @@
 #> eoflib:load/gen/scoreboards/uninstall_settings
 #
-# Initialises uninstall settings.
+# Initialises uninstall settings variables.
 
 #region
     # Initialise uninstall settings

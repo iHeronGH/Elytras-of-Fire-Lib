@@ -41,6 +41,6 @@
 #region
     # Test
 execute if entity @s run tellraw @s "Example function."
-execute unless entity @s run tellraw @a "Example function."
+execute unless entity @s run tellraw @a[tag=eoflib.admin] "Example function."
 
 #endregion

@@ -1,0 +1,31 @@
+{
+    "replace": false,
+    "values": [
+        "#eoflib:carpet",
+        "#eoflib:flora/dripleaf",
+        "#eoflib:flora/grass",
+        "#eoflib:flora/mushrooms/small",
+        "#eoflib:flora/vines",
+        "#eoflib:light/small",
+        "#eoflib:minecraft/air",
+        "#eoflib:minecraft/amethyst",
+        "#eoflib:minecraft/corals",
+        "#eoflib:minecraft/flowers",
+        "#eoflib:minecraft/redstone_components",
+        "minecraft:bamboo",
+        "minecraft:chain",
+        "minecraft:chorus_plant",
+        "minecraft:dead_bush",
+        "minecraft:frogspawn",
+        "minecraft:iron_bars",
+        "minecraft:sea_pickle",
+        "minecraft:snow",
+        "minecraft:sugar_cane",
+        "#minecraft:banners",
+        "#minecraft:bee_growables",
+        "#minecraft:fences",
+        "#minecraft:fence_gates",
+        "#minecraft:flower_pots",
+        "#minecraft:saplings"
+    ]
+}

@@ -12,7 +12,4 @@ tellraw @a[tag=eoflib.admin, tag=!eoflib.debug] [{"text": "Settings: ", "color":
         ## Non-Admin Msg
 tellraw @a[tag=!eoflib.debug, tag=!eoflib.admin] [{"text": "Settings: ", "color": "gray"}, {"text": "[", "color": "gray"}, {"text": "PS", "color": "light_purple", "underlined": true, "hoverEvent": {"action": "show_text", "contents":[{"text": "Click here to view the ", "color": "gray"}, {"text": "Player Settings", "color": "light_purple"}, {"text": "!", "color": "gray"}]}, "clickEvent": {"action": "run_command", "value": "/trigger eof.settings set 1"}}, {"text": "] [", "color": "gray"}, {"text": "AS", "color": "dark_gray", "hoverEvent": {"action": "show_text", "contents":[{"text": "Click here to view the Admin Settings!\n\nYou do not have permission to edit the\nAdmin Settings for Elytras of Fire. Contact\nan administrator if this is incorrect.", "color": "dark_gray"}]}}, {"text": "] [", "color": "gray"}, {"text": "US", "color": "dark_gray", "hoverEvent": {"action": "show_text", "contents":[{"text": "Click here to view the Uninstall Settings!\n\nYou do not have permission to edit the\nUninstall Settings for Elytras of Fire.\nContact an administrator if this is incorrect.", "color": "dark_gray"}]}}, {"text": "]", "color": "gray"}]
 
-    # DLC Messages
-function #eoflib:detect_dlcs
-
 #endregion

@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:beacon",
+        "minecraft:ender_chest",
+        "minecraft:jack_o_lantern",
+        "minecraft:glowstone",
+        "minecraft:redstone_lamp",
+        "minecraft:sea_lantern",
+        "minecraft:shroomlight"
+    ]
+}

@@ -3,7 +3,8 @@
 # Prevent ability enabling due to @s having occupied ability slots.
 
 #region
-tellraw @s [{"text": "", "color": "red"}, {"text": "\n[", "color": "gray"}, "E", {"text": "o", "color": "gold"}, "F", {"text": "]", "color": "gray"}, " Your abilities cannot be enabled as there is something occupying the ability slots."]
+    # Announce fail
+tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Your abilities cannot be enabled as there is something occupying the ability slots.", "color": "red"}]
 
     # Cancel ability toggle request
 scoreboard players set @s eof.abilities 0
