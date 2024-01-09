@@ -2,6 +2,7 @@
     "replace": false,
     "values": [
         "minecraft:bubble_column",
+        "minecraft:water",
         "#eoflib:passable/general"
     ]
 }

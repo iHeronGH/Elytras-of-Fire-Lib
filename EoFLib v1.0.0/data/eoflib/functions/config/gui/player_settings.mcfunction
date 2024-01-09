@@ -3,6 +3,9 @@
 # Displays the player settings page.
 
 #region
+    # Debug
+tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "gray"}, {"text": "eoflib:config/gui/player_settings.mcf", "color": "gold"}]
+
     # Activate triggers scoreboard
 scoreboard players enable @s eoflib.trigger
 

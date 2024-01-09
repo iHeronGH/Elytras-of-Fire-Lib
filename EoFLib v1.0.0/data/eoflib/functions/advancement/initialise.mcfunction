@@ -3,6 +3,9 @@
 # Initialise players on datapack load.
 
 #region
+    # Debug
+tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "gray"}, {"text": "eoflib:advancement/initialise.mcf", "color": "gold"}]
+
     # Initialise scoreboards
 scoreboard players set @s eof.trigger 0
 scoreboard players set @s eof.settings 0

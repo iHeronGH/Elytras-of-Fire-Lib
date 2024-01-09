@@ -64,6 +64,15 @@ scoreboard objectives add eoflib.dropped_ability_item minecraft.dropped:minecraf
 #define objective eoflib.dropped_ricardo Tracks players who have dropped Ricardo. What the heck, dude?
 scoreboard objectives add eoflib.dropped_ricardo minecraft.dropped:minecraft.poisonous_potato
 
+#define objective eoflib.projectile.egg Tracks players who have thrown an egg.
+scoreboard objectives add eoflib.projectile.egg minecraft.used:minecraft.egg
+
+#define objective eoflib.projectile.snowball Tracks players who have thrown a snowball.
+scoreboard objectives add eoflib.projectile.snowball minecraft.used:minecraft.snowball
+
+#define objective eoflib.projectile.ender_pearl Tracks players who have thrown a ender pearl.
+scoreboard objectives add eoflib.projectile.ender_pearl minecraft.used:minecraft.ender_pearl
+
     # Scoreholders
         ## Global Vars
 #define score_holder #eoflib.available_dlcs The number of active DLCs currently on the world/server.

@@ -16,6 +16,7 @@ clear @a #eoflib:items{eof_data: {}}
 execute unless predicate eoflib:settings/uninstall/forceloads run function #eoflib:uninstall/forceloads
 execute unless predicate eoflib:settings/uninstall/scoreboards run function #eoflib:uninstall/scoreboards
 execute unless predicate eoflib:settings/uninstall/storages run function #eoflib:uninstall/storages
+execute unless predicate eoflib:settings/uninstall/bossbars run function #eoflib:uninstall/bossbars
 execute unless predicate eoflib:settings/uninstall/teams run function #eoflib:uninstall/teams
 
         ## Disable DLC datapacks

@@ -4,7 +4,7 @@
 
 #region
     # Debug
-tellraw @s "eoflib:abilities/return/main.mcf"
+tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "gray"}, {"text": "eoflib:abilities/return/main.mcf", "color": "gold"}]
 
     # Return abilities
 trigger eof.abilities set 3

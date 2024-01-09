@@ -1,6 +1,6 @@
-#> eoflib_raycast:raycast/load
+#> eoflib_raycast:load
 #
-# Initialise EoFLib.
+# Initialise EoFLib: Raycast.
 
 #region
     # Generate vitals

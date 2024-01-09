@@ -13,4 +13,10 @@ scoreboard players set #eoflib.uninstall_settings.scoreboards eoflib.uninstall_s
 #define score_holder #eoflib.uninstall_settings.storages Remove all storages when the datapack is uninstalled.
 scoreboard players set #eoflib.uninstall_settings.storages eoflib.uninstall_settings 1
 
+#define score_holder #eoflib.uninstall_settings.bossbars Remove all bossbars when the datapack is uninstalled.
+scoreboard players set #eoflib.uninstall_settings.bossbars eoflib.uninstall_settings 1
+
+#define score_holder #eoflib.uninstall_settings.forceloads Remove all forceloads when the datapack is uninstalled.
+scoreboard players set #eoflib.uninstall_settings.forceloads eoflib.uninstall_settings 1
+
 #endregion
