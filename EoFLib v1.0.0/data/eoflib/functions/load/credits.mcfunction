@@ -3,6 +3,10 @@
 # Display credits to individuals who have helped with the development of Elytras of Fire. Thank you!
 
 #region
+    # Debug
+execute if entity @s run tellraw @s[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:credits.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib/functions/load/credits.mcfunction", "color": "aqua"}}}]
+execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:credits.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib/functions/load/credits.mcfunction", "color": "aqua"}}}]
+
     # Credits for Elytras of Fire
 tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Credits for Elytras of Fire", "color": "gold"}]
 tellraw @s [{"text": "\nThank you to ", "color": "gray"}, {"text": "Godzilla1005", "color": "gold"}, {"text": " for extensive help debugging, developing, and testing out many of the datapack's features.", "color": "gray"}]

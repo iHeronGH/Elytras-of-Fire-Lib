@@ -98,7 +98,7 @@ And uninstalling Elytras of Fire Lib is even simpler:
 
 Elytras of Fire Lib, as a library of sources that other datapacks can hook into, promotes DLCs!
 
-If you're looking to use Elytras of Fire Lib and other DLCs, here is a list updated as of **`October 10, 2023`** for all supported DLCs:
+If you're looking to use Elytras of Fire Lib and other DLCs, here is a list updated as of **`January 10, 2024`** for all supported DLCs:
 
 - [iHeronGH](https://github.com/iHeronGH)'s [Elytras of Fire](https://github.com/iHeronGH/Elytras-of-Fire)
 - [iHeronGH](https://github.com/iHeronGH)'s [The Lost Continent](https://github.com/iHeronGH/The-Lost-Continent)
@@ -721,10 +721,10 @@ The following entries are settings that only players with the **`eoflib.admin`**
 - **Enable Friendly Fire** (unreleased): Toggle friendly fire for most abilities. (Default: OFF)
   - ON: ---
   - OFF: ---<br><br>
-- **Cooldown Bypass**: Cooldown Bypass allows you to bypass all tribe ability cooldowns. (Default: OFF)
+- **Cooldown Bypass**: Allows you to bypass all tribe ability cooldowns. (Default: OFF)
   - ON: User will bypass all cooldowns imposed by abilities.
   - OFF: User is penalised by ability cooldowns on successful use.<br><br>
-- **Debug Mode**: Debug Mode displays helpful information in-game to streamline datapack development and show function references and sources. (Default: OFF)
+- **Debug Mode**: Displays helpful information in-game to streamline datapack development and show function references and sources. (Default: OFF)
   - ON: User will receive debugging messages in chat.
   - OFF: User will see no technical messages.
 
@@ -738,15 +738,18 @@ The following entries are settings that only players with the **`eoflib.admin`**
 
 The following entries are settings that only players with the **`eoflib.admin`** tag can change:
 
-- **Keep Teams**: Remove all tribe teams when this datapack is uninstalled (Default: ON)
+- **Keep Teams**: Keep all tribe teams intact when this datapack is uninstalled (Default: ON)
   - ON: Teams will remain after uninstall.
   - OFF: Teams will be removed during uninstall.<br><br>
-- **Keep Scoreboards**: Remove all scoreboard objectives and data when this datapack is uninstalled. (Default: ON)
+- **Keep Scoreboards**: Keep all scoreboard objectives and data intact when this datapack is uninstalled. (Default: ON)
   - ON: Scoreboards will remain after uninstall.
   - OFF: Scoreboard objectives and data will be removed during uninstall.<br><br>
-- **Keep Storages**: Remove all storage data when this datapack is uninstalled. (Default: ON)
+- **Keep Storages**: Keep all storage data intact when this datapack is uninstalled. (Default: ON)
   - ON: Storage data will remain after uninstall.
   - OFF: Relevant storage data will be removed during uninstall.<br><br>
+- **Keep Bossbars**: Keep all bossbars intact when this datapack is uninstalled. (Default: ON)
+  - ON: Bossbars will remain after uninstall.
+  - OFF: Bossbars will be removed during uninstall.<br><br>
 - **Keep Forceloads**: Toggle whether forceloaded chunks stay forceloaded after this datapack is uninstalled. (Default: ON)
   - ON: Forceloaded chunks will remain forceloaded after uninstall.
   - OFF: Forceloaded chunks will no longer be forceloaded during uninstall.
@@ -766,6 +769,7 @@ The sole edit to Vanilla is the **`climbable`** block tag. There is currently no
 All entity tags, custom items, scoreboard objectives, and storages used in Elytras of Fire use the following namespaces to clarify association with Elytras of Fire:
 
 - **`eoflib`**
+- **`eoflib_raycast`**
 - **`eof`**
 
 > Documentation: [Function headers](https://github.com/Arcensoth/imp-spec/blob/master/docs/imp_doc.md#function-headers)

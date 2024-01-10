@@ -3,7 +3,11 @@
 # Disables attributes and enabling of attributes for non-operator abilities.
 
 #region
-    # Disable Attributes
+    # Debug
+# execute if entity @s run tellraw @s[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:disable_attributes.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib/functions/loop/time/5t/disable_attributes.mcfunction", "color": "aqua"}}}]
+# execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:disable_attributes.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib/functions/loop/time/5t/disable_attributes.mcfunction", "color": "aqua"}}}]
+
+    # Disable attributes
 execute unless predicate eoflib:settings/admin/allow_attributes if entity @a[tag=eoflib.atts, tag=!eoflib.admin] run tag @a[tag=eoflib.atts, tag=!eoflib.admin] remove eoflib.atts
 
 #endregion

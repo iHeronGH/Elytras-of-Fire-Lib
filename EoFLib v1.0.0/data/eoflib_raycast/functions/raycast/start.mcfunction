@@ -3,7 +3,11 @@
 # Starts a raycast at the current executing position.
 
 #region
-    # Set reference storage as ability item
+    # Debug
+execute if entity @s run tellraw @s[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib_raycast:start.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib_raycast/functions/raycast/start.mcfunction", "color": "aqua"}}}]
+execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib_raycast:start.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib_raycast/functions/raycast/start.mcfunction", "color": "aqua"}}}]
+
+    # Set reference storages as ability item
 $data modify storage eoflib_raycast:ability ability_data set value $(ability_data)
 $data modify storage eoflib_raycast:ability raycast_data set value $(raycast_data)
 

@@ -3,6 +3,10 @@
 # Hello world!
 
 #region
+    # Debug
+execute if entity @s run tellraw @s[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:hw.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib/functions/load/hw.mcfunction", "color": "aqua"}}}]
+execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:hw.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib/functions/load/hw.mcfunction", "color": "aqua"}}}]
+
     # Baseline
 tellraw @a[tag=!eoflib.debug] [{"text": "\n", "color": "gray"}, {"text": "                 =", "strikethrough": true}, {"text": " [", "color": "gray"}, {"text": "Elytras ", "color": "red"}, {"text": "of ", "color": "gold"}, {"text": "Fire", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "=                 ", "strikethrough": true}, "\n", {"text": "This datapack implements the draconic world of\nWings of Fire into Minecraft!", "color": "gray"}, "\n\n", {"text": "Version: ", "color": "gray"}, {"text": "2.0.0", "color": "aqua"}, "\n", {"text": "Contributors: "}, {"text": "View Credits", "color": "aqua", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger eoflib.trigger set 2"}}]
 
