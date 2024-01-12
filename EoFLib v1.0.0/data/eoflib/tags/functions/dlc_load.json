@@ -1,6 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "eoflib:load",
-        "eoflib_raycast:load"]
-}
