@@ -29,6 +29,18 @@ execute unless score #eoflib.4 eoflib.numbers = #eoflib.4 eoflib.numbers run sco
 #define score_holder #eoflib.5 Equal to 5.
 execute unless score #eoflib.5 eoflib.numbers = #eoflib.5 eoflib.numbers run scoreboard players set #eoflib.5 eoflib.numbers 5
 
+#define score_holder #eoflib.6 Equal to 6.
+execute unless score #eoflib.6 eoflib.numbers = #eoflib.6 eoflib.numbers run scoreboard players set #eoflib.6 eoflib.numbers 6
+
+#define score_holder #eoflib.7 Equal to 7.
+execute unless score #eoflib.7 eoflib.numbers = #eoflib.7 eoflib.numbers run scoreboard players set #eoflib.7 eoflib.numbers 7
+
+#define score_holder #eoflib.8 Equal to 8.
+execute unless score #eoflib.8 eoflib.numbers = #eoflib.8 eoflib.numbers run scoreboard players set #eoflib.8 eoflib.numbers 8
+
+#define score_holder #eoflib.9 Equal to 9.
+execute unless score #eoflib.9 eoflib.numbers = #eoflib.9 eoflib.numbers run scoreboard players set #eoflib.9 eoflib.numbers 9
+
 #define score_holder #eoflib.10 Equal to 10.
 execute unless score #eoflib.10 eoflib.numbers = #eoflib.10 eoflib.numbers run scoreboard players set #eoflib.10 eoflib.numbers 10
 
