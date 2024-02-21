@@ -11,7 +11,7 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color"
 function eoflib_raycast:raycast/ray/particle with storage eoflib_raycast:ability raycast_data
 
     # Check for entities
-execute if score #eoflib.raycast.hit eoflib.raycast matches 0 positioned ~-0.333 ~-0.333 ~-0.333 as @e[sort=nearest, type=!#eoflib:unaffected, tag=!eoflib.ray_active, dx=0] run function eoflib_raycast:raycast/entity/check
+execute if score #eoflib.raycast.hit eoflib.raycast matches 0 positioned ~-0.333 ~-0.333 ~-0.333 as @e[sort=nearest, tag=!eoflib.ray_active, predicate=eoflib:entities/affected, dx=0] run function eoflib_raycast:raycast/entity/check
 
     # Check for non-passable blocks
 execute if score #eoflib.raycast.hit eoflib.raycast matches 0 run function eoflib_raycast:raycast/block/check with storage eoflib_raycast:ability raycast_data.blocks

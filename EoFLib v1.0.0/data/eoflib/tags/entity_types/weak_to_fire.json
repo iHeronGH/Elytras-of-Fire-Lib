@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:cod",
+        "minecraft:phantom",
+        "minecraft:polar_bear",
+        "minecraft:salmon",
+        "minecraft:snow_golem",
+        "minecraft:stray",
+        "minecraft:zombie"
+    ]
+}

@@ -4,8 +4,8 @@
 
 #region
     # Debug
-execute if entity @s run tellraw @s[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib/functions/load/triggers.mcfunction", "color": "aqua"}}}]
-execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "data/eoflib/functions/load/triggers.mcfunction", "color": "aqua"}}}]
+execute if entity @s run tellraw @s[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "You executed the following function:\n\ndata/eoflib/functions/load/triggers.mcfunction", "color": "aqua"}}}]
+execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n\ndata/eoflib/functions/load/triggers.mcfunction", "color": "aqua"}}}]
 
     # Remove Advancement
 advancement revoke @s only eoflib:trigger
@@ -23,6 +23,10 @@ execute if score @s eoflib.trigger matches 4 run function eoflib:config/settings
                 #### PS: Ability Handling
 execute if score @s eoflib.trigger matches 5 run function eoflib:config/settings/player/ability_handling/ability
 execute if score @s eoflib.trigger matches 6 run function eoflib:config/settings/player/ability_handling/item
+
+                #### PS: PVP
+execute if score @s eoflib.trigger matches 32 run function eoflib:config/settings/player/pvp/disable
+execute if score @s eoflib.trigger matches 33 run function eoflib:config/settings/player/pvp/enable
 
             ### Admin Settings triggers
                 #### AS: Allow Abilities
@@ -66,6 +70,10 @@ execute if score @s eoflib.trigger matches 26 run function eoflib:config/setting
                 #### AS: Save Settings
 execute if score @s eoflib.trigger matches 27 run function eoflib:config/settings/admin/save_settings/toggle_show_agui
 
+                #### AS: PVP
+execute if score @s eoflib.trigger matches 34 run function eoflib:config/settings/admin/allow_pvp/toggle_show_pgui
+execute if score @s eoflib.trigger matches 35 run function eoflib:config/settings/admin/allow_pvp/toggle_show_agui
+
         ## Form Submissions
 execute if score @s eoflib.trigger matches 28 run function eoflib:load/report/bug
 execute if score @s eoflib.trigger matches 29 run function eoflib:load/report/idea
@@ -73,7 +81,7 @@ execute if score @s eoflib.trigger matches 30 run function eoflib:load/report/fe
 execute if score @s eoflib.trigger matches 31 run function eoflib:load/report/bye_ricardo
 
         ## Failsafe
-execute unless score @s eoflib.trigger matches 0 unless score @s eoflib.trigger matches 2..31 run tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Invalid range for trigger ", "color": "red"}, {"text": "eoflib.trigger", "color": "gold"}, {"text": "; received value (", "color": "red"}, {"score":{"name": "@s", "objective": "eoflib.trigger"}, "color": "gold"}, {"text": ") does not match expected value range (", "color": "red"}, {"text": "2-31", "color": "gold"}, {"text": ").", "color": "red"}]
+execute unless score @s eoflib.trigger matches 0 unless score @s eoflib.trigger matches 2..35 run tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Invalid range for trigger ", "color": "red"}, {"text": "eoflib.trigger", "color": "gold"}, {"text": "; received value (", "color": "red"}, {"score":{"name": "@s", "objective": "eoflib.trigger"}, "color": "gold"}, {"text": ") does not match expected value range (", "color": "red"}, {"text": "2-35", "color": "gold"}, {"text": ").", "color": "red"}]
 
     # Abilities Trigger
 execute if score @s eof.abilities matches 1..2 run function eoflib:config/settings/player/abilities/toggle
