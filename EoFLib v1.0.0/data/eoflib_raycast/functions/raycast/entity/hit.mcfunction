@@ -9,6 +9,6 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color"
 
     # Entity successfully hit
 scoreboard players set #eoflib.raycast.hit eoflib.raycast 1
-function #eoflib:abilities/entity_effects/main
+execute if entity @e[tag=eoflib.ray_active, tag=!eoflib.pvp_disabled] run function #eoflib:abilities/entity_effects/main
 
 #endregion

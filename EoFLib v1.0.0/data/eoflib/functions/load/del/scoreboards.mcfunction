@@ -32,5 +32,7 @@ scoreboard objectives remove eoflib.dropped_ricardo
 scoreboard objectives remove eoflib.projectile.egg
 scoreboard objectives remove eoflib.projectile.ender_pearl
 scoreboard objectives remove eoflib.projectile.snowball
+scoreboard objectives remove eoflib.projectile.bow
+scoreboard objectives remove eoflib.projectile.crossbow
 
 #endregion

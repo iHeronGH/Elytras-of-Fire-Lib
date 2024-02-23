@@ -91,7 +91,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:473646,eoflib:{dummy:1b}}"
+                            "tag": "{CustomModelData: 473646, eoflib: {dummy: 1b}}"
                         }
                     ]
                 }

@@ -77,6 +77,12 @@ scoreboard objectives add eoflib.projectile.snowball minecraft.used:minecraft.sn
 #define objective eoflib.projectile.ender_pearl Tracks players who have thrown a ender pearl.
 scoreboard objectives add eoflib.projectile.ender_pearl minecraft.used:minecraft.ender_pearl
 
+#define objective eoflib.projectile.bow Tracks players who have used a bow.
+scoreboard objectives add eoflib.projectile.bow minecraft.used:minecraft.bow
+
+#define objective eoflib.projectile.crossbow Tracks players who have used a crossbow.
+scoreboard objectives add eoflib.projectile.crossbow minecraft.used:minecraft.crossbow
+
     # Scoreholders
         ## Global Vars
 #define score_holder #eoflib.available_dlcs The number of active DLCs currently on the world/server.

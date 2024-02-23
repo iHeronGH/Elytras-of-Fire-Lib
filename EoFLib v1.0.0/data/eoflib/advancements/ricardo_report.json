@@ -10,10 +10,15 @@
                         "entity": "this",
                         "scores": {
                             "eoflib.dropped_ricardo": {
-                                "min": 0,
+                                "min": 1,
                                 "max": 2147483647
                             }
                         }
+                    }
+                ],
+                "items": [
+                    {
+                        "nbt": "{eoflib: {}}"
                     }
                 ]
             }
@@ -25,7 +30,7 @@
                     "items": [
                         "minecraft:poisonous_potato"
                     ],
-                    "nbt": "{eoflib:{}}"
+                    "nbt": "{eoflib: {}}"
                 }
             }
         }

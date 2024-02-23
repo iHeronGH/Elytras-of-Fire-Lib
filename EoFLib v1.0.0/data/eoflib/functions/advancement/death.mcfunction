@@ -1,6 +1,6 @@
 #> eoflib:advancement/death
 #
-# Run commands when a player dies.
+# Run commands when a player dies and respawns.
 
 #region
     # Debug

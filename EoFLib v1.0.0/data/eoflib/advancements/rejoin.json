@@ -1,7 +1,7 @@
 {
     "parent": "eoflib:root",
     "criteria": {
-        "left_game": {
+        "rejoined_game": {
             "trigger": "minecraft:enter_block",
             "conditions": {
                 "player": [

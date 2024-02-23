@@ -15,6 +15,8 @@ function #eoflib:advancement/projectile_fired
 scoreboard players reset @s eoflib.projectile.egg
 scoreboard players reset @s eoflib.projectile.ender_pearl
 scoreboard players reset @s eoflib.projectile.snowball
+scoreboard players reset @s eoflib.projectile.bow
+scoreboard players reset @s eoflib.projectile.crossbow
 advancement revoke @s only eoflib:projectile_fired
 
 #endregion
