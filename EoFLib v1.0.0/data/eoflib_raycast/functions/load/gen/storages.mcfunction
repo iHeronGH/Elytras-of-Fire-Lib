@@ -9,6 +9,6 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color"
 
     # Generate storage
 #declare storage eoflib_raycast:ability The ability to operate upon and pull raycast data from.
-data merge storage eoflib_raycast:ability {ability_data: {type: '', name: '', cooldown: 0, duration: 0}, raycast_data: {arc_intensity: 0, range: 0, particle: "end_rod", blocks: {passthrough: "#eoflib:passable/general", action: "none`", influences: ""}}}
+data merge storage eoflib_raycast:ability {ability_data: {type: '', name: '', cooldown: 0, duration: 0}, raycast_data: {arc_intensity: 0, range: 0, particle: "end_rod", blocks: {passthrough: "#eoflib:passable/general", action: "none", influences: ""}}}
 
 #endregion

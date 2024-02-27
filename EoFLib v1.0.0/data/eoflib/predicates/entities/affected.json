@@ -35,10 +35,13 @@
         }
     },
     {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-            "nbt": "{Tags: [\"eoflib.pvp\"]}"
+        "condition": "minecraft:inverted",
+        "term": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{Tags: [\"eoflib.pvp_disabled\"]}"
+            }
         }
     }
 ]

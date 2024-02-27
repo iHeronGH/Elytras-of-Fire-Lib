@@ -7,19 +7,19 @@
 execute if entity @s run tellraw @s[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:abilities/disable.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "You executed the following function:\n\ndata/eoflib/functions/config/settings/player/abilities/disable.mcfunction", "color": "aqua"}}}]
 execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:abilities/disable.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n\ndata/eoflib/functions/config/settings/player/abilities/disable.mcfunction", "color": "aqua"}}}]
 
-    # Disable Abilities
+    # Disable abilities
 tag @s remove eoflib.abils
 
-    # Remove Abilities
+    # Remove abilities
 clear @s knowledge_book{eof_data: {}}
 
-    # Announce Disable
+    # Announce disable
 execute if score @s eof.abilities matches 1 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] Abilities have been toggled ", "color": "gray"}, {"text": "off", "color": "red"}, {"text": "! [", "color": "gray"}, {"text": "Enable", "color": "green", "underlined": true, "clickEvent": {"action": "run_command", "value": "/trigger eof.abilities set 1"}}, {"text": "]", "color": "gray"}]
 
-    # Launch Settings if Disabled from Settings
+    # Launch settings if disabled from settings
 execute if score @s eof.abilities matches 2 run trigger eof.settings set 1
 
-    # Reset Score
+    # Reset score
 scoreboard players set @s eof.abilities 0
 
 #endregion
