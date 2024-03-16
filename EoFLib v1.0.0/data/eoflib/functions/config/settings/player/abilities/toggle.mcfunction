@@ -8,9 +8,9 @@ execute if entity @s run tellraw @s[tag=eoflib.debug] [{"text": "[", "color": "d
 execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:abilities/toggle.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n\ndata/eoflib/functions/config/settings/player/abilities/toggle.mcfunction", "color": "aqua"}}}]
 
     # Disable abilities
-execute if entity @s[tag=eoflib.abils, scores={eof.abilities=1..}] run function eoflib:config/settings/player/abilities/disable
+execute if entity @s[tag=eoflib.abilities, scores={eof.abilities=1..}] run function eoflib:config/settings/player/abilities/disable
 
     # Enable abilities
-execute if entity @s[tag=!eoflib.abils, scores={eof.abilities=1..}] run function eoflib:config/settings/player/abilities/checks
+execute if entity @s[tag=!eoflib.abilities, scores={eof.abilities=1..}] run function eoflib:config/settings/player/abilities/checks
 
 #endregion

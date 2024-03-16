@@ -27,8 +27,8 @@ execute unless predicate eoflib:settings/uninstall/teams run function #eoflib:un
 function #eoflib:uninstall
 
         ## DLC uninstall message
-execute if score #eoflib.available_dlcs eoflib.dlcs matches 0 run tellraw @a[tag=!eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] EoFLib and all dependencies has been uninstalled.", "color": "gray"}]
-execute unless score #eoflib.available_dlcs eoflib.dlcs matches 0 run tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "EoFLib has been installed. One or more dependencies failed to correctly uninstall.", "color": "red"}]
+execute if score #eoflib.available_dlcs eoflib.dlcs matches 0 run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] EoFLib and all dependencies has been uninstalled.", "color": "gray"}]
+# execute if score #eoflib.available_dlcs eoflib.dlcs matches 1.. run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "EoFLib has been installed. One or more dependencies failed to correctly uninstall.", "color": "red"}]
 
         ## Disable datapack
 datapack disable "file/EoFLib v1.0.0"

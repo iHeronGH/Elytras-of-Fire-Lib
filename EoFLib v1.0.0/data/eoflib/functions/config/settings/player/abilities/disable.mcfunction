@@ -8,7 +8,7 @@ execute if entity @s run tellraw @s[tag=eoflib.debug] [{"text": "[", "color": "d
 execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:abilities/disable.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n\ndata/eoflib/functions/config/settings/player/abilities/disable.mcfunction", "color": "aqua"}}}]
 
     # Disable abilities
-tag @s remove eoflib.abils
+tag @s remove eoflib.abilities
 
     # Remove abilities
 clear @s knowledge_book{eof_data: {}}

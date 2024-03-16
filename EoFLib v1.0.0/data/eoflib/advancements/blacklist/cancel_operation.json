@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "cancel_operation": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:settings/admin/in_blacklist_operation"
+                    }
+                ],
+                "recipe": "eoflib:ability"
+            }
+        }
+    },
+    "rewards": {
+        "function": "eoflib:config/settings/admin/allow_abilities/blacklist/cancel_operation"
+    }
+}

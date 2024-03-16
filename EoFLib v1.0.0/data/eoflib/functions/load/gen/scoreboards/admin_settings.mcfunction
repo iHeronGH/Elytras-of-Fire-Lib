@@ -35,4 +35,11 @@ scoreboard players set #eoflib.admin_settings.friendly_fire eoflib.admin_setting
 #define score_holder #eoflib.admin_settings.save_settings Toggles admin setting persistance on world reload.
 scoreboard players set #eoflib.admin_settings.save_settings eoflib.admin_settings 1
 
+    ## Ability Blacklist variables
+#define score_holder eoflib.admin_settings.blacklist_settings.counter Used to iterate through the blacklist array.
+scoreboard players set eoflib.admin_settings.blacklist_settings.counter eoflib.admin_settings 0
+
+#define score_holder eoflib.admin_settings.blacklist_settings.total_blacklisted The total number of abilities blacklisted.
+scoreboard players set eoflib.admin_settings.blacklist_settings.total_blacklisted eoflib.admin_settings 0
+
 #endregion
