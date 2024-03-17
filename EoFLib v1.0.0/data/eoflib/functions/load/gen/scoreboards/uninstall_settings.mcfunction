@@ -9,18 +9,18 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color"
 
     # Initialise uninstall settings
 #define score_holder #eoflib.uninstall_settings.teams Remove all teams when the datapack is uninstalled.
-scoreboard players set #eoflib.uninstall_settings.teams eoflib.uninstall_settings 1
+execute unless predicate eoflib:settings/admin/save_settings run scoreboard players set #eoflib.uninstall_settings.teams eoflib.uninstall_settings 1
 
 #define score_holder #eoflib.uninstall_settings.scoreboards Remove all scoreboards when the datapack is uninstalled.
-scoreboard players set #eoflib.uninstall_settings.scoreboards eoflib.uninstall_settings 1
+execute unless predicate eoflib:settings/admin/save_settings run scoreboard players set #eoflib.uninstall_settings.scoreboards eoflib.uninstall_settings 1
 
 #define score_holder #eoflib.uninstall_settings.storages Remove all storages when the datapack is uninstalled.
-scoreboard players set #eoflib.uninstall_settings.storages eoflib.uninstall_settings 1
+execute unless predicate eoflib:settings/admin/save_settings run scoreboard players set #eoflib.uninstall_settings.storages eoflib.uninstall_settings 1
 
 #define score_holder #eoflib.uninstall_settings.bossbars Remove all bossbars when the datapack is uninstalled.
-scoreboard players set #eoflib.uninstall_settings.bossbars eoflib.uninstall_settings 1
+execute unless predicate eoflib:settings/admin/save_settings run scoreboard players set #eoflib.uninstall_settings.bossbars eoflib.uninstall_settings 1
 
 #define score_holder #eoflib.uninstall_settings.forceloads Remove all forceloads when the datapack is uninstalled.
-scoreboard players set #eoflib.uninstall_settings.forceloads eoflib.uninstall_settings 1
+execute unless predicate eoflib:settings/admin/save_settings run scoreboard players set #eoflib.uninstall_settings.forceloads eoflib.uninstall_settings 1
 
 #endregion
