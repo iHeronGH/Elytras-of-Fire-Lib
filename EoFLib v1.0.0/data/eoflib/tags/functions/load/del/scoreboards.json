@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "eoflib:load/del/scoreboards"
+        "eoflib:load/del/scoreboards",
+        "eoflib_raycast:load/del/scoreboards"
     ]
 }

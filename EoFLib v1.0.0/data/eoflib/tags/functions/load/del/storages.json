@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "eoflib:load/del/storages"
+        "eoflib:load/del/storages",
+        "eoflib_raycast:load/del/storages"
     ]
 }

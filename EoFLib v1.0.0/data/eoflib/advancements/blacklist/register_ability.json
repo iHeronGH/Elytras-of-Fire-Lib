@@ -1,7 +1,7 @@
 {
     "criteria": {
         "dropped_ability": {
-            "trigger": "minecraft:tick",
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "player": [
                     {
