@@ -18,14 +18,13 @@
                     {
                         "items": [
                             "minecraft:ender_eye"
-                        ],
-                        "nbt": "{eof_data: {}}"
+                        ]
                     }
                 ]
             }
         }
     },
     "rewards": {
-        "function": "eoflib:abilities/return/main"
+        "function": "eoflib:advancement/eye_dropped"
     }
 }

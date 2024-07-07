@@ -1,7 +1,7 @@
 {
     "criteria": {
         "cancel_operation": {
-            "trigger": "minecraft:recipe_unlocked",
+            "trigger": "minecraft:using_item",
             "conditions": {
                 "player": [
                     {
@@ -9,7 +9,10 @@
                         "name": "eoflib:settings/admin/in_blacklist_operation"
                     }
                 ],
-                "recipe": "eoflib:ability"
+                "item": {
+                    "items": ["minecraft:ender_eye"],
+                    "nbt": "{eof_data: {ability_data: {}}}"
+                }
             }
         }
     },

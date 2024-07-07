@@ -29,6 +29,15 @@
                                 "condition": "minecraft:entity_scores",
                                 "entity": "this",
                                 "scores": {
+                                    "eoflib.projectile.eye_of_ender": {
+                                        "min": 1
+                                    }
+                                }
+                            },
+                            {
+                                "condition": "minecraft:entity_scores",
+                                "entity": "this",
+                                "scores": {
                                     "eoflib.projectile.snowball": {
                                         "min": 1
                                     }

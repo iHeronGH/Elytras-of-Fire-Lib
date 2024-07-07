@@ -1,4 +1,4 @@
-#> eoflib:load/gen/scoreboards/worldtime
+#> eoflib:load/gen/scoreboards/variables/worldtime
 #
 # Initialises worldtime constants.
 

@@ -1,7 +1,7 @@
 {
     "criteria": {
         "ability_used": {
-            "trigger": "minecraft:recipe_unlocked",
+            "trigger": "minecraft:using_item",
             "conditions": {
                 "player": [
                     {
@@ -9,11 +9,16 @@
                         "name": "eoflib:tribes/dragon"
                     }
                 ],
-                "recipe": "eoflib:ability"
+                "item": {
+                    "items": [
+                        "minecraft:ender_eye"
+                    ],
+                    "nbt": "{eof_data: {ability_data: {}}}"
+                }
             }
         },
         "no_blacklist_operation_active": {
-            "trigger": "minecraft:recipe_unlocked",
+            "trigger": "minecraft:using_item",
             "conditions": {
                 "player": [
                     {
@@ -24,7 +29,12 @@
                         }
                     }
                 ],
-                "recipe": "eoflib:ability"
+                "item": {
+                    "items": [
+                        "minecraft:ender_eye"
+                    ],
+                    "nbt": "{eof_data: {ability_data: {}}}"
+                }
             }
         }
     },

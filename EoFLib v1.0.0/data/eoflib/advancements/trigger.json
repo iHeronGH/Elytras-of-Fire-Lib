@@ -1,5 +1,4 @@
 {
-    "parent": "eoflib:root",
     "criteria": {
         "activated_trigger": {
             "trigger": "minecraft:tick",

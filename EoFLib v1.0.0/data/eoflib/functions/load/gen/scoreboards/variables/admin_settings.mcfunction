@@ -1,4 +1,4 @@
-#> eoflib:load/gen/scoreboards/admin_settings
+#> eoflib:load/gen/scoreboards/variables/admin_settings
 #
 # Initialises admin settings variables.
 

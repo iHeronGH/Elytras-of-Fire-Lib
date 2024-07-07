@@ -1,8 +1,7 @@
 {
-    "parent": "eoflib:root",
     "criteria": {
         "on_death": {
-            "trigger": "minecraft:enter_block",
+            "trigger": "minecraft:tick",
             "conditions": {
                 "player": [
                     {

@@ -1,4 +1,4 @@
-#> eoflib:load/gen/scoreboards/numbers
+#> eoflib:load/gen/scoreboards/variables/numbers
 #
 # Initialises static number constants.
 

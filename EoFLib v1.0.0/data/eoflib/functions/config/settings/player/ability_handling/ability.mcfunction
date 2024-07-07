@@ -9,7 +9,6 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color"
 
     # Resolve tags
 tag @s remove eoflib.ah.drop_item
-tag @s add eoflib.ah.remove_abilities
 
     # Launch settings
 trigger eof.settings set 1

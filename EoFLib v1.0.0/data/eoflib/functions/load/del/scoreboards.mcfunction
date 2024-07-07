@@ -17,6 +17,7 @@ scoreboard objectives remove eoflib.health
 scoreboard objectives remove eoflib.hunger
 scoreboard objectives remove eoflib.leave_game
 scoreboard objectives remove eoflib.numbers
+scoreboard objectives remove eoflib.game_ver
 scoreboard objectives remove eoflib.worldtime
 
         ## Trigger Objectives
@@ -32,6 +33,7 @@ scoreboard objectives remove eoflib.dropped_ability_item
 scoreboard objectives remove eoflib.dropped_ricardo
 scoreboard objectives remove eoflib.projectile.egg
 scoreboard objectives remove eoflib.projectile.ender_pearl
+scoreboard objectives remove eoflib.projectile.eye_of_ender
 scoreboard objectives remove eoflib.projectile.snowball
 scoreboard objectives remove eoflib.projectile.bow
 scoreboard objectives remove eoflib.projectile.crossbow

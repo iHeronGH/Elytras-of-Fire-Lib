@@ -1,5 +1,4 @@
 {
-    "parent": "eoflib:root",
     "criteria": {
         "ricardo_thrown": {
             "trigger": "minecraft:inventory_changed",

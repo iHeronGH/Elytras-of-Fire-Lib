@@ -1,4 +1,4 @@
-#> eoflib:load/gen/scoreboards/uninstall_settings
+#> eoflib:load/gen/scoreboards/variables/uninstall_settings
 #
 # Initialises uninstall settings variables.
 

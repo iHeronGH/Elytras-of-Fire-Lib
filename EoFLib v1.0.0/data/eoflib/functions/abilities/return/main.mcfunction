@@ -15,13 +15,7 @@ trigger eof.abilities set 3
 advancement revoke @s only eoflib:ability_used
 advancement revoke @s only eoflib:ability_dropped
 
-    # Reset scores if applicable
-scoreboard players reset @s eoflib.dropped_ability_item
-
-    # Revoke recipes
-recipe take @s eoflib:ability
-recipe take @s eoflib:primary
-recipe take @s eoflib:secondary
-recipe take @s eoflib:tertiary
+    # Kill potential ender eyes
+execute anchored eyes positioned ^ ^ ^ run kill @e[sort=nearest, limit=1, type=minecraft:eye_of_ender, distance=..0.1]
 
 #endregion
