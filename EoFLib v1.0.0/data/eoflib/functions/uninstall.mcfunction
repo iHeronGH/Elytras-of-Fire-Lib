@@ -9,19 +9,20 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color"
 
     # Announce removal
         ## Player-prompted delete message
-execute if entity @s run tellraw @a [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"selector": "@s"}, {"text": " is fully removing Elytras of Fire...", "color": "gray"}]
+execute if entity @s run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"selector": "@s"}, {"text": " is fully removing Elytras of Fire...", "color": "gray"}]
         ## Non-player-prompted delete message
-execute unless entity @s run tellraw @a [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F"}, {"text": "] ", "color": "gray"}, {"text": "Fully uninstalling Elytras of Fire...", "color": "red"}]
+execute unless entity @s run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F"}, {"text": "] ", "color": "gray"}, {"text": "Fully uninstalling Elytras of Fire...", "color": "red"}]
 
     # Reset player items
 clear @a #eoflib:items{eof_data: {}}
 
     # Remove datapack and installed DLCs
-execute unless predicate eoflib:settings/uninstall/forceloads run function #eoflib:uninstall/forceloads
-execute unless predicate eoflib:settings/uninstall/scoreboards run function #eoflib:uninstall/scoreboards
-execute unless predicate eoflib:settings/uninstall/storages run function #eoflib:uninstall/storages
-execute unless predicate eoflib:settings/uninstall/bossbars run function #eoflib:uninstall/bossbars
-execute unless predicate eoflib:settings/uninstall/teams run function #eoflib:uninstall/teams
+execute unless predicate eoflib:settings/uninstall/forceloads run function eoflib:uninstall/forceloads
+execute unless predicate eoflib:settings/uninstall/storages run function eoflib:uninstall/storages
+execute unless predicate eoflib:settings/uninstall/bossbars run function eoflib:uninstall/bossbars
+execute unless predicate eoflib:settings/uninstall/teams run function eoflib:uninstall/teams
+    #> THIS HAS TO BE LAST!!!!!!
+execute unless predicate eoflib:settings/uninstall/scoreboards run function eoflib:uninstall/scoreboards
 
         ## Disable DLC datapacks
 function #eoflib:uninstall

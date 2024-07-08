@@ -9,7 +9,6 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color"
 
     # Miscellaneous objectives
 #define objective eoflib.dropped_ability_item Tracks players who have dropped an Elytras of Fire ability item.
-# scoreboard objectives add eoflib.dropped_ability_item minecraft.dropped:minecraft.knowledge_book
 scoreboard objectives add eoflib.dropped_ability_item minecraft.dropped:minecraft.ender_eye
 
 #define objective eoflib.dropped_ricardo Tracks players who have dropped Ricardo. What the heck, dude?

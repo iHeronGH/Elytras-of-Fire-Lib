@@ -102,9 +102,10 @@ execute if score @s eof.settings matches 4 run function eoflib:config/settings/a
 execute if score @s eof.settings matches 5 run function eoflib:config/settings/admin/allow_abilities/blacklist/prepare_remove
 execute if score @s eof.settings matches 6 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove_last_ability
 execute if score @s eof.settings matches 7 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove_all_abilities
+execute if score @s eof.settings matches 8 run function eoflib:config/settings/admin/allow_abilities/blacklist/cancel_operation
 
         ## Failsafe
-execute unless score @s eof.settings matches 0..7 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Invalid range for trigger ", "color": "red"}, {"text": "eof.settings", "color": "gold"}, {"text": "; received value (", "color": "red"}, {"score":{"name": "@s", "objective": "eof.settings"}, "color": "gold"}, {"text": ") does not match expected value range (", "color": "red"}, {"text": "1-7", "color": "gold"}, {"text": ").", "color": "red"}]
+execute unless score @s eof.settings matches 0..8 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Invalid range for trigger ", "color": "red"}, {"text": "eof.settings", "color": "gold"}, {"text": "; received value (", "color": "red"}, {"score":{"name": "@s", "objective": "eof.settings"}, "color": "gold"}, {"text": ") does not match expected value range (", "color": "red"}, {"text": "1-7", "color": "gold"}, {"text": ").", "color": "red"}]
 
     # Reset Scores
 scoreboard players enable @s eof.abilities

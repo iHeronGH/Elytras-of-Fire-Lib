@@ -15,8 +15,8 @@ function eoflib:load/gen/scoreboards/objectives/miscellaneous
 
     # Variables
 function eoflib:load/gen/scoreboards/variables/global
-function eoflib:load/gen/scoreboards/variables/admin_settings
 function eoflib:load/gen/scoreboards/variables/uninstall_settings
+function eoflib:load/gen/scoreboards/variables/admin_settings
 function eoflib:load/gen/scoreboards/variables/numbers
 function eoflib:load/gen/scoreboards/variables/game_vers
 function eoflib:load/gen/scoreboards/variables/worldtime
