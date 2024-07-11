@@ -1,4 +1,4 @@
-#> eoflib:config/settings/admin/allow_abilities/blacklist/remove_last_ability
+#> eoflib:config/settings/admin/allow_abilities/blacklist/remove_latest_ability
 #
 # Remove registered ability from the blacklist.
 
@@ -11,7 +11,7 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug] [{"text": "[", "color"
 data remove storage eoflib:config eoflib.admin_settings.blacklist[-1]
 
     # Announce feedback
-tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Latest ability added has successfully removed from the ability blacklist.", "color": "gray"}]
+tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Latest ability added successfully removed from the ability blacklist.", "color": "gray"}]
 
     # Display blacklist
 function eoflib:config/settings/admin/allow_abilities/blacklist/prepare_remove
