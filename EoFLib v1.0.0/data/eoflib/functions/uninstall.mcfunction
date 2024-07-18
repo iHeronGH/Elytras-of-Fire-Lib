@@ -1,41 +1,20 @@
 #> eoflib:uninstall
 #
-# Uninstall all Elytras of Fire DLCs.
+# Begin pre-uninstall procedures.
 
 #region
     # Debug
-execute if entity @s run tellraw @s[tag=eoflib.debug, scores={eoflib.debug=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:functions/uninstall.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "You executed the following function:\n\ndata/eoflib/functions/uninstall.mcfunction", "color": "aqua"}}}]
-execute if entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug=2..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:functions/uninstall.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " executed the following function:\n\ndata/eoflib/functions/uninstall.mcfunction", "color": "aqua"}]}}]
-execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:functions/uninstall.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n\ndata/eoflib/functions/uninstall.mcfunction", "color": "aqua"}}}]
+execute if entity @s run tellraw @s[tag=eoflib.debug, scores={eoflib.debug_mode=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:functions/uninstall.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "You executed the following function:\n- data/eoflib/functions/uninstall.mcfunction", "color": "aqua"}}}]
+execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:functions/uninstall.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " executed the following function:\n- data/eoflib/functions/uninstall.mcfunction", "color": "aqua"}]}}]
+execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:functions/uninstall.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n- data/eoflib/functions/uninstall.mcfunction", "color": "aqua"}}}]
 
-    # Announce removal
-        ## Player-prompted delete message
-execute if entity @s run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"selector": "@s"}, {"text": " is fully removing Elytras of Fire...", "color": "gray"}]
-        ## Non-player-prompted delete message
-execute unless entity @s run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F"}, {"text": "] ", "color": "gray"}, {"text": "Fully uninstalling Elytras of Fire...", "color": "red"}]
+    # Tag player as about to uninstall
+tag @s add eoflib.uninstall.active
 
-    # Reset player items
-clear @a #eoflib:items{eof_data: {}}
+    # Prompt Uninstall Settings
+execute if entity @s[tag=eoflib.uninstall] run trigger eof.settings set 3
 
-    # Remove datapack and installed DLCs
-execute unless predicate eoflib:settings/uninstall/forceloads run function eoflib:uninstall/forceloads
-execute unless predicate eoflib:settings/uninstall/storages run function eoflib:uninstall/storages
-execute unless predicate eoflib:settings/uninstall/bossbars run function eoflib:uninstall/bossbars
-execute unless predicate eoflib:settings/uninstall/teams run function eoflib:uninstall/teams
-    #> THIS HAS TO BE LAST!!!!!!
-execute unless predicate eoflib:settings/uninstall/scoreboards run function eoflib:uninstall/scoreboards
-
-        ## Disable DLC datapacks
-function #eoflib:uninstall
-
-        ## DLC uninstall message
-execute if score #eoflib.available_dlcs eoflib.dlcs matches 0 run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] EoFLib and all dependencies has been uninstalled.", "color": "gray"}]
-# execute if score #eoflib.available_dlcs eoflib.dlcs matches 1.. run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "EoFLib has been installed. One or more dependencies failed to correctly uninstall.", "color": "red"}]
-
-        ## Disable datapack
-datapack disable "file/EoFLib v1.0.0"
-
-        ## Post-delete admin message
-tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] EoFLib and all dependencies has sucessfully been removed. If you wish to reinstall it, you can ", "color": "gray"}, {"text": "click here", "color": "gold", "underlined": true, "clickEvent": {"action": "run_command", "value": "/datapack enable \"file/EoFLib v1.0.0\""}}, {"text": " and it will magically reinstall itself, or you can type the command ", "color": "gray"}, {"text": "/datapack enable \"file/EoFLib v1.0.0\"", "color": "gold", "underlined": true, "clickEvent": {"action": "suggest_command", "value": "/datapack enable \"file/EoFLib v1.0.0\""}}, {"text": " to manually reinstall the datapack. You will have to manually install any other dependencies using ", "color": "gray"}, {"text": "/datapack enable", "color": "gold", "underlined": true, "clickEvent": {"action": "suggest_command", "value": "/datapack enable "}}, {"text": ".\n\nThank you for using Elytras of Fire!", "color": "gray"}]
+    # Suggest player use Uninstall Settings if Uninstall Mode is disabled
+execute if entity @s[tag=!eoflib.uninstall] run tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Are you certain you wish to uninstall without enabling Uninstall Mode? Improperly preserved data may have a higher chance of being lost!", "color": "red"}, {"text": "\n\n[", "color": "gray"}, {"text": "Check Settings", "color": "green", "underlined": true, "hoverEvent": {"action": "show_text", "contents": {"text": "Launch Uninstall Settings.", "color": "green"}}, "clickEvent": {"action": "run_command", "value": "/execute if entity @s[tag=eoflib.admin] run trigger eof.settings set 3"}}, {"text": "] [", "color": "gray"}, {"text": "Proceed", "color": "dark_red", "underlined": true, "hoverEvent": {"action": "show_text", "contents": {"text": "Proceed with uninstall without using\nUninstall Settings.\n\nThis is your final confirmation!", "color": "dark_red"}}, "clickEvent": {"action": "run_command", "value": "/execute if entity @s[tag=eoflib.admin] run trigger eoflib.trigger set 67"}}, {"text": "] [", "color": "gray"}, {"text": "Cancel", "color": "red", "underlined": true, "hoverEvent": {"action": "show_text", "contents": {"text": "Cancel Elytras of Fire uninstallation.", "color": "red"}}, "clickEvent": {"action": "run_command", "value": "/execute if entity @s[tag=eoflib.admin] run trigger eoflib.trigger set 68"}}, {"text": "]", "color": "gray"}]
 
 #endregion

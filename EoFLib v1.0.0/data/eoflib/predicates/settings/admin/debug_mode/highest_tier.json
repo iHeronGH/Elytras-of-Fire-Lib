@@ -1,0 +1,17 @@
+{
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+        "eoflib.debug_mode": {
+            "min": {
+                "type": "minecraft:score",
+                "score": "eoflib.debug_mode",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "#eoflib.debug_mode.max"
+                },
+                "scale": 1
+            }
+        }
+    }
+}
