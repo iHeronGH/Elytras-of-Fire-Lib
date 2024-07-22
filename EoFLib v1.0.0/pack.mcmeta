@@ -1,10 +1,10 @@
 {
     "pack": {
-        "pack_format": 15,
-        "supported_formats": [
-            15,
-            18
-        ],
+        "pack_format": 18,
+        "supported_formats": {
+            "min_inclusive": 18,
+            "max_inclusive": 26
+        },
         "description": [
             {
                 "text": "Version: ",
@@ -14,7 +14,7 @@
                 "text": "1.0.0",
                 "color": "aqua"
             },
-            "\n\n",
+            "\n",
             {
                 "text": "The official core datapack for\nElytras of Fire!\n\nThis datapack is to be used in order\nfor most other Elytras of Fire DLC\ndatapacks to work."
             }

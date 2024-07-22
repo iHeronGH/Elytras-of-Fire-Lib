@@ -16,6 +16,6 @@ trigger eof.abilities set 3
 advancement revoke @s only eoflib:ability_used
 
     # Kill potential ender eyes
-execute anchored eyes positioned ^ ^ ^ run kill @e[sort=nearest, limit=1, type=minecraft:eye_of_ender, distance=..0.1]
+execute anchored eyes positioned ^ ^ ^ positioned ~ ~-0.52 ~ run kill @e[sort=nearest, limit=1, type=minecraft:eye_of_ender, distance=..0.1]
 
 #endregion
