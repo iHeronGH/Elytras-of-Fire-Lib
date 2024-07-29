@@ -11,7 +11,7 @@
                                 "condition": "minecraft:entity_scores",
                                 "entity": "this",
                                 "scores": {
-                                    "eoflib.projectile.egg": {
+                                    "eoflib.used.egg": {
                                         "min": 1
                                     }
                                 }
@@ -20,7 +20,7 @@
                                 "condition": "minecraft:entity_scores",
                                 "entity": "this",
                                 "scores": {
-                                    "eoflib.projectile.ender_pearl": {
+                                    "eoflib.used.ender_pearl": {
                                         "min": 1
                                     }
                                 }
@@ -29,7 +29,7 @@
                                 "condition": "minecraft:entity_scores",
                                 "entity": "this",
                                 "scores": {
-                                    "eoflib.projectile.eye_of_ender": {
+                                    "eoflib.used.ender_eye": {
                                         "min": 1
                                     }
                                 }
@@ -38,7 +38,7 @@
                                 "condition": "minecraft:entity_scores",
                                 "entity": "this",
                                 "scores": {
-                                    "eoflib.projectile.snowball": {
+                                    "eoflib.used.snowball": {
                                         "min": 1
                                     }
                                 }
@@ -47,7 +47,7 @@
                                 "condition": "minecraft:entity_scores",
                                 "entity": "this",
                                 "scores": {
-                                    "eoflib.projectile.bow": {
+                                    "eoflib.used.bow": {
                                         "min": 1
                                     }
                                 }
@@ -56,7 +56,7 @@
                                 "condition": "minecraft:entity_scores",
                                 "entity": "this",
                                 "scores": {
-                                    "eoflib.projectile.crossbow": {
+                                    "eoflib.used.crossbow": {
                                         "min": 1
                                     }
                                 }

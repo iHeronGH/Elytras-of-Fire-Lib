@@ -15,11 +15,11 @@ execute anchored eyes positioned ^ ^ ^ at @e[sort=nearest, limit=1, type=#eoflib
 function #eoflib:advancement/projectile_fired
 
     # Reset
-scoreboard players reset @s eoflib.projectile.egg
-scoreboard players reset @s eoflib.projectile.ender_pearl
-scoreboard players reset @s eoflib.projectile.snowball
-scoreboard players reset @s eoflib.projectile.bow
-scoreboard players reset @s eoflib.projectile.crossbow
+scoreboard players reset @s eoflib.used.egg
+scoreboard players reset @s eoflib.used.ender_pearl
+scoreboard players reset @s eoflib.used.snowball
+scoreboard players reset @s eoflib.used.bow
+scoreboard players reset @s eoflib.used.crossbow
 advancement revoke @s only eoflib:projectile_fired
 
 #endregion
