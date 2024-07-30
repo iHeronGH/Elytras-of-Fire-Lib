@@ -11,50 +11,30 @@
                 ]
             }
         },
-        "primary_ability_activated": {
+        "ability_used": {
             "trigger": "minecraft:tick",
             "conditions": {
                 "player": [
                     {
-                        "condition": "minecraft:reference",
-                        "name": "eoflib:abilities/primary_used"
-                    },
-                    {
-                        "condition": "minecraft:reference",
-                        "name": "eoflib:movement/sneak"
-                    }
-                ]
-            }
-        },
-        "secondary_ability_activated": {
-            "trigger": "minecraft:tick",
-            "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:reference",
-                        "name": "eoflib:abilities/secondary_used"
-                    }
-                ]
-            }
-        },
-        "tertiary_ability_activated": {
-            "trigger": "minecraft:player_hurt_entity",
-            "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:reference",
-                        "name": "eoflib:abilities/tertiary_used"
-                    }
-                ],
-                "damage": {
-                    "dealt": {
-                        "min": 1
-                    }
-                },
-                "entity": [
-                    {
-                        "condition": "minecraft:reference",
-                        "name": "eoflib:entities/affected"
+                        "condition": "minecraft:any_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "eoflib:abilities/any_used"
+                            },
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "eoflib:abilities/primary_activated"
+                            },
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "eoflib:abilities/secondary_activated"
+                            },
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "eoflib:abilities/tertiary_activated"
+                            }
+                        ]
                     }
                 ]
             }
@@ -74,19 +54,6 @@
             }
         }
     },
-    "requirements": [
-        [
-            "valid_tribe"
-        ],
-        [
-            "primary_ability_activated",
-            "secondary_ability_activated",
-            "tertiary_ability_activated"
-        ],
-        [
-            "no_blacklist_operation_active"
-        ]
-    ],
     "rewards": {
         "function": "eoflib:advancement/ability_activated"
     }

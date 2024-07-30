@@ -10,7 +10,7 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_m
 
     # Scoreboards
         ## Global Objectives
-scoreboard objectives remove eoflib.admin_settings
+scoreboard objectives remove eoflib.damage
 scoreboard objectives remove eoflib.death
 scoreboard objectives remove eoflib.debug_mode
 scoreboard objectives remove eoflib.dlcs

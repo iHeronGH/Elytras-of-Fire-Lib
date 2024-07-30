@@ -17,11 +17,13 @@ This datapack does nothing on its own. If you are looking to use this alongside 
   - [Features](#features)
     - [DLC Compatibility](#dlc-compatibility)
     - [Advancements](#advancements)
-      - [Ability Used](#eoflibability_usedjson)
+      - [Ability Used](#eoflibability_activatedjson)
+      - [Blacklist](#eoflibability_activatedjson)
       - [Death](#eoflibdeathjson)
       - [Dragon](#eoflibdragonjson)
       - [Ignited](#eoflibignitedjson)
       - [New ID](#eoflibnew_idjson)
+      - [Projectile Fired](#eoflibprojectile_firedjson)
       - [Rejoin](#eoflibrejoinjson)
       - [Ricardo Report](#eoflibricardo_reportjson)
       - [Root](#eoflibrootjson)
@@ -109,7 +111,7 @@ If you're a developer, contributor, or just plain curious, continue below as doc
 
 ### Advancements
 
-Elytras of Fire Lib comes with 9 advancements:
+Elytras of Fire Lib comes with 10 advancements:
 
 <details>
 
@@ -117,13 +119,24 @@ Elytras of Fire Lib comes with 9 advancements:
 
 [Back to top](#)
 
-#### eoflib:ability_used.json
+#### eoflib:blacklist/.../\<tag>.json
 
-**`ability_used.json`** is an advancement that is rewarded to players who have right-clicked their ability item — not necessarily activating said ability, but solely using the item. **`ability_used.json`** can be hooked into by adding your functions to your datapack's **`eoflib:reset/abilities.json`** function tag. Note that functions triggered via this advancement will activate one game tick after this advancement is rewarded to properly reset used abilities. **Do not overwrite/add the file to Elytras of Fire Lib.**
+Advancements located here deal with resolving blacklist operations. By default, 2 files are included: **`cancel_operation`**, which cancels the current active blacklist operation, and **`register_ability`**, which registers a thrown ability to the blacklist. **Do not overwrite/add these files to Elytras of Fire Lib.**
 
 ```text
 📦 eoflib:advancements
-└ 📄 ability_used.json
+└ 📁 blacklist
+  ├ 📄 cancel_operation.json
+  └ 📄 register_ability.json
+```
+
+#### eoflib:ability_activated.json
+
+**`ability_activated.json`** is an advancement that is rewarded to players who have right-clicked their ability item — not necessarily activating said ability, but solely using the item. **`ability_activated.json`** can be hooked into by adding your functions to your datapack's **`eoflib:reset/abilities.json`** function tag. Note that functions triggered via this advancement will activate one game tick after this advancement is rewarded to properly reset used abilities. **Do not overwrite/add the file to Elytras of Fire Lib.**
+
+```text
+📦 eoflib:advancements
+└ 📄 ability_activated.json
 ```
 
 #### eoflib:death.json
@@ -191,6 +204,22 @@ Elytras of Fire Lib comes with 9 advancements:
 ```text
 📦 eoflib:advancements
 └ 📄 new_id.json
+```
+
+#### eoflib:projectile_fired.json
+
+**`projectile_fired.json`** is an advancement that is activated when a player projectile_fireds the server. Most commonly, this is used to reactivate schedules that require players present on the server such as tribe effects and passive abilities. **`projectile_fired.json`** can be hooked into by adding your functions to your datapack's **`eoflib:tags/functions/projectile_fired.json`** function tag. **Do not overwrite/add the file to Elytras of Fire Lib.**
+
+```json
+{
+  "parent": "eoflib:projectile_fired",
+  ...
+}
+```
+
+```text
+📦 eoflib:advancements
+└ 📄 rejoin.json
 ```
 
 #### eoflib:rejoin.json
@@ -291,31 +320,91 @@ Elytras of Fire Lib comes with many predicates for DLCs to hook into:
 
 [Back to top](#)
 
-#### eoflib:on_fire.json
+#### eoflib:abilities/.../\<tag>.json
 
-**`on_fire.json`** checks if an entity is on fire.
+Predicates located here deal with tribal abilities being used and/or activated. By default, 4 files are included: **`any_used.json`** checks if any ability has been *used* (right clicked),  and **`primary.json`**, **`secondary.json`**, and **`tertiary.json`** all check if their respective archetype of ability has been *activated*.
 
 ```text
 📦 eoflib:predicates
-└ 📄 on_fire.json
+└ 📁 abilities
+  ├ 📄 any_used.json
+  ├ 📄 primary_activated.json
+  ├ 📄 secondary_activated.json
+  └ 📄 tertiary_activated.json
 ```
 
-#### inventory/.../\<predicate>.json
+#### eoflib:damage/.../\<tag>.json
+
+Predicates located here deal with damage. By default, 3 files are included: **`minimum.json`** checks if an entity has dealt at least one point of damage,  **`on_fire.json`** checks if an entity is on fire, and **`recent.json`** checks if an entity has recently taken damage.
+
+```text
+📦 eoflib:predicates
+└ 📁 damage
+  ├ 📄 minimum.json
+  ├ 📄 on_fire.json
+  └ 📄 recent.json
+```
+
+#### eoflib:entities/.../\<tag>.json
+
+Predicates located here deal with entity grouping. By default, 2 files are included: **`affected.json`** and **`recent.json`**, which both check if a given entity is or is not allowed to be affected by abilities.
+
+```text
+📦 eoflib:predicates
+└ 📁 entities
+  ├ 📄 affected.json
+  └ 📄 unaffected.json
+```
+
+#### inventory/ability/\<predicate>.json
+
+Predicates located here deal with checking if a player's ability slots are unoccupied. By default, 3 files are included, each checking a specific hotbar slot to see if it is unoccupied.
+
+```text
+📦 eoflib:predicates
+└ 📁 inventory
+  └ 📁 ability
+    ├ 📄 primary_empty.json
+    ├ 📄 secondary_empty.json
+    └ 📄 tertiary_empty.json
+```
+
+#### inventory/hotbar/\<predicate>.json
 
 Predicates located here deal with inventory checking. By default, 9 files are included, each checking a specific hotbar slot to see if it is unoccupied.
 
 ```text
 📦 eoflib:predicates
 └ 📁 inventory
-  ├ 📄 slot_0_empty.json
-  ├ 📄 slot_1_empty.json
-  ├ 📄 slot_2_empty.json
-  ├ 📄 slot_3_empty.json
-  ├ 📄 slot_4_empty.json
-  ├ 📄 slot_5_empty.json
-  ├ 📄 slot_6_empty.json
-  ├ 📄 slot_7_empty.json
-  └ 📄 slot_8_empty.json
+  └ 📁 hotbar
+    ├ 📄 slot_0_empty.json
+    ├ 📄 slot_1_empty.json
+    ├ 📄 slot_2_empty.json
+    ├ 📄 slot_3_empty.json
+    ├ 📄 slot_4_empty.json
+    ├ 📄 slot_5_empty.json
+    ├ 📄 slot_6_empty.json
+    ├ 📄 slot_7_empty.json
+    └ 📄 slot_8_empty.json
+```
+
+#### inventory/mainhand/.../\<predicate>.json
+
+Predicates located here deal with inventory checking. By default, 4 files are included, each checking a specific hotbar slot to see if it is unoccupied.
+
+```text
+📦 eoflib:predicates
+└ 📁 inventory
+  └ 📁 mainhand
+    ├ 📄 slot_0_empty.json
+    ├ 📄 slot_1_empty.json
+    ├ 📄 slot_2_empty.json
+    ├ 📄 slot_3_empty.json
+    ├ 📄 slot_4_empty.json
+    ├ 📄 slot_5_empty.json
+    ├ 📄 slot_6_empty.json
+    ├ 📄 slot_7_empty.json
+    └ 📄 slot_8_empty.json
 ```
 
 #### location/.../\<predicate>.json

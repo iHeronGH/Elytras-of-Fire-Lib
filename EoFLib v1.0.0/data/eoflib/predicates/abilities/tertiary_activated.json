@@ -1,0 +1,10 @@
+[
+    {
+        "condition": "minecraft:reference",
+        "name": "eoflib:inventory/mainhand/ability/tertiary"
+    },
+    {
+        "condition": "minecraft:reference",
+        "name": "eoflib:damage/minimum"
+    }
+]

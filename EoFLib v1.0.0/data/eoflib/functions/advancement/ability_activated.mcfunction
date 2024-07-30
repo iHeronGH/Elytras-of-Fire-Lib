@@ -1,6 +1,6 @@
 #> eoflib:advancement/ability_activated
 #
-# Return used abilities to player and reinitialise for reuse.
+# Reinitialise abilities for reuse.
 
 #region
     # Debug
@@ -15,7 +15,8 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_m
     # Get ability used
 function #eoflib:advancement/ability_activated
 
-    # Reset score
+    # Reset scores
+scoreboard players set @a eoflib.damage 0
 scoreboard players set @s eoflib.used.wfoas 0
 
     # Revoke advancements

@@ -1,5 +1,6 @@
 {
     "values": [
+        "eoflib:loop/time/1t/default_scores",
         "eoflib:loop/time/1t/timer"
     ]
 }

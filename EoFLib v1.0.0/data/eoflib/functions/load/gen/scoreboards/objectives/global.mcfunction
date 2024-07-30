@@ -9,6 +9,9 @@ execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug
 execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:objectives/global.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n- data/eoflib/functions/load/gen/scoreboards/objectives/global.mcfunction", "color": "aqua"}}}]
 
     # Global
+#define objective eoflib.damage Tracks amount of damage done in a hit.
+scoreboard objectives add eoflib.damage minecraft.custom:minecraft.damage_dealt
+
 #define objective eoflib.death Tracks players who have died.
 scoreboard objectives add eoflib.death minecraft.custom:minecraft.deaths
 

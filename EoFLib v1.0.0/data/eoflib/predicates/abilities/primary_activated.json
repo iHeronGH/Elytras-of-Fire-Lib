@@ -4,6 +4,10 @@
         "name": "eoflib:inventory/mainhand/ability/primary"
     },
     {
+        "condition": "minecraft:reference",
+        "name": "eoflib:movement/sneak"
+    },
+    {
         "condition": "minecraft:entity_scores",
         "entity": "this",
         "scores": {
