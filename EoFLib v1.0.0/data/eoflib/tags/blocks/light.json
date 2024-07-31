@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "#eoflib:light/block",
+        "#eoflib:light/small"
+    ]
+}

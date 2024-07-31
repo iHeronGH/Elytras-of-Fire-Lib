@@ -1,13 +1,23 @@
 {
     "replace": false,
     "values": [
+        "#eoflib:minecraft/amethyst",
+        "minecraft:brewing_stand",
+        "minecraft:brown_mushroom",
+        "minecraft:calibrated_sculk_sensor",
+        "#minecraft:campfires",
+        "#minecraft:candles",
         "minecraft:conduit",
+        "minecraft:dragon_egg",
         "minecraft:end_rod",
+        "#eoflib:minecraft/fire",
+        "minecraft:glow_lichen",
         "minecraft:lantern",
         "minecraft:light",
+        "minecraft:nether_portal",
+        "minecraft:sculk_sensor",
+        "minecraft:sea_pickle",
         "minecraft:soul_lantern",
-        "#eoflib:minecraft/torches",
-        "#minecraft:campfires",
-        "#minecraft:candles"
+        "#eoflib:minecraft/torches"
     ]
 }

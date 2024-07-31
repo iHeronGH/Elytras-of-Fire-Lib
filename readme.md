@@ -278,7 +278,7 @@ Advancements located here deal with resolving blacklist operations. By default, 
 
 ### Loot Tables
 
-Elytras of Fire Lib comes with 2 loot tables: **`ricardo.json`** and **`shulker_box.json`**.
+Elytras of Fire Lib comes with 2 loot tables:
 
 <details>
 
@@ -312,7 +312,7 @@ Elytras of Fire Lib comes with 2 loot tables: **`ricardo.json`** and **`shulker_
 
 ### Predicates
 
-Elytras of Fire Lib comes with many predicates for DLCs to hook into:
+Elytras of Fire Lib comes with 52 predicates for DLCs to hook into:
 
 <details>
 
@@ -320,7 +320,7 @@ Elytras of Fire Lib comes with many predicates for DLCs to hook into:
 
 [Back to top](#)
 
-#### eoflib:abilities/.../\<tag>.json
+#### eoflib:abilities/\<tag>.json
 
 Predicates located here deal with tribal abilities being used and/or activated. By default, 4 files are included: **`any_used.json`** checks if any ability has been *used* (right clicked),  and **`primary.json`**, **`secondary.json`**, and **`tertiary.json`** all check if their respective archetype of ability has been *activated*.
 
@@ -333,7 +333,7 @@ Predicates located here deal with tribal abilities being used and/or activated. 
   └ 📄 tertiary_activated.json
 ```
 
-#### eoflib:damage/.../\<tag>.json
+#### eoflib:damage/\<tag>.json
 
 Predicates located here deal with damage. By default, 3 files are included: **`minimum.json`** checks if an entity has dealt at least one point of damage,  **`on_fire.json`** checks if an entity is on fire, and **`recent.json`** checks if an entity has recently taken damage.
 
@@ -345,7 +345,7 @@ Predicates located here deal with damage. By default, 3 files are included: **`m
   └ 📄 recent.json
 ```
 
-#### eoflib:entities/.../\<tag>.json
+#### eoflib:entities/\<tag>.json
 
 Predicates located here deal with entity grouping. By default, 2 files are included: **`affected.json`** and **`recent.json`**, which both check if a given entity is or is not allowed to be affected by abilities.
 
@@ -388,26 +388,22 @@ Predicates located here deal with inventory checking. By default, 9 files are in
     └ 📄 slot_8_empty.json
 ```
 
-#### inventory/mainhand/.../\<predicate>.json
+#### inventory/mainhand/ability/\<predicate>.json
 
-Predicates located here deal with inventory checking. By default, 4 files are included, each checking a specific hotbar slot to see if it is unoccupied.
+Predicates located here deal with checking the player's mainhand. By default, 4 files are included, each checking the player's mainhand for any/a specific archetype of ability.
 
 ```text
 📦 eoflib:predicates
 └ 📁 inventory
   └ 📁 mainhand
-    ├ 📄 slot_0_empty.json
-    ├ 📄 slot_1_empty.json
-    ├ 📄 slot_2_empty.json
-    ├ 📄 slot_3_empty.json
-    ├ 📄 slot_4_empty.json
-    ├ 📄 slot_5_empty.json
-    ├ 📄 slot_6_empty.json
-    ├ 📄 slot_7_empty.json
-    └ 📄 slot_8_empty.json
+    └ 📁 ability
+      ├ 📄 any.json
+      ├ 📄 primary.json
+      ├ 📄 secondary.json
+      └ 📄 tertiary.json
 ```
 
-#### location/.../\<predicate>.json
+#### location/\<predicate>.json
 
 Predicates located here deal with location checking. By default, 2 files are included: **`submerged_in_water.json`** checks for players that are completely encompassed in water (or waterlogged blocks) and **`water.json`** checks for players standing on or in water (or waterlogged blocks.)
 
@@ -418,20 +414,7 @@ Predicates located here deal with location checking. By default, 2 files are inc
   └ 📄 water.json
 ```
 
-#### mainhand/.../\<predicate>.json
-
-Predicates located here deal with mainhand checking. By default, 3 files are included, each checking whether a player is holding either a primary, secondary, or tertiary ability in their mainhand.
-
-```text
-📦 eoflib:predicates
-└ 📁 mainhand
-  └ 📁 ability
-    ├ 📄 primary.json
-    ├ 📄 secondary.json
-    └ 📄 tertiary.json
-```
-
-#### movement/.../\<predicate>.json
+#### movement/\<predicate>.json
 
 Predicates located here deal with movement checking. By default, 6 files are included, each checking for general and player-specific movement types.
 
@@ -446,7 +429,46 @@ Predicates located here deal with movement checking. By default, 6 files are inc
   └ 📄 swim.json
 ```
 
-#### tribes/.../\<predicate>.json
+#### settings/admin/.../\<predicate>.json
+
+Predicates located here deal with defining admin settings. By default, 13 files is included.
+
+```text
+📦 eoflib:predicates
+└ 📁 settings
+  └ 📁 admin
+    ├ 📁 debug_mode
+    │ ├ 📄 highest_tier.json
+    │ └ 📄 lowest_tier.json
+    ├ 📄 ability_timer.json
+    ├ 📄 allow_abilities.json
+    ├ 📄 allow_attributes.json
+    ├ 📄 allow_pvp.json
+    ├ 📄 allow_range_display.json
+    ├ 📄 cooldown_bypass.json
+    ├ 📄 custom_deaths.json
+    ├ 📄 destructive_abilities.json
+    ├ 📄 friendly_fire.json
+    ├ 📄 in_blacklist_operation.json
+    └ 📄 save_settings.json
+```
+
+#### settings/uninstall/\<predicate>.json
+
+Predicates located here deal with tribe checking. By default, only 1 file is included.
+
+```text
+📦 eoflib:predicates
+└ 📁 settings
+  └ 📁 uninstall
+    ├ 📄 bossbars.json
+    ├ 📄 forceloads.json
+    ├ 📄 scoreboards.json
+    ├ 📄 storages.json
+    └ 📄 teams.json
+```
+
+#### tribes/\<predicate>.json
 
 Predicates located here deal with tribe checking. By default, only 1 file is included.
 
@@ -470,49 +492,25 @@ Elytras of Fire Lib comes with dozens of tags for blocks, entities, functions, a
 
 [Back to top](#)
 
-#### eoflib:earth_blocks.json
+#### eoflib:blocks/\<tag>.json
 
-**`earth_blocks.json`** groups blocks associated with earthy/silty materials.
-
-```text
-📦 eoflib:tags
-└ 📁 blocks
-  └ 📄 earth_blocks.json
-```
-
-#### eoflib:ice.json
-
-**`ice.json`** groups blocks associated with ice.
+Tags here group blocks by their respective titles. By default, 6 files are included: **`carpet.json`** groups carpet-like blocks, **`earth_blocks.json`** groups earthy/silty and natural blocks, **`hot.json`** groups hot blocks.
+**`ice.json`** groups icy blocks, **`snow.json`** groups blocks associated with snow, and **`waterlogged.json`** groups blocks that are able to be waterlogged.
 
 ```text
 📦 eoflib:tags
 └ 📁 blocks
-  └ 📄 ice.json
-```
-
-#### eoflib:snow.json
-
-**`snow.json`** groups blocks associated with snow.
-
-```text
-📦 eoflib:tags
-└ 📁 blocks
-  └ 📄 snow.json
-```
-
-#### eoflib:waterlogged.json
-
-**`waterlogged.json`** groups blocks that are able to be waterlogged.
-
-```text
-📦 eoflib:tags
-└ 📁 blocks
+  ├ 📄 carpet.json
+  ├ 📄 earth_blocks.json
+  ├ 📄 hot.json
+  ├ 📄 ice.json
+  ├ 📄 snow.json
   └ 📄 waterlogged.json
 ```
 
 #### minecraft:climbable.json
 
-**`climbable.json`** adds to Minecraft's own **`climbable.json`** block tag. Because there is no way to make custom block tags climbable, this is the only overwrite Elytras of Fire Lib does to the Minecraft namespace.
+**`climbable.json`** adds to Minecraft's own **`climbable.json`** block tag. Because there is no way (that I am more willing to do) to make custom block tags climbable, this is the only overwrite Elytras of Fire Lib does to the Minecraft namespace.
 
 ```text
 📦 minecraft:tags
@@ -538,7 +536,7 @@ Tags here group blocks commonly found composing Minecraft deserts. By default, 5
 
 #### eoflib:flora/.../\<tag>.json
 
-Tags here group blocks best described as flora. They are further grouped by dimension and general distinction (grasses, mosses, vines, etc.) By default, 10 related files are included.
+Tags here group blocks best described as flora. They are further grouped by dimension and general distinction (grasses, mosses, vines, etc.) By default, 12 related files are included.
 
 ```text
 📦 eoflib:tags
@@ -550,7 +548,10 @@ Tags here group blocks best described as flora. They are further grouped by dime
     ├ 📄 moss.json
     ├ 📄 mushrooms.json
     ├ 📄 vines.json
-    └ 📁 nether
+    ├ 📁 mushrooms
+    │ ├ 📄 block.json
+    │ └ 📄 small.json
+    ├ 📁 nether
     │ ├ 📄 grass.json
     │ └ 📄 vines.json
     └ 📁 overworld
@@ -558,9 +559,22 @@ Tags here group blocks best described as flora. They are further grouped by dime
       └ 📄 vines.json
 ```
 
+#### eoflib:light/.../\<tag>.json
+
+Tags here group blocks that emit light sources. By default, 3 related files are included.
+
+```text
+📦 eoflib:tags
+└ 📁 blocks
+  ├ 📄 light.json
+  └ 📁 light
+    ├ 📄 block.json
+    └ 📄 small.json
+```
+
 #### eoflib:minecraft/.../\<tag>.json
 
-Tags here group blocks that are meant to replace or add to the default Minecraft tags in terms of usage. [As it is good practice to not *overwrite* default tags](#imp-compliance), these are simply here to abide by this practice. By default, 11 files are included.
+Tags here group blocks that are meant to replace or add to the default Minecraft tags in terms of usage. [As it is good practice to not *overwrite* default tags](#imp-compliance) unless it is unavoidable, these are simply here to abide by this practice. By default, 13 files are included.
 
 ```text
 📦 eoflib:tags
@@ -571,7 +585,9 @@ Tags here group blocks that are meant to replace or add to the default Minecraft
     ├ 📄 coral_fans.json
     ├ 📄 corals.json
     ├ 📄 dirt.json
+    ├ 📄 fire.json
     ├ 📄 flowers.json
+    ├ 📄 froglights.json
     ├ 📄 glass_panes.json
     ├ 📄 gravel.json
     ├ 📄 redstone_components.json
