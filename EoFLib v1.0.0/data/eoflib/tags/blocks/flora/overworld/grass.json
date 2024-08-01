@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
+        "minecraft:bamboo",
         "minecraft:fern",
         {"id": "minecraft:grass", "required": false},
         {"id": "minecraft:short_grass", "required": false},

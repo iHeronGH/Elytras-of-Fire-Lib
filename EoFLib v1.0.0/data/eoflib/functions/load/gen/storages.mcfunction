@@ -15,6 +15,9 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_m
         ## Ability Blacklist
 execute unless predicate eoflib:settings/admin/save_settings run data modify storage eoflib:config eoflib.admin_settings.blacklist set value []
 
+        ## Ability Blacklist register
+data modify storage eoflib:config eoflib.admin_settings.blacklist_register set value {}
+
         ## Ability Blacklist settings
 data modify storage eoflib:config eoflib.admin_settings.blacklist_settings set value {counter: 0, total_blacklisted: 0}
 

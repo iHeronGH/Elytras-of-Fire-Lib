@@ -12,8 +12,8 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_m
 tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Operation cancelled.", "color": "red"}]
 
     # Resolve tags
-tag @s remove eoflib.abilities.add_to_blacklist
-tag @s remove eoflib.abilities.remove_from_blacklist
+tag @s remove eoflib.abilities.blacklist.add
+tag @s remove eoflib.abilities.blacklist.remove
 
     # Remove advancement
 advancement revoke @s only eoflib:blacklist/cancel_operation

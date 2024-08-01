@@ -572,7 +572,7 @@ Tags here group blocks that emit light sources. By default, 3 related files are 
     └ 📄 small.json
 ```
 
-#### eoflib:minecraft/.../\<tag>.json
+#### eoflib:minecraft/\<tag>.json
 
 Tags here group blocks that are meant to replace or add to the default Minecraft tags in terms of usage. [As it is good practice to not *overwrite* default tags](#imp-compliance) unless it is unavoidable, these are simply here to abide by this practice. By default, 13 files are included.
 
@@ -593,6 +593,18 @@ Tags here group blocks that are meant to replace or add to the default Minecraft
     ├ 📄 redstone_components.json
     ├ 📄 sand.json
     └ 📄 torches.json
+```
+
+#### eoflib:passable/.../\<tag>.json
+
+Tags here group blocks that raycast abilities can pass through. By default, 2 related files are included.
+
+```text
+📦 eoflib:tags
+└ 📁 blocks
+  └ 📁 passable
+    ├ 📄 general.json
+    └ 📄 water.json
 ```
 
 </details>

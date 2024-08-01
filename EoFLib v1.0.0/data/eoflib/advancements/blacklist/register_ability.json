@@ -1,4 +1,11 @@
 {
+    "display": {
+        "icon": {
+            "item": "minecraft:stone"
+        },
+        "title": "register ability",
+        "description": ""
+    },
     "criteria": {
         "dropped_ability": {
             "trigger": "minecraft:inventory_changed",

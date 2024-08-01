@@ -2,6 +2,6 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-        "nbt": "{Tags: [\"eoflib.abilities.add_to_blacklist\"]}"
+        "nbt": "{Tags: [\"eoflib.abilities.blacklist.add\"]}"
     }
 }
