@@ -4,9 +4,9 @@
 
 #region
     # Debug
-execute if entity @s run tellraw @s[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "You executed the following function:\n- data/eoflib/functions/load/triggers.mcfunction", "color": "aqua"}}}]
-execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " executed the following function:\n- data/eoflib/functions/load/triggers.mcfunction", "color": "aqua"}]}}]
-execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n- data/eoflib/functions/load/triggers.mcfunction", "color": "aqua"}}}]
+execute if entity @s run tellraw @s[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "You executed the following function:\n- eoflib:load/triggers.mcfunction", "color": "aqua"}}}]
+execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " executed the following function:\n- eoflib:load/triggers.mcfunction", "color": "aqua"}]}}]
+execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/triggers.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n- eoflib:load/triggers.mcfunction", "color": "aqua"}}}]
 
     # Remove Advancement
 advancement revoke @s only eoflib:trigger
@@ -43,48 +43,48 @@ execute if score @s eoflib.trigger matches 23 run function eoflib:config/setting
 
                 #### AS: Ability Blacklist
 execute if score @s eoflib.trigger matches 24 run function eoflib:config/settings/admin/allow_abilities/blacklist/prepare_add
-execute if score @s eoflib.trigger matches 25 run function eoflib:config/settings/admin/allow_abilities/blacklist/add_ability
-execute if score @s eoflib.trigger matches 26 run function eoflib:config/settings/admin/allow_abilities/blacklist/add_tribe
-execute if score @s eoflib.trigger matches 27 run function eoflib:config/settings/admin/allow_abilities/blacklist/add_archetype
+execute if score @s eoflib.trigger matches 25 run function eoflib:config/settings/admin/allow_abilities/blacklist/add/ability_mode
+execute if score @s eoflib.trigger matches 26 run function eoflib:config/settings/admin/allow_abilities/blacklist/add/tribe_mode
+execute if score @s eoflib.trigger matches 27 run function eoflib:config/settings/admin/allow_abilities/blacklist/add/archetype_mode
 execute if score @s eoflib.trigger matches 28 run function eoflib:config/settings/admin/allow_abilities/blacklist/prepare_remove
-execute if score @s eoflib.trigger matches 29 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove_earliest_ability
-execute if score @s eoflib.trigger matches 30 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove_latest_ability
-execute if score @s eoflib.trigger matches 31 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove_all_abilities
+execute if score @s eoflib.trigger matches 29 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove/earliest_ability
+execute if score @s eoflib.trigger matches 30 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove/latest_ability
+execute if score @s eoflib.trigger matches 31 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove/all_abilities
 execute if score @s eoflib.trigger matches 32 run function eoflib:config/settings/admin/allow_abilities/blacklist/cancel_operation
 
                 #### AS: Allow Attributes
-execute if score @s eoflib.trigger matches 40 run function eoflib:config/settings/admin/allow_attributes/toggle_show_pgui
-execute if score @s eoflib.trigger matches 41 run function eoflib:config/settings/admin/allow_attributes/toggle_show_agui
+execute if score @s eoflib.trigger matches 33 run function eoflib:config/settings/admin/allow_attributes/toggle_show_pgui
+execute if score @s eoflib.trigger matches 34 run function eoflib:config/settings/admin/allow_attributes/toggle_show_agui
 
                 #### AS: Allow Range Display
-execute if score @s eoflib.trigger matches 42 run function eoflib:config/settings/admin/allow_range_display/toggle_show_pgui
-execute if score @s eoflib.trigger matches 43 run function eoflib:config/settings/admin/allow_range_display/toggle_show_agui
+execute if score @s eoflib.trigger matches 35 run function eoflib:config/settings/admin/allow_range_display/toggle_show_pgui
+execute if score @s eoflib.trigger matches 36 run function eoflib:config/settings/admin/allow_range_display/toggle_show_agui
 
                 #### AS: PVP
-execute if score @s eoflib.trigger matches 44 run function eoflib:config/settings/admin/allow_pvp/toggle_show_pgui
-execute if score @s eoflib.trigger matches 45 run function eoflib:config/settings/admin/allow_pvp/toggle_show_agui
+execute if score @s eoflib.trigger matches 37 run function eoflib:config/settings/admin/allow_pvp/toggle_show_pgui
+execute if score @s eoflib.trigger matches 38 run function eoflib:config/settings/admin/allow_pvp/toggle_show_agui
 
                 #### AS: Deactivation Timer
-execute if score @s eoflib.trigger matches 46 run function eoflib:config/settings/admin/deactivation_timer/toggle_show_agui
+execute if score @s eoflib.trigger matches 39 run function eoflib:config/settings/admin/deactivation_timer/toggle_show_agui
 
                 #### AS: Destructive Abilities
-execute if score @s eoflib.trigger matches 47 run function eoflib:config/settings/admin/destructive_abilities/toggle_show_agui
+execute if score @s eoflib.trigger matches 40 run function eoflib:config/settings/admin/destructive_abilities/toggle_show_agui
 
                 #### AS: Custom Deaths
-execute if score @s eoflib.trigger matches 48 run function eoflib:config/settings/admin/custom_deaths/toggle_show_agui
+execute if score @s eoflib.trigger matches 41 run function eoflib:config/settings/admin/custom_deaths/toggle_show_agui
 
                 #### AS: Friendly Fire
-execute if score @s eoflib.trigger matches 49 run function eoflib:config/settings/admin/friendly_fire/toggle_show_agui
+execute if score @s eoflib.trigger matches 42 run function eoflib:config/settings/admin/friendly_fire/toggle_show_agui
 
                 #### AS: Cooldown Bypass
-execute if score @s eoflib.trigger matches 50 run function eoflib:config/settings/admin/cooldown_bypass/disable_show_agui
-execute if score @s eoflib.trigger matches 51 run function eoflib:config/settings/admin/cooldown_bypass/enable_show_agui
+execute if score @s eoflib.trigger matches 43 run function eoflib:config/settings/admin/cooldown_bypass/disable_show_agui
+execute if score @s eoflib.trigger matches 44 run function eoflib:config/settings/admin/cooldown_bypass/enable_show_agui
 
                 #### AS: Debug Mode
-execute if score @s eoflib.trigger matches 52 run function eoflib:config/settings/admin/debug_mode/disable_show_agui
-execute if score @s eoflib.trigger matches 53 run function eoflib:config/settings/admin/debug_mode/enable_show_agui
-execute if score @s eoflib.trigger matches 54 run function eoflib:config/settings/admin/debug_mode/dec_level_show_agui
-execute if score @s eoflib.trigger matches 55 run function eoflib:config/settings/admin/debug_mode/inc_level_show_agui
+execute if score @s eoflib.trigger matches 45 run function eoflib:config/settings/admin/debug_mode/disable_show_agui
+execute if score @s eoflib.trigger matches 46 run function eoflib:config/settings/admin/debug_mode/enable_show_agui
+execute if score @s eoflib.trigger matches 47 run function eoflib:config/settings/admin/debug_mode/dec_level_show_agui
+execute if score @s eoflib.trigger matches 48 run function eoflib:config/settings/admin/debug_mode/inc_level_show_agui
 
             ### Uninstall Settings triggers
 execute if score @s eoflib.trigger matches 70 run function eoflib:config/settings/uninstall/teams/toggle_show_ugui
@@ -104,7 +104,7 @@ execute if score @s eoflib.trigger matches 92 run function eoflib:load/report/fe
 execute if score @s eoflib.trigger matches 93 run function eoflib:load/report/bye_ricardo
 
         ## Failsafe
-execute unless score @s eoflib.trigger matches 0 unless score @s eoflib.trigger matches 2..9 unless score @s eoflib.trigger matches 20..45 unless score @s eoflib.trigger matches 70..78 unless score @s eoflib.trigger matches 90..93 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Invalid range for trigger ", "color": "red"}, {"text": "eoflib.trigger", "color": "gold"}, {"text": "; received value (", "color": "red"}, {"score": {"name": "@s", "objective": "eoflib.trigger"}, "color": "gold"}, {"text": ") does not match expected value range (", "color": "red"}, {"text": "2-9, 20-45, 60-68, 80-83", "color": "gold"}, {"text": ").", "color": "red"}]
+execute unless score @s eoflib.trigger matches 0 unless score @s eoflib.trigger matches 2..9 unless score @s eoflib.trigger matches 20..48 unless score @s eoflib.trigger matches 70..78 unless score @s eoflib.trigger matches 90..93 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Invalid range for trigger ", "color": "red"}, {"text": "eoflib.trigger", "color": "gold"}, {"text": "; received value (", "color": "red"}, {"score": {"name": "@s", "objective": "eoflib.trigger"}, "color": "gold"}, {"text": ") does not match expected value range (", "color": "red"}, {"text": "2-9, 20-48, 70-78, 90-93", "color": "gold"}, {"text": ").", "color": "red"}]
 
     # Abilities Trigger
 execute if score @s eof.abilities matches 1..2 run function eoflib:config/settings/player/abilities/toggle

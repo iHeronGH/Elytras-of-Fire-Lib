@@ -1,13 +1,6 @@
 {
-    "display": {
-        "icon": {
-            "item": "minecraft:stone"
-        },
-        "title": "register ability",
-        "description": ""
-    },
     "criteria": {
-        "dropped_ability": {
+        "register_data": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "player": [
@@ -29,6 +22,6 @@
         }
     },
     "rewards": {
-        "function": "eoflib:config/settings/admin/allow_abilities/blacklist/register_ability"
+        "function": "eoflib:config/settings/admin/allow_abilities/blacklist/add/register_data"
     }
 }
