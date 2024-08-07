@@ -19,6 +19,6 @@
         }
     },
     "rewards": {
-        "function": "eoflib:config/settings/admin/allow_abilities/blacklist/cancel_operation"
+        "function": "eoflib:config/settings/admin/blacklist/cancel_operation"
     }
 }

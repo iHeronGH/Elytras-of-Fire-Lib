@@ -42,15 +42,15 @@ execute if score @s eoflib.trigger matches 22 run function eoflib:config/setting
 execute if score @s eoflib.trigger matches 23 run function eoflib:config/settings/admin/allow_abilities/toggle_show_agui
 
                 #### AS: Ability Blacklist
-execute if score @s eoflib.trigger matches 24 run function eoflib:config/settings/admin/allow_abilities/blacklist/prepare_add
-execute if score @s eoflib.trigger matches 25 run function eoflib:config/settings/admin/allow_abilities/blacklist/add/ability_mode
-execute if score @s eoflib.trigger matches 26 run function eoflib:config/settings/admin/allow_abilities/blacklist/add/tribe_mode
-execute if score @s eoflib.trigger matches 27 run function eoflib:config/settings/admin/allow_abilities/blacklist/add/archetype_mode
-execute if score @s eoflib.trigger matches 28 run function eoflib:config/settings/admin/allow_abilities/blacklist/prepare_remove
-execute if score @s eoflib.trigger matches 29 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove/earliest_ability
-execute if score @s eoflib.trigger matches 30 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove/latest_ability
-execute if score @s eoflib.trigger matches 31 run function eoflib:config/settings/admin/allow_abilities/blacklist/remove/all_abilities
-execute if score @s eoflib.trigger matches 32 run function eoflib:config/settings/admin/allow_abilities/blacklist/cancel_operation
+execute if score @s eoflib.trigger matches 24 run function eoflib:config/settings/admin/blacklist/prepare_add
+execute if score @s eoflib.trigger matches 25 run function eoflib:config/settings/admin/blacklist/add/ability_mode
+execute if score @s eoflib.trigger matches 26 run function eoflib:config/settings/admin/blacklist/add/tribe_mode
+execute if score @s eoflib.trigger matches 27 run function eoflib:config/settings/admin/blacklist/add/archetype_mode
+execute if score @s eoflib.trigger matches 28 run function eoflib:config/settings/admin/blacklist/prepare_remove
+execute if score @s eoflib.trigger matches 29 run function eoflib:config/settings/admin/blacklist/remove/earliest_ability
+execute if score @s eoflib.trigger matches 30 run function eoflib:config/settings/admin/blacklist/remove/latest_ability
+execute if score @s eoflib.trigger matches 31 run function eoflib:config/settings/admin/blacklist/remove/all_abilities
+execute if score @s eoflib.trigger matches 32 run function eoflib:config/settings/admin/blacklist/cancel_operation
 
                 #### AS: Allow Attributes
 execute if score @s eoflib.trigger matches 33 run function eoflib:config/settings/admin/allow_attributes/toggle_show_pgui

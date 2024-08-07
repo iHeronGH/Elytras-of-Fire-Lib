@@ -109,6 +109,118 @@ If you're a developer, contributor, or just plain curious, continue below as doc
 
 ---
 
+### Configuration Settings
+
+Elytras of Fire Lib comes with many settings to fit many niches!
+<details>
+
+<summary> Player Settings </summary>
+
+[Back to top](#)
+
+The following entries are settings that any player can use and configure, no matter the conditions:
+
+- **Enable Tribe Abilities**: Toggle on or off your hotbar abilities. (Default: OFF)
+  - ON: Player is able to use active abilities freely. They may disable them at any point.
+  - OFF: Player is unable to use active abilities. They may enable them at any point.<br><br>
+- **Enable Tribe Attributes**: Toggle on or off your tribe's attributes and any passive abilities. (Default: OFF)
+  - ON: Player benefits from the passive effects of their current tribe. They may disable them at any point.
+  - OFF: Player is unaffected by any tribe's passive effects. They may enable them at any point.<br><br>
+- **Enable Range Display**: Toggle on or off the range preview for your held ability. (Default: OFF)
+  - ON: Player receives visual feedback of the range/range type of their held ability. They may disable this feedback at any point.
+  - OFF: Player no longer sees their held ability's range preview. They may enable this feedback at any point.<br><br>
+- **Enable PVP**: Toggle on or off the ability to harm entities via abilities and/or the effects of their abilities. (Default: ON)
+  - ON: Player can deal and take damage from all abilities and can be afflicted by any potential custom effects. They may disable this at any point.
+  - OFF: Player no longer has any interaction with any abilities or custom effects. They may enable this at any point.<br><br>
+- **Ability Handling**: Choose what happens when an ability item is replaced with another item. (Default: Remove Abilities)
+  - Remove Abilities: Player's abilities are automatically disabled when a non-ability item enters a slot occupied by an ability item.
+  - Remove Items: Player's attempt to replace an ability item with a non-ability item results in the non-ability item being dropped at their feet.<br><br>
+
+</details>
+
+<details>
+
+<summary> Admin Settings </summary>
+
+[Back to top](#)
+
+The following entries are settings that only players with the **`eoflib.admin`** tag can change:
+
+- **Persistent Settings**: Keep your settings when the world is reloaded in any way. (Default: ON)
+  - ON: Admin Settings and Uninstall Settings stay as-configured when the /reload command is ran or the world is otherwise reloaded.
+  - OFF: Admin Settings and Uninstall Settings are set to the default, recommended settings on world reloading.
+    - Default: Admin Settings and Uninstall Settings are immediately set to their defaults.<br><br>
+- **Allow Abilities**: Toggle the ability for non-admin players to toggle their abilities. (Default: ON)
+  - ON: Players are able to freely toggle on or off their tribe abilities. Players must reenable their setting when Allow Abilities is changed from OFF to ON.
+  - OFF: Players are no longer able to toggle on their tribe abilities, and all players have their abilities disabled.
+    - Blacklist: Edit the [Ability Blacklist](#ability-blacklist).<br><br>
+- **Allow Attributes**: Toggle the ability for non-admin players to toggle their tribe attributes. (Default: ON)
+  - ON: Players are able to freely toggle on or off their tribe attributes. Players must reenable their setting when Allow Attributes is changed from OFF to ON.
+  - OFF: Players are no longer able to toggle on their tribe attributes, and all players have their attributes disabled.<br><br>
+- **Allow Range Display**: Toggle the ability for non-admin players to toggle Range Display. (Default: OFF)
+  - ON: Players are able to freely toggle on or off their ability's range display. Players must reenable their setting when Allow Range Display is changed from OFF to ON.
+  - OFF: Players are no longer able to toggle on their ability's range display, and all players have their ability's range display disabled.<br><br>
+- **Allow PVP**: Toggle the ability for non-admin players to toggle PVP. (Default: On)
+  - ON: Players are able to freely toggle on or off Elytras of Fire-based PVP. Players must reenable their setting when Allow PVP is changed from OFF to ON.
+  - OFF: Players are no longer able to toggle on PVP, and all players have PVP disabled.<br><br>
+- **Enable Deactiviation Timer** (unreleased): The Deactivation timer automatically disables abilities for players who are not actively using them. Enable this option to decrease performance impact of Elytras of Fire Lib and any installed DLCs. (Default: OFF)
+  - ON: Players who have not actively used their ability during a period of time will automatically have them disabled.
+  - OFF: Players will keep their abilities active regardless of ability inactivity.<br><br>
+- **Enable Destructive Effects**: Toggle the destructive properties that some abilities come with. (Default: OFF)
+  - ON: Abilities can cause physical damage to some terrain, structures, buildings, etc.
+  - OFF: Abilities will cause no damage to the environment and will only affect entities.<br><br>
+- **Custom Death Messages** (unreleased): Toggle custom death messages when players are killed by certain abilities. (Default: ON)
+  - ON: Deaths caused by certain abilities will give a datapack-generated death message. Purely cosmetic.
+  - OFF: Deaths by abilities will not yield new death messages.<br><br>
+- **Enable Friendly Fire** (unreleased): Toggle friendly fire for most abilities. (Default: OFF)
+  - ON: Players are able to freely toggle on or off friendly fire.
+  - OFF: Players are no longer able to toggle on friendly fire, and ability effects can be taken from any source.<br><br>
+- **Cooldown Bypass**: Allows you to bypass all tribe ability cooldowns. (Default: OFF)
+  - ON: User will bypass all cooldowns imposed by abilities.
+  - OFF: User is penalised by ability cooldowns on successful use.<br><br>
+- **Debug Mode**: Displays helpful information in-game to streamline datapack development and show function references and sources. (Default: OFF)
+  - ON: User will receive debugging messages in chat.
+    - 0: Debug Mode is soft disabled.
+    - 1: User will see only load/uninstall messages.
+    - 2: All general one-call functions called by the user.
+    - 3: All general one-call functions called by the user and other command sources.
+    - 4: Condiionally-looping functions.
+    - 5: All functions.
+  - OFF: User will see no technical messages.
+
+</details>
+
+<details>
+
+<summary> Uninstall Settings </summary>
+
+[Back to top](#)
+
+The following entries are settings that only players with the **`eoflib.admin`** tag can change:
+
+- **Keep Teams**: Keep all tribe teams intact when this datapack is uninstalled (Default: ON)
+  - ON: Teams will remain after uninstall.
+  - OFF: Teams will be removed during uninstall.<br><br>
+- **Keep Scoreboards**: Keep all scoreboard objectives and data intact when this datapack is uninstalled. (Default: ON)
+  - ON: Scoreboards will remain after uninstall.
+  - OFF: Scoreboard objectives and data will be removed during uninstall.<br><br>
+- **Keep Storages**: Keep all storage data intact when this datapack is uninstalled. (Default: ON)
+  - ON: Storage data will remain after uninstall.
+  - OFF: Relevant storage data will be removed during uninstall.<br><br>
+- **Keep Bossbars**: Keep all bossbars intact when this datapack is uninstalled. (Default: ON)
+  - ON: Bossbars will remain after uninstall.
+  - OFF: Bossbars will be removed during uninstall.<br><br>
+- **Keep Forceloads**: Toggle whether forceloaded chunks stay forceloaded after this datapack is uninstalled. (Default: ON)
+  - ON: Forceloaded chunks will remain forceloaded after uninstall.
+  - OFF: Forceloaded chunks will no longer be forceloaded during uninstall.<br><br>
+- **Uninstall Mode**: Toggles the display of these settings when the datapack's uninstall function is called. (Default: OFF)
+  - ON: Any user uninstalling the datapack will be queried if they would like to review the uninstall settings. If not, they may proceed with uninstalling (NOT RECOMMENDED!).
+  - OFF: Any user uninstalling the datapack will have the Uninstall Settings displayed to them. They may be toggled during this phase, along with an easily accessible uninstall button once their settings are as fit.
+
+</details>
+
+---
+
 ### Advancements
 
 Elytras of Fire Lib comes with 10 advancements:
@@ -755,13 +867,9 @@ Tags here group functions to be ran on a regular schedule. By default, 4 files a
 
 [Back to top](#)
 
-### Abilities Support
-
-Arguably one of the most major parts of Elytras of Fire, ability support will be coming next! Currently there is minimal framework for ability support, but this is the next step in the development of Elytras of Fire Lib — and Elytras of Fire as a whole.
-
 ### Ability Blacklist
 
-The Ability Blacklist is planned to exclude certain abilities from being granted to players. It is slated to deny abilities by type (primary, secondary, and tertiary), by tribe, and/or individually.
+The Ability Blacklist is planned to exclude certain abilities from being granted to players. It is slated to deny abilities by archetype (primary, secondary, and tertiary), by tribe, and/or individually.
 
 ### Custom Death Messages
 
@@ -776,102 +884,6 @@ Custom Death Messages will be exactly that: custom death messages that will play
 ## Other Qualities
 
 [Back to top](#)
-
-### Configuration Settings
-
-Elytras of Fire Lib comes with many settings to fit many niches!
-<!--ooooooohhh spooky its line 666 :scream:-->
-<details>
-
-<summary> Player Settings </summary>
-
-[Back to top](#)
-
-The following entries are settings that any player can use and configure, no matter the conditions:
-
-- **Enable Tribe Abilities**: Toggle on or off your hotbar abilities. (Default: OFF)
-  - ON: Player is able to use active abilities freely. They may disable them at any point.
-  - OFF: Player is unable to use active abilities. They may enable them at any point.<br><br>
-- **Enable Tribe Attributes**: Toggle on or off your tribe's attributes and any passive abilities. (Default: OFF)
-  - ON: Player benefits from the passive effects of their current tribe. They may disable them at any point.
-  - OFF: Player is unaffected by any tribe's passive effects. They may enable them at any point.<br><br>
-- **Enable Range Display**: Toggle on or off the range preview for your held ability. (Default: OFF)
-  - ON: Player receives visual feedback of the range/range type of their held ability. They may disable this feedback at any point.
-  - OFF: Player no longer sees their held ability's range preview. They may enable this feedback at any point.<br><br>
-- **Ability Handling**: Choose what happens when an ability item is replaced with another item. (Default: Remove Abilities)
-  - Remove Abilities: Player's abilities are automatically disabled when a non-ability item enters a slot occupied by an ability item.
-  - Remove Items: Player's attempt to replace an ability item with a non-ability item results in the non-ability item being dropped at their feet.<br><br>
-
-</details>
-
-<details>
-
-<summary> Admin Settings </summary>
-
-[Back to top](#)
-
-The following entries are settings that only players with the **`eoflib.admin`** tag can change:
-
-- **Persistent Settings**: Keep your settings when the world is reloaded in any way. (Default: ON)
-  - ON: Admin Settings and Uninstall Settings stay as-configured when the /reload command is ran or the world is otherwise reloaded.
-  - OFF: Admin Settings and Uninstall Settings are set to the default, recommended settings on world reloading.
-    - Default: Admin Settings and Uninstall Settings are immediately set to their defaults.<br><br>
-- **Allow Abilities**: Toggle the ability for non-admin players to toggle their abilities. (Default: ON)
-  - ON: Players are able to freely toggle on or off their tribe abilities. Players must reenable their setting when Allow Abilities is changed from OFF to ON.
-  - OFF: Players are no longer able to toggle on their tribe abilities, and all players have their abilities disabled.
-    - Blacklist: Edit the [Ability Blacklist](#ability-blacklist).<br><br>
-- **Allow Attributes**: Toggle the ability for non-admin players to toggle their tribe attributes. (Default: ON)
-  - ON: Players are able to freely toggle on or off their tribe attributes. Players must reenable their setting when Allow Attributes is changed from OFF to ON.
-  - OFF: Players are no longer able to toggle on their tribe attributes, and all players have their attributes disabled.<br><br>
-- **Allow Range Display**: Toggle the ability for non-admin players to toggle Range Display. (Default: OFF)
-  - ON: Players are able to freely toggle on or off their ability's range display. Players must reenable their setting when Allow Range Display is changed from OFF to ON.
-  - OFF: Players are no longer able to toggle on their ability's range display, and all players have their ability's range display disabled.<br><br>
-- **Enable Deactiviation Timer**: The Deactivation timer automatically disables abilities for players who are not actively using them. Enable this option to decrease performance impact of Elytras of Fire Lib and any installed DLCs. (Default: ON)
-  - ON: Players who have not actively used their ability during a period of time will automatically have them disabled.
-  - OFF: Players will keep their abilities active regardless of ability inactivity.<br><br>
-- **Enable Destructive Effects**: Toggle the destructive properties that some abilities come with. (Default: OFF)
-  - ON: Abilities can cause physical damage to some terrain, structures, buildings, etc.
-  - OFF: Abilities will cause no damage to the environment and will only affect entities.<br><br>
-- **Custom Death Messages** (unreleased): Toggle custom death messages when players are killed by certain abilities. (Default: ON)
-  - ON: Deaths caused by certain abilities will give a datapack-generated death message. Purely cosmetic.
-  - OFF: Deaths by abilities will not yield new death messages.<br><br>
-- **Enable Friendly Fire** (unreleased): Toggle friendly fire for most abilities. (Default: OFF)
-  - ON: ---
-  - OFF: ---<br><br>
-- **Cooldown Bypass**: Allows you to bypass all tribe ability cooldowns. (Default: OFF)
-  - ON: User will bypass all cooldowns imposed by abilities.
-  - OFF: User is penalised by ability cooldowns on successful use.<br><br>
-- **Debug Mode**: Displays helpful information in-game to streamline datapack development and show function references and sources. (Default: OFF)
-  - ON: User will receive debugging messages in chat.
-  - OFF: User will see no technical messages.
-
-</details>
-
-<details>
-
-<summary> Uninstall Settings </summary>
-
-[Back to top](#)
-
-The following entries are settings that only players with the **`eoflib.admin`** tag can change:
-
-- **Keep Teams**: Keep all tribe teams intact when this datapack is uninstalled (Default: ON)
-  - ON: Teams will remain after uninstall.
-  - OFF: Teams will be removed during uninstall.<br><br>
-- **Keep Scoreboards**: Keep all scoreboard objectives and data intact when this datapack is uninstalled. (Default: ON)
-  - ON: Scoreboards will remain after uninstall.
-  - OFF: Scoreboard objectives and data will be removed during uninstall.<br><br>
-- **Keep Storages**: Keep all storage data intact when this datapack is uninstalled. (Default: ON)
-  - ON: Storage data will remain after uninstall.
-  - OFF: Relevant storage data will be removed during uninstall.<br><br>
-- **Keep Bossbars**: Keep all bossbars intact when this datapack is uninstalled. (Default: ON)
-  - ON: Bossbars will remain after uninstall.
-  - OFF: Bossbars will be removed during uninstall.<br><br>
-- **Keep Forceloads**: Toggle whether forceloaded chunks stay forceloaded after this datapack is uninstalled. (Default: ON)
-  - ON: Forceloaded chunks will remain forceloaded after uninstall.
-  - OFF: Forceloaded chunks will no longer be forceloaded during uninstall.
-
-</details>
 
 ### IMP Compliance
 
