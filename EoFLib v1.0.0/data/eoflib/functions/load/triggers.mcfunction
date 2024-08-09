@@ -47,44 +47,47 @@ execute if score @s eoflib.trigger matches 25 run function eoflib:config/setting
 execute if score @s eoflib.trigger matches 26 run function eoflib:config/settings/admin/blacklist/add/tribe_mode
 execute if score @s eoflib.trigger matches 27 run function eoflib:config/settings/admin/blacklist/add/archetype_mode
 execute if score @s eoflib.trigger matches 28 run function eoflib:config/settings/admin/blacklist/prepare_remove
-execute if score @s eoflib.trigger matches 29 run function eoflib:config/settings/admin/blacklist/remove/earliest_ability
-execute if score @s eoflib.trigger matches 30 run function eoflib:config/settings/admin/blacklist/remove/latest_ability
-execute if score @s eoflib.trigger matches 31 run function eoflib:config/settings/admin/blacklist/remove/all_abilities
-execute if score @s eoflib.trigger matches 32 run function eoflib:config/settings/admin/blacklist/cancel_operation
+execute if score @s eoflib.trigger matches 29 run function eoflib:config/settings/admin/blacklist/list/ability_mode
+execute if score @s eoflib.trigger matches 30 run function eoflib:config/settings/admin/blacklist/list/tribe_mode
+execute if score @s eoflib.trigger matches 31 run function eoflib:config/settings/admin/blacklist/list/archetype_mode
+execute if score @s eoflib.trigger matches 32 run function eoflib:config/settings/admin/blacklist/remove/earliest_entry
+execute if score @s eoflib.trigger matches 33 run function eoflib:config/settings/admin/blacklist/remove/latest_entry
+execute if score @s eoflib.trigger matches 34 run function eoflib:config/settings/admin/blacklist/remove/all_entries
+execute if score @s eoflib.trigger matches 35 run function eoflib:config/settings/admin/blacklist/cancel_operation
 
                 #### AS: Allow Attributes
-execute if score @s eoflib.trigger matches 33 run function eoflib:config/settings/admin/allow_attributes/toggle_show_pgui
-execute if score @s eoflib.trigger matches 34 run function eoflib:config/settings/admin/allow_attributes/toggle_show_agui
+execute if score @s eoflib.trigger matches 36 run function eoflib:config/settings/admin/allow_attributes/toggle_show_pgui
+execute if score @s eoflib.trigger matches 37 run function eoflib:config/settings/admin/allow_attributes/toggle_show_agui
 
                 #### AS: Allow Range Display
-execute if score @s eoflib.trigger matches 35 run function eoflib:config/settings/admin/allow_range_display/toggle_show_pgui
-execute if score @s eoflib.trigger matches 36 run function eoflib:config/settings/admin/allow_range_display/toggle_show_agui
+execute if score @s eoflib.trigger matches 38 run function eoflib:config/settings/admin/allow_range_display/toggle_show_pgui
+execute if score @s eoflib.trigger matches 39 run function eoflib:config/settings/admin/allow_range_display/toggle_show_agui
 
                 #### AS: PVP
-execute if score @s eoflib.trigger matches 37 run function eoflib:config/settings/admin/allow_pvp/toggle_show_pgui
-execute if score @s eoflib.trigger matches 38 run function eoflib:config/settings/admin/allow_pvp/toggle_show_agui
+execute if score @s eoflib.trigger matches 40 run function eoflib:config/settings/admin/allow_pvp/toggle_show_pgui
+execute if score @s eoflib.trigger matches 41 run function eoflib:config/settings/admin/allow_pvp/toggle_show_agui
 
                 #### AS: Deactivation Timer
-execute if score @s eoflib.trigger matches 39 run function eoflib:config/settings/admin/deactivation_timer/toggle_show_agui
+execute if score @s eoflib.trigger matches 42 run function eoflib:config/settings/admin/deactivation_timer/toggle_show_agui
 
                 #### AS: Destructive Abilities
-execute if score @s eoflib.trigger matches 40 run function eoflib:config/settings/admin/destructive_abilities/toggle_show_agui
+execute if score @s eoflib.trigger matches 43 run function eoflib:config/settings/admin/destructive_abilities/toggle_show_agui
 
                 #### AS: Custom Deaths
-execute if score @s eoflib.trigger matches 41 run function eoflib:config/settings/admin/custom_deaths/toggle_show_agui
+execute if score @s eoflib.trigger matches 44 run function eoflib:config/settings/admin/custom_deaths/toggle_show_agui
 
                 #### AS: Friendly Fire
-execute if score @s eoflib.trigger matches 42 run function eoflib:config/settings/admin/friendly_fire/toggle_show_agui
+execute if score @s eoflib.trigger matches 45 run function eoflib:config/settings/admin/friendly_fire/toggle_show_agui
 
                 #### AS: Cooldown Bypass
-execute if score @s eoflib.trigger matches 43 run function eoflib:config/settings/admin/cooldown_bypass/disable_show_agui
-execute if score @s eoflib.trigger matches 44 run function eoflib:config/settings/admin/cooldown_bypass/enable_show_agui
+execute if score @s eoflib.trigger matches 46 run function eoflib:config/settings/admin/cooldown_bypass/disable_show_agui
+execute if score @s eoflib.trigger matches 47 run function eoflib:config/settings/admin/cooldown_bypass/enable_show_agui
 
                 #### AS: Debug Mode
-execute if score @s eoflib.trigger matches 45 run function eoflib:config/settings/admin/debug_mode/disable_show_agui
-execute if score @s eoflib.trigger matches 46 run function eoflib:config/settings/admin/debug_mode/enable_show_agui
-execute if score @s eoflib.trigger matches 47 run function eoflib:config/settings/admin/debug_mode/dec_level_show_agui
-execute if score @s eoflib.trigger matches 48 run function eoflib:config/settings/admin/debug_mode/inc_level_show_agui
+execute if score @s eoflib.trigger matches 48 run function eoflib:config/settings/admin/debug_mode/disable_show_agui
+execute if score @s eoflib.trigger matches 49 run function eoflib:config/settings/admin/debug_mode/enable_show_agui
+execute if score @s eoflib.trigger matches 50 run function eoflib:config/settings/admin/debug_mode/dec_level_show_agui
+execute if score @s eoflib.trigger matches 51 run function eoflib:config/settings/admin/debug_mode/inc_level_show_agui
 
             ### Uninstall Settings triggers
 execute if score @s eoflib.trigger matches 70 run function eoflib:config/settings/uninstall/teams/toggle_show_ugui

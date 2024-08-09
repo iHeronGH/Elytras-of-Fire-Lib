@@ -13,7 +13,6 @@ tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"tex
 
     # Resolve tags
 tag @s remove eoflib.abilities.blacklist.add
-tag @s remove eoflib.abilities.blacklist.remove
 tag @s remove eoflib.abilities.blacklist.add.ability
 tag @s remove eoflib.abilities.blacklist.add.tribe
 tag @s remove eoflib.abilities.blacklist.add.archetype

@@ -1,13 +1,9 @@
 {
     "criteria": {
-        "cancel_operation": {
+        "ability_dropped": {
             "trigger": "minecraft:tick",
             "conditions": {
                 "player": [
-                    {
-                        "condition": "minecraft:reference",
-                        "name": "eoflib:settings/admin/in_blacklist_operation"
-                    },
                     {
                         "condition": "minecraft:entity_scores",
                         "entity": "this",
@@ -22,6 +18,6 @@
         }
     },
     "rewards": {
-        "function": "eoflib:config/settings/admin/blacklist/cancel_operation"
+        "function": "eoflib:advancement/ability_dropped"
     }
 }

@@ -30,8 +30,8 @@ execute unless score #eoflib.1_20_5 eoflib.game_ver = #eoflib.1_20_5 eoflib.game
 #define score_holder #eoflib.1_20_5 Data version for Minecraft Java 1.20.6.
 execute unless score #eoflib.1_20_6 eoflib.game_ver = #eoflib.1_20_6 eoflib.game_ver run scoreboard players set #eoflib.1_20_6 eoflib.game_ver 3839
 
-#define score_holder $eoflib.game_ver Data version for the current world/server.
-execute store result score $eoflib.game_ver eoflib.game_ver run data get entity @a[limit=1] DataVersion
+#define score_holder #eoflib.game_ver Data version for the current world/server.
+execute unless score #eoflib.game_ver eoflib.game_ver = #eoflib.game_ver eoflib.game_ver store result score #eoflib.game_ver eoflib.game_ver run data get entity @a[limit=1] DataVersion
 
     # Check for correct world version
 function #eoflib:load/check_version

@@ -9,9 +9,9 @@ execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug
 execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:functions/load.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n- eoflib:load.mcfunction", "color": "aqua"}}}]
 
     # Generate vitals
+function #eoflib:load/gen/scoreboards
 function #eoflib:load/gen/teams
 function #eoflib:load/gen/storages
-function #eoflib:load/gen/scoreboards
 function #eoflib:load/gen/bossbars
 function #eoflib:load/gen/forceloads
 
