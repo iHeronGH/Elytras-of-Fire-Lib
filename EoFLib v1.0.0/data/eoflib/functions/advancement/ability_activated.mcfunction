@@ -16,7 +16,7 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_m
 function #eoflib:advancement/ability_activated
 
     # Reset scores
-scoreboard players set @a eoflib.damage 0
+scoreboard players set @s eoflib.damage 0
 scoreboard players set @s eoflib.used.wfoas 0
 
     # Revoke advancements
