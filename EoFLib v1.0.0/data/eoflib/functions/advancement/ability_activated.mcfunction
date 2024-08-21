@@ -9,7 +9,7 @@ execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug
 execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:advancement/ability_activated.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n- eoflib:advancement/ability_activated.mcfunction", "color": "aqua"}}}]
 
     # Return abilities
-# clear @s #eoflib:items{eof_data: {}}
+# clear @s #eoflib:items{eof_data: {ability_data: {}}}
 # trigger eof.abilities set 3
 
     # Get ability used

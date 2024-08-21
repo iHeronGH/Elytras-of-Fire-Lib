@@ -15,7 +15,7 @@ execute if entity @s run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": 
 execute unless entity @s run tellraw @a[tag=eoflib.admin] [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F"}, {"text": "] ", "color": "gray"}, {"text": "Fully uninstalling Elytras of Fire...", "color": "red"}]
 
     # Reset player items
-clear @a #eoflib:items{eof_data: {}}
+clear @a #eoflib:items{eof_data: {ability_data: {}}}
 
     # Remove datapack and installed DLCs
 function eoflib:uninstall/forceloads

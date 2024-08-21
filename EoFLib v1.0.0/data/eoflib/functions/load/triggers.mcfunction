@@ -18,7 +18,7 @@ execute if score @s eoflib.trigger matches 2 run function eoflib:load/credits
         ## Settings
             ### Player Settings triggers
                 #### PS: Set Slots
-execute if score @s eoflib.trigger matches 3 run function eoflib:config/settings/player/abilities/set_slots/checks
+execute if score @s eoflib.trigger matches 3 run function eoflib:config/settings/player/set_slots/checks
 
                 #### PS: Range Display
 execute if score @s eoflib.trigger matches 4 run function eoflib:config/settings/player/range_display/disable
@@ -107,7 +107,7 @@ execute if score @s eoflib.trigger matches 92 run function eoflib:load/report/fe
 execute if score @s eoflib.trigger matches 93 run function eoflib:load/report/bye_ricardo
 
         ## Failsafe
-execute unless score @s eoflib.trigger matches 0 unless score @s eoflib.trigger matches 2..9 unless score @s eoflib.trigger matches 20..48 unless score @s eoflib.trigger matches 70..78 unless score @s eoflib.trigger matches 90..93 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Invalid range for trigger ", "color": "red"}, {"text": "eoflib.trigger", "color": "gold"}, {"text": "; received value (", "color": "red"}, {"score": {"name": "@s", "objective": "eoflib.trigger"}, "color": "gold"}, {"text": ") does not match expected value range (", "color": "red"}, {"text": "2-9, 20-48, 70-78, 90-93", "color": "gold"}, {"text": ").", "color": "red"}]
+execute unless score @s eoflib.trigger matches 0 unless score @s eoflib.trigger matches 2..9 unless score @s eoflib.trigger matches 20..51 unless score @s eoflib.trigger matches 70..78 unless score @s eoflib.trigger matches 90..93 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "]", "color": "gray"}, {"text": " Invalid range for trigger ", "color": "red"}, {"text": "eoflib.trigger", "color": "gold"}, {"text": "; received value (", "color": "red"}, {"score": {"name": "@s", "objective": "eoflib.trigger"}, "color": "gold"}, {"text": ") does not match expected value range (", "color": "red"}, {"text": "2-9, 20-51, 70-78, 90-93", "color": "gold"}, {"text": ").", "color": "red"}]
 
     # Abilities Trigger
 execute if score @s eof.abilities matches 1..2 run function eoflib:config/settings/player/abilities/toggle

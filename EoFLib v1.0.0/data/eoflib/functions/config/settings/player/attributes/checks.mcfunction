@@ -10,14 +10,14 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_m
 
     # Fail
         ## Not a Dragon
-execute if entity @s[predicate=!eoflib:tribes/dragon] run function eoflib:config/settings/player/attributes/fail/not_a_dragon
+execute unless predicate eoflib:tribes/dragon run function eoflib:config/settings/player/attributes/fail/not_a_dragon
 
         ## Globally disabled
 execute unless predicate eoflib:settings/admin/allow_attributes if entity @s[tag=!eoflib.admin] run function eoflib:config/settings/player/attributes/fail/admin_disabled
 
     # Succeed
         ## Enable attributes
-execute if predicate eoflib:settings/admin/allow_attributes if entity @s[predicate=eoflib:tribes/dragon] run function eoflib:config/settings/player/attributes/enable
+execute if predicate eoflib:settings/admin/allow_attributes if predicate eoflib:tribes/dragon run function eoflib:config/settings/player/attributes/enable
 execute unless predicate eoflib:settings/admin/allow_attributes if entity @s[tag=eoflib.admin, predicate=eoflib:tribes/dragon] run function eoflib:config/settings/player/attributes/enable
 
 #endregion

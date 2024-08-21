@@ -10,6 +10,6 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_m
 
     # Disable abilities
 execute unless predicate eoflib:settings/admin/allow_abilities if entity @a[tag=eoflib.abilities, tag=!eoflib.admin] run tag @a[tag=eoflib.abilities, tag=!eoflib.admin] remove eoflib.abilities
-clear @a[tag=!eoflib.abilities] #eoflib:items{eof_data: {}}
+clear @a[tag=!eoflib.abilities] #eoflib:items{eof_data: {ability_data: {}}}
 
 #endregion

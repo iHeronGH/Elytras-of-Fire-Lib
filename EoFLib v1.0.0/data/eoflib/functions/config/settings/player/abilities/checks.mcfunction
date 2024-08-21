@@ -8,18 +8,23 @@ execute if entity @s run tellraw @s[tag=eoflib.debug, scores={eoflib.debug_mode=
 execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:abilities/checks.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " executed the following function:\n- eoflib:config/settings/player/abilities/checks.mcfunction", "color": "aqua"}]}}]
 execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:abilities/checks.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server executed the following function:\n- eoflib:config/settings/player/abilities/checks.mcfunction", "color": "aqua"}}}]
 
+    # Initialise check
+scoreboard players set @s eoflib.check 1
+
     # Fail
-        ## Not a Dragon
-execute if entity @s[predicate=!eoflib:tribes/dragon] run function eoflib:config/settings/player/abilities/fail/not_a_dragon
+        ## Not a Dragon (-1)
+execute if score @s eoflib.check matches 1 run function eoflib:config/settings/player/abilities/checks/not_a_dragon
 
-        ## Globally disabled
-execute unless predicate eoflib:settings/admin/allow_abilities if entity @s[tag=!eoflib.admin] run function eoflib:config/settings/player/abilities/fail/admin_disabled
+        ## Globally disabled (-2)
+execute if score @s eoflib.check matches 1 run function eoflib:config/settings/player/abilities/checks/admin_disabled
 
-        ## Slots occupied
-execute if entity @s[predicate=eoflib:tribes/dragon] unless entity @s[predicate=eoflib:inventory/ability/primary_empty, predicate=eoflib:inventory/ability/secondary_empty, predicate=eoflib:inventory/ability/tertiary_empty] run function eoflib:config/settings/player/abilities/fail/occupied_slots
+        ## Slots occupied (-3)
+execute if score @s eoflib.check matches 1 run function eoflib:config/settings/player/abilities/checks/occupied_slots
+
+        ## Cancel ability toggle request
+execute if score @s eoflib.check matches -3..-1 run scoreboard players set @s eof.abilities 0
 
     # Succeed
-        ## Enable abilities
-execute if entity @s[predicate=eoflib:tribes/dragon] if entity @s[predicate=eoflib:inventory/ability/primary_empty, predicate=eoflib:inventory/ability/secondary_empty, predicate=eoflib:inventory/ability/tertiary_empty] run function eoflib:config/settings/player/abilities/enable
+execute if score @s eoflib.check matches 1 run function eoflib:config/settings/player/abilities/enable
 
 #endregion

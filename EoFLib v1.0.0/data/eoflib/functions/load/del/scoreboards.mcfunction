@@ -21,7 +21,7 @@ scoreboard objectives remove eoflib.leave_game
 scoreboard objectives remove eoflib.numbers
 scoreboard objectives remove eoflib.game_ver
 scoreboard objectives remove eoflib.worldtime
-scoreboard objectives remove eoflib.set_slot.check
+scoreboard objectives remove eoflib.check
 scoreboard objectives remove eoflib.set_slot.primary
 scoreboard objectives remove eoflib.set_slot.secondary
 scoreboard objectives remove eoflib.set_slot.tertiary
