@@ -8,12 +8,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": 0
+                        "eoflib.set_slot.secondary": 0
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_0_empty"
+                    "name": "eoflib:inventory/ability/non_secondary_item/0"
                 }
             ]
         },
@@ -24,12 +24,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": 1
+                        "eoflib.set_slot.secondary": 1
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_1_empty"
+                    "name": "eoflib:inventory/ability/non_secondary_item/1"
                 }
             ]
         },
@@ -40,12 +40,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": 2
+                        "eoflib.set_slot.secondary": 2
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_2_empty"
+                    "name": "eoflib:inventory/ability/non_secondary_item/2"
                 }
             ]
         },
@@ -56,12 +56,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": 3
+                        "eoflib.set_slot.secondary": 3
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_3_empty"
+                    "name": "eoflib:inventory/ability/non_secondary_item/3"
                 }
             ]
         },
@@ -72,12 +72,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": 4
+                        "eoflib.set_slot.secondary": 4
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_4_empty"
+                    "name": "eoflib:inventory/ability/non_secondary_item/4"
                 }
             ]
         },
@@ -88,12 +88,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": 5
+                        "eoflib.set_slot.secondary": 5
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_5_empty"
+                    "name": "eoflib:inventory/ability/non_secondary_item/5"
                 }
             ]
         },
@@ -104,12 +104,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": 6
+                        "eoflib.set_slot.secondary": 6
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_6_empty"
+                    "name": "eoflib:inventory/ability/non_secondary_item/6"
                 }
             ]
         },
@@ -120,12 +120,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": 7
+                        "eoflib.set_slot.secondary": 7
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_7_empty"
+                    "name": "eoflib:inventory/ability/non_secondary_item/7"
                 }
             ]
         },
@@ -136,12 +136,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": 8
+                        "eoflib.set_slot.secondary": 8
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_8_empty"
+                    "name": "eoflib:inventory/ability/non_secondary_item/8"
                 }
             ]
         },
@@ -152,12 +152,12 @@
                     "condition": "minecraft:entity_scores",
                     "entity": "this",
                     "scores": {
-                        "eoflib.set_slot.primary": -106
+                        "eoflib.set_slot.secondary": -106
                     }
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/ability/non_primary_item/offhand"
+                    "name": "eoflib:inventory/ability/non_secondary_item/offhand"
                 }
             ]
         }

@@ -13,7 +13,7 @@
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_0_empty"
+                    "name": "eoflib:inventory/ability/non_primary_item/0"
                 }
             ]
         },
@@ -29,7 +29,7 @@
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_1_empty"
+                    "name": "eoflib:inventory/ability/non_primary_item/1"
                 }
             ]
         },
@@ -45,7 +45,7 @@
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_2_empty"
+                    "name": "eoflib:inventory/ability/non_primary_item/2"
                 }
             ]
         },
@@ -61,7 +61,7 @@
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_3_empty"
+                    "name": "eoflib:inventory/ability/non_primary_item/3"
                 }
             ]
         },
@@ -77,7 +77,7 @@
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_4_empty"
+                    "name": "eoflib:inventory/ability/non_primary_item/4"
                 }
             ]
         },
@@ -93,7 +93,7 @@
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_5_empty"
+                    "name": "eoflib:inventory/ability/non_primary_item/5"
                 }
             ]
         },
@@ -109,7 +109,7 @@
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_6_empty"
+                    "name": "eoflib:inventory/ability/non_primary_item/6"
                 }
             ]
         },
@@ -125,7 +125,7 @@
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_7_empty"
+                    "name": "eoflib:inventory/ability/non_primary_item/7"
                 }
             ]
         },
@@ -141,7 +141,7 @@
                 },
                 {
                     "condition": "minecraft:reference",
-                    "name": "eoflib:inventory/hotbar/slot_8_empty"
+                    "name": "eoflib:inventory/ability/non_primary_item/8"
                 }
             ]
         },

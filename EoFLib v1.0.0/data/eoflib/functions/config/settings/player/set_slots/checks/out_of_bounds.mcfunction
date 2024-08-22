@@ -22,6 +22,6 @@ execute unless score @s eoflib.set_slot.tertiary matches 0..8 unless score @s eo
 execute unless score @s eoflib.set_slot.primary matches -3 unless score @s eoflib.set_slot.secondary matches -3 unless score @s eoflib.set_slot.tertiary matches -3 run scoreboard players set @s eoflib.check 1
 
     # Announce fail
-execute if score @s eoflib.check matches -3 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Slots failed to save as all abilities must be registered to a hotbar slot.", "color": "red"}]
+execute if score @s eoflib.check matches -3 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Slots failed to save as all abilities must be registered to a hotbar slot. ", "color": "red"}, {"text": "[", "color": "gray"}, {"text": "Toggle", "color": "red", "underlined": true, "hoverEvent": {"action": "show_text", "contents": {"text": "Toggle abilities.", "color": "gray"}}, "clickEvent": {"action": "run_command", "value": "/trigger eof.abilities"}}, {"text": "]", "color": "gray"}]
 
 #endregion

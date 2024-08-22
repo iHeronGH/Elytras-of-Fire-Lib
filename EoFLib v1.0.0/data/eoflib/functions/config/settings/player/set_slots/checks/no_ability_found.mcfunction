@@ -22,6 +22,6 @@ execute unless score @s eoflib.set_slot.tertiary matches 1 run scoreboard player
 execute if score @s eoflib.set_slot.primary matches 1 if score @s eoflib.set_slot.secondary matches 1 if score @s eoflib.set_slot.tertiary matches 1 run scoreboard players set @s eoflib.check 1
 
     # Announce fail
-execute if score @s eoflib.check matches -1 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Slots failed to save as one or more abilities is missing from your inventory.", "color": "red"}]
+execute if score @s eoflib.check matches -1 run tellraw @s [{"text": "[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Slots failed to save as one or more abilities is missing from your inventory. ", "color": "red"}, {"text": "[", "color": "gray"}, {"text": "Toggle", "color": "red", "underlined": true, "hoverEvent": {"action": "show_text", "contents": {"text": "Toggle abilities.", "color": "gray"}}, "clickEvent": {"action": "run_command", "value": "/trigger eof.abilities"}}, {"text": "]", "color": "gray"}]
 
 #endregion

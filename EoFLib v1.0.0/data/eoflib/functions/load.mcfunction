@@ -16,14 +16,14 @@ function #eoflib:load/gen/bossbars
 function #eoflib:load/gen/forceloads
 
     # Clear and rerun schedules
-schedule clear eoflib:loop/time/1t
-schedule clear eoflib:loop/time/5t
-schedule clear eoflib:loop/time/10t
-schedule clear eoflib:loop/time/20t
-function eoflib:loop/time/1t
-function eoflib:loop/time/5t
-function eoflib:loop/time/10t
-function eoflib:loop/time/20t
+schedule clear eoflib:loop/1t
+schedule clear eoflib:loop/5t
+schedule clear eoflib:loop/10t
+schedule clear eoflib:loop/20t
+function eoflib:loop/1t
+function eoflib:loop/5t
+function eoflib:loop/10t
+function eoflib:loop/20t
 
     # Successful launch message
 function eoflib:load/hw

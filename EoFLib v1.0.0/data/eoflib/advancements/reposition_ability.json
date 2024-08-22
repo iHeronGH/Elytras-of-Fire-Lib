@@ -6,7 +6,7 @@
                 "player": [
                     {
                         "condition": "minecraft:reference",
-                        "name": "eoflib:inventory/ability/primary_empty"
+                        "name": "eoflib:inventory/ability/non_primary_item"
                     },
                     {
                         "condition": "minecraft:reference",
@@ -21,7 +21,7 @@
                 "player": [
                     {
                         "condition": "minecraft:reference",
-                        "name": "eoflib:inventory/ability/secondary_empty"
+                        "name": "eoflib:inventory/ability/non_secondary_item"
                     },
                     {
                         "condition": "minecraft:reference",
@@ -36,7 +36,7 @@
                 "player": [
                     {
                         "condition": "minecraft:reference",
-                        "name": "eoflib:inventory/ability/tertiary_empty"
+                        "name": "eoflib:inventory/ability/non_tertiary_item"
                     },
                     {
                         "condition": "minecraft:reference",

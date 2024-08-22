@@ -12,7 +12,7 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_m
 trigger eof.abilities set 3
 
     # Kill EoF items
-function eoflib:loop/time/20t/kill_items
+function eoflib:loop/20t/kill_items
 
     # Other namespace functions
 function #eoflib:advancement/ability_dropped
