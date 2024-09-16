@@ -11,6 +11,11 @@ execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_m
     # Initialise check
 scoreboard players set @s eoflib.check 1
 
+    # Initialise scores
+execute unless predicate eoflib:settings/player/set_slot/valid_primary run scoreboard players set @s eoflib.set_slot.primary 6
+execute unless predicate eoflib:settings/player/set_slot/valid_secondary run scoreboard players set @s eoflib.set_slot.secondary 7
+execute unless predicate eoflib:settings/player/set_slot/valid_tertiary run scoreboard players set @s eoflib.set_slot.tertiary 8
+
     # Fail
         ## Not a Dragon (-1)
 execute if score @s eoflib.check matches 1 run function eoflib:config/settings/player/abilities/checks/not_a_dragon

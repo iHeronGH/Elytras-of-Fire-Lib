@@ -37,11 +37,13 @@ scoreboard objectives remove eoflib.trigger
         ## Miscellaneous Objectives
 scoreboard objectives remove eoflib.dropped_ability_item
 scoreboard objectives remove eoflib.dropped_ricardo
-scoreboard objectives remove eoflib.used.egg
-scoreboard objectives remove eoflib.used.ender_pearl
-scoreboard objectives remove eoflib.used.ender_eye
-scoreboard objectives remove eoflib.used.snowball
 scoreboard objectives remove eoflib.used.bow
 scoreboard objectives remove eoflib.used.crossbow
+scoreboard objectives remove eoflib.used.egg
+scoreboard objectives remove eoflib.used.ender_eye
+scoreboard objectives remove eoflib.used.ender_pearl
+scoreboard objectives remove eoflib.used.fishing_rod
+scoreboard objectives remove eoflib.used.snowball
+scoreboard objectives remove eoflib.used.wfoas
 
 #endregion

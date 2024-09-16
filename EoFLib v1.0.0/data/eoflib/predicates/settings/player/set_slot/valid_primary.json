@@ -1,0 +1,27 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:any_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": -106
+                    }
+                },
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": {
+                            "min": 0,
+                            "max": 8
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

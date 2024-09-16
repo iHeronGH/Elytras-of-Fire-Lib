@@ -1,0 +1,17 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:reference",
+            "name": "eoflib:settings/player/set_slot/valid_primary"
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "eoflib:settings/player/set_slot/valid_secondary"
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "eoflib:settings/player/set_slot/valid_tertiary"
+        }
+    ]
+}

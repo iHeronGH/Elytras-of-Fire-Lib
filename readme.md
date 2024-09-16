@@ -16,9 +16,10 @@ This datapack does nothing on its own. If you are looking to use this alongside 
   - [Installation and Uninstallation](#installation-and-uninstallation)
   - [Features](#features)
     - [DLC Compatibility](#dlc-compatibility)
+    - [Configuration Settings](#configuration-settings)
     - [Advancements](#advancements)
-      - [Ability Used](#eoflibability_activatedjson)
-      - [Blacklist](#eoflibability_activatedjson)
+      - [Blacklist](#eoflibblacklisttagjson)
+      - [Ability Activated](#eoflibability_activatedjson)
       - [Death](#eoflibdeathjson)
       - [Dragon](#eoflibdragonjson)
       - [Ignited](#eoflibignitedjson)
@@ -34,42 +35,44 @@ This datapack does nothing on its own. If you are looking to use this alongside 
       - Blocks
         - [Shulker Box](#minecraftshulker_boxjson)
     - [Predicates](#predicates)
-      - [On Fire](#eoflibon_firejson)
-      - [Inventory](#inventorypredicatejson)
+      - [Abilities](#eoflibabilitiestagjson)
+      - [Damage](#eoflibdamagetagjson)
+      - [Entities](#eoflibentitiestagjson)
+      - Inventory
+        - [Ability Slot](#inventoryabilitypredicatejson)
+        - [Hotbar](#inventoryhotbarpredicatejson)
+        - [Ability in Mainhand](#inventorymainhandabilitypredicatejson)
       - [Location](#locationpredicatejson)
-      - [Mainhand](#mainhandpredicatejson)
       - [Movement](#movementpredicatejson)
+      - [Admin Settings](#settingsadminpredicatejson)
+      - [Uninstall Settings](#settingsuninstallpredicatejson)
       - [Tribes](#tribespredicatejson)
     - [Tags](#tags)
-      - Block Tags
-        - [Earth Blocks](#eoflibearth_blocksjson)
-        - [Ice](#eoflibicejson)
-        - [Snow](#eoflibsnowjson)
-        - [Waterlogged](#eoflibwaterloggedjson)
+      - Blocks
         - [Climbable](#minecraftclimbablejson)
-        - [Desert](#eoflibdeserttagjson)
-        - [Flora](#eoflibfloratagjson)
+        - [Blocks](#eoflibblockstagjson)
+          - [Desert](#eoflibdeserttagjson)
+          - [Flora](#eoflibfloratagjson)
+          - [Light](#eofliblighttagjson)
         - [Minecraft](#eoflibminecrafttagjson)
-      - Entity Tags
+        - [Passable](#eoflibpassabletagjson)
+      - Entities
         - [Projectiles](#eoflibprojectilesjson)
         - [Unaffected](#eoflibunaffectedjson)
-      - Function Tags
+      - Functions
         - [Config](#tagsfunctionsconfigjson)
         - [Detect DLCs](#tagsfunctionsdetect_dlcsjson)
-        - [DLC Load](#tagsfunctionsdlc_loadjson)
+        - [Load DLCs](#tagsfunctionsdlc_loadjson)
         - [Uninstall](#tagsfunctionsuninstalljson)
         - [Load](#tagsfunctionsloadtagjson)
         - [Reset](#tagsfunctionsresettagjson)
         - [Timers](#tagsfunctionstimerstagjson)
-      - Item Tags
-        - [Items](#tagsitemsitemsjson)
+      - [Items](#tagsitemsitemsjson)
   - [Planned Features](#planned-features)
-    - [Abilities Support](#abilities-support)
     - [Ability Blacklist](#ability-blacklist)
     - [Custom Death Messages](#custom-death-messages)
     - [Friendly Fire (A.K.A. Wings)](#friendly-fire-aka-wings)
   - [Other Qualities](#other-qualities)
-    - [Configuration Settings](#configuration-settings)
     - [IMP Compliance](#imp-compliance)
 
 ---
@@ -185,7 +188,7 @@ The following entries are settings that only players with the **`eoflib.admin`**
     - 2: All general one-call functions called by the user.
     - 3: All general one-call functions called by the user and other command sources.
     - 4: Condiionally-looping functions.
-    - 5: All functions.
+    - 5: All function calls.
   - OFF: User will see no technical messages.
 
 </details>
@@ -198,21 +201,21 @@ The following entries are settings that only players with the **`eoflib.admin`**
 
 The following entries are settings that only players with the **`eoflib.admin`** tag can change:
 
-- **Keep Teams**: Keep all tribe teams intact when this datapack is uninstalled (Default: ON)
-  - ON: Teams will remain after uninstall.
-  - OFF: Teams will be removed during uninstall.<br><br>
-- **Keep Scoreboards**: Keep all scoreboard objectives and data intact when this datapack is uninstalled. (Default: ON)
-  - ON: Scoreboards will remain after uninstall.
-  - OFF: Scoreboard objectives and data will be removed during uninstall.<br><br>
+- **Keep Forceloads**: Toggle whether forceloaded chunks stay forceloaded after this datapack is uninstalled. (Default: ON)
+  - ON: Forceloaded chunks will remain forceloaded after uninstall.
+  - OFF: Forceloaded chunks will no longer be forceloaded during uninstall.<br><br>
 - **Keep Storages**: Keep all storage data intact when this datapack is uninstalled. (Default: ON)
   - ON: Storage data will remain after uninstall.
   - OFF: Relevant storage data will be removed during uninstall.<br><br>
 - **Keep Bossbars**: Keep all bossbars intact when this datapack is uninstalled. (Default: ON)
   - ON: Bossbars will remain after uninstall.
   - OFF: Bossbars will be removed during uninstall.<br><br>
-- **Keep Forceloads**: Toggle whether forceloaded chunks stay forceloaded after this datapack is uninstalled. (Default: ON)
-  - ON: Forceloaded chunks will remain forceloaded after uninstall.
-  - OFF: Forceloaded chunks will no longer be forceloaded during uninstall.<br><br>
+- **Keep Teams**: Keep all tribe teams intact when this datapack is uninstalled. (Default: ON)
+  - ON: Teams will remain after uninstall.
+  - OFF: Teams will be removed during uninstall.<br><br>
+- **Keep Scoreboards**: Keep all scoreboard objectives and data intact when this datapack is uninstalled. (Default: ON)
+  - ON: Scoreboards will remain after uninstall.
+  - OFF: Scoreboard objectives and data will be removed during uninstall.<br><br>
 - **Uninstall Mode**: Toggles the display of these settings when the datapack's uninstall function is called. (Default: OFF)
   - ON: Any user uninstalling the datapack will be queried if they would like to review the uninstall settings. If not, they may proceed with uninstalling (NOT RECOMMENDED!).
   - OFF: Any user uninstalling the datapack will have the Uninstall Settings displayed to them. They may be toggled during this phase, along with an easily accessible uninstall button once their settings are as fit.
@@ -244,7 +247,7 @@ Advancements located here deal with resolving blacklist operations. By default, 
 
 #### eoflib:ability_activated.json
 
-**`ability_activated.json`** is an advancement that is rewarded to players who have right-clicked their ability item — not necessarily activating said ability, but solely using the item. **`ability_activated.json`** can be hooked into by adding your functions to your datapack's **`eoflib:reset/abilities.json`** function tag. Note that functions triggered via this advancement will activate one game tick after this advancement is rewarded to properly reset used abilities. **Do not overwrite/add the file to Elytras of Fire Lib.**
+**`ability_activated.json`** is an advancement that is rewarded to players who have right-clicked their ability item — not necessarily activating said ability, but solely using the item. **`ability_activated.json`** can be hooked into by adding your functions to your datapack's **`eoflib:reset/abilities.json`** function tag. **Do not overwrite/add the file to Elytras of Fire Lib.**
 
 ```text
 📦 eoflib:advancements
@@ -253,14 +256,7 @@ Advancements located here deal with resolving blacklist operations. By default, 
 
 #### eoflib:death.json
 
-**`death.json`** is an advancement that is rewarded to players who have died. **`death.json`** can be hooked into by setting this advancement as a parent to any other advancement you'd like, or by adding your functions to your datapack's **`eoflib:tags/functions/death.json`** function tag. **Do not overwrite/add the file to Elytras of Fire Lib.**
-
-```json
-{
-  "parent": "eoflib:death",
-  ...
-}
-```
+**`death.json`** is an advancement that is rewarded to players who have died. **`death.json`** can be hooked into by adding your functions to your datapack's **`eoflib:tags/functions/death.json`** function tag. **Do not overwrite/add the file to Elytras of Fire Lib.**
 
 ```text
 📦 eoflib:advancements
@@ -269,14 +265,7 @@ Advancements located here deal with resolving blacklist operations. By default, 
 
 #### eoflib:dragon.json
 
-**`dragon.json`** is an advancement that is rewarded under either of the following conditions: when a player joins a team that is recognised by any datapack as an Elytras of Fire team, or when a player is given a tag matching the name of an Elytras of Fire team. **`dragon.json`** can be hooked into by setting this advancement as a parent to any other advancement you'd like. **Do not overwrite/add the file to Elytras of Fire Lib.**
-
-```json
-{
-  "parent": "eoflib:dragon",
-  ...
-}
-```
+**`dragon.json`** is an advancement that is rewarded under either of the following conditions: when a player joins a team that is recognised by any datapack as an Elytras of Fire team, or when a player is given a tag matching the name of an Elytras of Fire team. **Do not overwrite/add the file to Elytras of Fire Lib.**
 
 ```text
 📦 eoflib:advancements
@@ -606,8 +595,7 @@ Elytras of Fire Lib comes with dozens of tags for blocks, entities, functions, a
 
 #### eoflib:blocks/\<tag>.json
 
-Tags here group blocks by their respective titles. By default, 6 files are included: **`carpet.json`** groups carpet-like blocks, **`earth_blocks.json`** groups earthy/silty and natural blocks, **`hot.json`** groups hot blocks.
-**`ice.json`** groups icy blocks, **`snow.json`** groups blocks associated with snow, and **`waterlogged.json`** groups blocks that are able to be waterlogged.
+Tags here group blocks by their respective titles. By default, 6 files are included: **`carpet.json`** groups carpet-like blocks, **`earth_blocks.json`** groups earthy/silty and natural blocks, **`hot.json`** groups hot blocks, **`ice.json`** groups icy blocks, **`snow.json`** groups blocks associated with snow, and **`waterlogged.json`** groups blocks that are able to be waterlogged.
 
 ```text
 📦 eoflib:tags
