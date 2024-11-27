@@ -1,0 +1,11 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "nbt": "{\"eof_data\": {\"ability_data\": {\"archetype\": \"tertiary\"}}}"
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "valid_tribe": {
+            "trigger": "minecraft:impossible",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:tribes/dragon"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+[
+    {
+        "condition": "minecraft:reference",
+        "name": "eoflib:abilities/secondary_used"
+    }
+]

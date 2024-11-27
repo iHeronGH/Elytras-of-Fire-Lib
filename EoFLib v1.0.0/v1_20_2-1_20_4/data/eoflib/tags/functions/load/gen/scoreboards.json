@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "eoflib:load/gen/scoreboards",
+        "eoflib_raycast:load/gen/scoreboards"
+    ]
+}

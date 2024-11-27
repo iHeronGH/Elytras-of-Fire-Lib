@@ -1,0 +1,16 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{Tags: [ \"eoflib.ability_data.hide_cooldown\"]}"
+            }
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "eoflib:settings/player/ability_data/hide_all"
+        }
+    ]
+}

@@ -1,9 +1,9 @@
 {
     "pack": {
-        "pack_format": 18,
+        "pack_format": 57,
         "supported_formats": {
-            "min_inclusive": 18,
-            "max_inclusive": 26
+            "min_inclusive": 41,
+            "max_inclusive": 57
         },
         "description": [
             {
@@ -17,6 +17,17 @@
             "\n",
             {
                 "text": "The official core datapack for\nElytras of Fire!\n\nThis datapack is to be used in order\nfor most other Elytras of Fire DLC\ndatapacks to work."
+            }
+        ]
+    },
+    "overlays": {
+        "entries": [
+            {
+                "formats": {
+                    "min_inclusive": 18,
+                    "max_inclusive": 26
+                },
+                "directory": "v1_20_2-1_20_4"
             }
         ]
     }

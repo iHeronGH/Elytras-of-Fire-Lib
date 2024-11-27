@@ -1,0 +1,33 @@
+{
+    "eofprefix": {
+        "prefix": "eofprefix",
+        "body": [
+            "{\"text\": \"[\", \"color\": \"gray\"}, {\"text\": \"E\", \"color\": \"red\"}, {\"text\": \"o\", \"color\": \"gold\"}, {\"text\": \"F\", \"color\": \"red\"}, {\"text\": \"] \", \"color\": \"gray\"}"
+        ],
+        "scope": "mcfunction"
+    },
+    "errormsg": {
+        "prefix": ["error", "em"],
+        "body": [
+            "tellraw @s [{\"text\": \"[\", \"color\": \"gray\"}, {\"text\": \"E\", \"color\": \"red\"}, {\"text\": \"o\", \"color\": \"gold\"}, {\"text\": \"F\", \"color\": \"red\"}, {\"text\": \"] \", \"color\": \"gray\"}, {\"text\": \"Error\", \"color\": \"red\"}]"
+        ],
+        "scope": "mcfunction"
+    },
+    "infomsg": {
+        "prefix": ["info", "im"],
+        "body": [
+            "tellraw @s [{\"text\": \"[\", \"color\": \"gray\"}, {\"text\": \"E\", \"color\": \"red\"}, {\"text\": \"o\", \"color\": \"gold\"}, {\"text\": \"F\", \"color\": \"red\"}, {\"text\": \"] \", \"color\": \"gray\"}, {\"text\": \"Information\", \"color\": \"gray\"}]"
+        ],
+        "scope": "mcfunction"
+    },
+    "menuoption": {
+        "prefix": ["menuoption", "menuopt", "mo"],
+        "body": [
+            "    # Disable",
+            "execute ${conditions} run tellraw @s [{\"text\": \"[\", \"color\": \"gray\"}, {\"text\": \"✔\", \"color\": \"green\", \"underlined\": true, \"hoverEvent\": {\"action\": \"show_text\", \"contents\": {\"text\": \"${optionNext:[DISABLE_MSG]}\", \"color\": \"red\"}}, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"${onClick:/trigger eoflib.trigger set #}\"}}, {\"text\": \"] \", \"color\": \"gray\"}, {\"text\": \"${title}\", \"color\": \"gray\", \"hoverEvent\": {\"action\": \"show_text\", \"contents\": {\"text\": \"${optionDescription}\", \"color\": \"gray\"}}}]",
+            "",
+            "    # Enable",
+            "execute ${conditions} run tellraw @s [{\"text\": \"[\", \"color\": \"gray\"}, {\"text\": \"❌\", \"color\": \"red\", \"underlined\": true, \"hoverEvent\": {\"action\": \"show_text\", \"contents\": {\"text\": \"${optionNext:[ENABLE_MSG]}\", \"color\": \"green\"}}, \"clickEvent\": {\"action\": \"run_command\", \"value\": \"${onClick:/trigger eoflib.trigger set #}\"}}, {\"text\": \"] \", \"color\": \"gray\"}, {\"text\": \"${title}\", \"color\": \"gray\", \"hoverEvent\": {\"action\": \"show_text\", \"contents\": {\"text\": \"${optionDescription}\", \"color\": \"gray\"}}}]"
+        ]
+    }
+}

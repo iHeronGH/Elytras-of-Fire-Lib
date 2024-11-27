@@ -1,0 +1,19 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:comparator",
+        "minecraft:lever",
+        "minecraft:lightning_rod",
+        "minecraft:piston_head",
+        "minecraft:redstone_torch",
+        "minecraft:redstone_wall_torch",
+        "minecraft:redstone_wire",
+        "minecraft:repeater",
+        "minecraft:tripwire",
+        "minecraft:tripwire_hook",
+        "#minecraft:buttons",
+        "#minecraft:pressure_plates",
+        "#minecraft:rails",
+        "#minecraft:trapdoors"
+    ]
+}

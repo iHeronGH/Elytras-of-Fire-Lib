@@ -1,0 +1,13 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+        "type": "minecraft:score",
+        "target": {
+            "type": "minecraft:fixed",
+            "name": "#eoflib.uninstall_settings.teams"
+        },
+        "score": "eoflib.uninstall_settings",
+        "scale": 1
+    },
+    "range": 1
+}

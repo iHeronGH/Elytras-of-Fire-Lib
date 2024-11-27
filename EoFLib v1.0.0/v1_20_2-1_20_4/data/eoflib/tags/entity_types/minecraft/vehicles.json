@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "#eoflib:minecraft/boats",
+        "#eoflib:minecraft/minecarts"
+    ]
+}

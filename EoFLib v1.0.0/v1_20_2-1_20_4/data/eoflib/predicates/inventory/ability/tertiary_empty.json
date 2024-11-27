@@ -1,0 +1,177 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:inverted",
+            "term": {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                    "eoflib.set_slot.tertiary": {
+                        "min": -1
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": 0
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/hotbar/slot_0_empty"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": 1
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/hotbar/slot_1_empty"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": 2
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/hotbar/slot_2_empty"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": 3
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/hotbar/slot_3_empty"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": 4
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/hotbar/slot_4_empty"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": 5
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/hotbar/slot_5_empty"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": 6
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/hotbar/slot_6_empty"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": 7
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/hotbar/slot_7_empty"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": 8
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/hotbar/slot_8_empty"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.tertiary": -106
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_tertiary_item/offhand"
+                }
+            ]
+        }
+    ]
+}

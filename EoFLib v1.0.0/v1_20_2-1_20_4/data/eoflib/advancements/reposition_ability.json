@@ -1,0 +1,55 @@
+{
+    "criteria": {
+        "reposition_primary": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:inventory/ability/non_primary_item"
+                    },
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:inventory/ability/has_primary"
+                    }
+                ]
+            }
+        },
+        "reposition_secondary": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:inventory/ability/non_secondary_item"
+                    },
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:inventory/ability/has_secondary"
+                    }
+                ]
+            }
+        },
+        "reposition_tertiary": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:inventory/ability/non_tertiary_item"
+                    },
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:inventory/ability/has_tertiary"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["reposition_primary", "reposition_secondary", "reposition_tertiary"]
+    ],
+    "rewards": {
+        "function": "eoflib:advancement/reposition_ability"
+    }
+}

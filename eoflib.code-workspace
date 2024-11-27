@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "EoFLib v1.0.0"
+        }
+    ],
+    "settings": {},
+    "extensions": {
+        "recommendations": [
+            "spgoding.datapack-language-server",
+            "minecraftcommands.syntax-mcfunction",
+            "chencmd.mc-datapack-utility",
+            "superant.mc-dp-icons",
+            "bierner.markdown-preview-github-styles"
+        ]
+    }
+}

@@ -2,6 +2,6 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-        "nbt": "{Inventory: [{tag: {eof_data: {ability_data: {archetype: \"secondary\"}}}}]}"
+        "nbt": "{Inventory: [{components: {\"minecraft:custom_components\": {\"eof_data\": {\"ability_data\": {\"archetype\": \"secondary\"}}}}}]}"
     }
 }

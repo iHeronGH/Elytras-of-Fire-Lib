@@ -2,36 +2,11 @@
     {
         "condition": "minecraft:inverted",
         "term": {
-            "condition": "minecraft:reference",
-            "name": "eoflib:entities/unaffected"
-        }
-    },
-    {
-        "condition": "minecraft:inverted",
-        "term": {
-            "condition": "minecraft:any_of",
-            "terms": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "type_specific": {
-                            "type": "player",
-                            "gamemode": "creative"
-                        }
-                    }
-                },
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "type_specific": {
-                            "type": "player",
-                            "gamemode": "spectator"
-                        }
-                    }
-                }
-            ]
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "#eoflib:unaffected"
+            }
         }
     },
     {
@@ -40,8 +15,18 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "nbt": "{Tags: [\"eoflib.pvp_disabled\"]}"
+                "type_specific": {
+                    "type": "player",
+                    "gamemode": [
+                        "creative",
+                        "spectator"
+                    ]
+                }
             }
         }
+    },
+    {
+        "condition": "minecraft:reference",
+        "name": "eoflib:settings/player/pvp/on"
     }
 ]

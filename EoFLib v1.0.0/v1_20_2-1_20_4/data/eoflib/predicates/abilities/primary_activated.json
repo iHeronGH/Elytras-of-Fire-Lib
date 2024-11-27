@@ -1,0 +1,10 @@
+[
+    {
+        "condition": "minecraft:reference",
+        "name": "eoflib:abilities/primary_used"
+    },
+    {
+        "condition": "minecraft:reference",
+        "name": "eoflib:movement/sneak"
+    }
+]

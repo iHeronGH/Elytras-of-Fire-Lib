@@ -4,7 +4,15 @@
     "predicate": {
         "equipment": {
             "offhand": {
-                "nbt": "{eof_data: {ability_data: {archetype: \"tertiary\"}}}"
+                "predicates": {
+                    "minecraft:custom_data": {
+                        "eof_data": {
+                            "ability_data": {
+                                "archetype": "tertiary"
+                            }
+                        }
+                    }
+                }
             }
         }
     }

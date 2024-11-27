@@ -4,7 +4,15 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "nbt": "{eof_data: {ability_data: {archetype:\"primary\"}}}"
+                "predicates": {
+                    "minecraft:custom_data": {
+                        "eof_data": {
+                            "ability_data": {
+                                "archetype": "primary"
+                            }
+                        }
+                    }
+                }
             }
         }
     }

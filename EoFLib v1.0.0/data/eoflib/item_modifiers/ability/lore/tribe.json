@@ -1,0 +1,21 @@
+{
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+        {
+            "text": "- Tribe:",
+            "color": "dark_gray",
+            "italic": true
+        }
+    ],
+    "mode": "append",
+    "conditions": [
+        {
+            "condition": "minecraft:inverted",
+            "term": {
+                "condition": "minecraft:reference",
+                "name": "eoflib:settings/player/ability_data/hide_tribe"
+            }
+        }
+    ]
+}

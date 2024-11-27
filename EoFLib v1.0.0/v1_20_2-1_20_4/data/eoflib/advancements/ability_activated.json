@@ -1,0 +1,60 @@
+{
+    "criteria": {
+        "valid_tribe": {
+            "trigger": "minecraft:impossible",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:tribes/dragon"
+                    }
+                ]
+            }
+        },
+        "ability_used": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:any_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "eoflib:abilities/any_used"
+                            },
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "eoflib:abilities/primary_activated"
+                            },
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "eoflib:abilities/secondary_activated"
+                            },
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "eoflib:abilities/tertiary_activated"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "no_blacklist_operation_active": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:reference",
+                            "name": "eoflib:settings/admin/in_blacklist_operation"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "eoflib:advancement/ability_activated"
+    }
+}

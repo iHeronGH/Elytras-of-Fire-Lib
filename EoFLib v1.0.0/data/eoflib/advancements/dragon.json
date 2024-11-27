@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "is_dragon": {
+        "valid_tribe": {
             "trigger": "minecraft:tick",
             "conditions": {
                 "player": [

@@ -1,0 +1,23 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:bamboo",
+        "minecraft:cactus",
+        "minecraft:chorus_plant",
+        "minecraft:dead_bush",
+        "minecraft:kelp",
+        "minecraft:sea_pickle",
+        "minecraft:sugar_cane",
+        "#minecraft:bee_growables",
+        "#minecraft:flower_pots",
+        "#minecraft:leaves",
+        "#minecraft:saplings",
+        "#eoflib:flora/dripleaf",
+        "#eoflib:flora/grass",
+        "#eoflib:flora/moss",
+        "#eoflib:flora/mushrooms",
+        "#eoflib:flora/vines",
+        "#eoflib:minecraft/corals",
+        "#eoflib:minecraft/flowers"
+    ]
+}

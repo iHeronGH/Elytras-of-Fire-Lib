@@ -1,0 +1,165 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": 0
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/0"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": 1
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/1"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": 2
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/2"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": 3
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/3"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": 4
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/4"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": 5
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/5"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": 6
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/6"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": 7
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/7"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": 8
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/8"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "eoflib.set_slot.primary": -106
+                    }
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "eoflib:inventory/ability/non_primary_item/offhand"
+                }
+            ]
+        }
+    ]
+}

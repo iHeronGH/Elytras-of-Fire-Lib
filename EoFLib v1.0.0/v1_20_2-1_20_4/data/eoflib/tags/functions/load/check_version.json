@@ -1,0 +1,4 @@
+{
+    "replace": false,
+    "values": ["eoflib:load/check_version"]
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "condition": "minecraft:location_check",
+        "offsetY": 0,
+        "predicate": {
+            "fluid": {
+                "tag": "minecraft:water"
+            }
+        }
+    },
+    {
+        "condition": "minecraft:location_check",
+        "offsetY": 1,
+        "predicate": {
+            "fluid": {
+                "tag": "minecraft:water"
+            }
+        }
+    }
+]

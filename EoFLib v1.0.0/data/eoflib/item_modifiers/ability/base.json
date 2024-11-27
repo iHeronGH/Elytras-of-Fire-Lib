@@ -1,0 +1,23 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:unbreakable": {},
+            "minecraft:hide_additional_tooltip": {}
+        }
+    },
+    {
+        "function": "minecraft:toggle_tooltips",
+        "toggles": {
+            "minecraft:attribute_modifiers": false,
+            "minecraft:enchantments": false,
+            "minecraft:unbreakable": false
+        }
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:enchantment_glint_override": false
+        }
+    }
+]
