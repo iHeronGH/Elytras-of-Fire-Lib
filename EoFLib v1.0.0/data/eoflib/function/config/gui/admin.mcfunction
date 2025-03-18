@@ -20,7 +20,7 @@ function eoflib:config/gui/admin/allow_abilities
 function eoflib:config/gui/admin/allow_attributes
 function eoflib:config/gui/admin/allow_pvp
 function eoflib:config/gui/admin/allow_range_display
-function eoflib:config/gui/admin/deactivation_timer
+# function eoflib:config/gui/admin/deactivation_timer
 function eoflib:config/gui/admin/destructive_effects
 function eoflib:config/gui/admin/custom_deaths
 function eoflib:config/gui/admin/friendly_fire

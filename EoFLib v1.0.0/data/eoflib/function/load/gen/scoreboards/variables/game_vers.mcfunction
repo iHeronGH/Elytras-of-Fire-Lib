@@ -42,6 +42,9 @@ execute unless score #eoflib.1_21_2 eoflib.game_ver = #eoflib.1_21_2 eoflib.game
 #define score_holder #eoflib.1_21_3 Data version for Minecraft Java 1.21.3.
 execute unless score #eoflib.1_21_3 eoflib.game_ver = #eoflib.1_21_3 eoflib.game_ver run scoreboard players set #eoflib.1_21_3 eoflib.game_ver 4082
 
+#define score_holder #eoflib.1_21_3 Data version for Minecraft Java 1.21.3.
+execute unless score #eoflib.1_21_4 eoflib.game_ver = #eoflib.1_21_4 eoflib.game_ver run scoreboard players set #eoflib.1_21_4 eoflib.game_ver 4189
+
 #define score_holder #eoflib.game_ver Data version for the current world/server.
 execute unless score #eoflib.game_ver eoflib.game_ver matches 1.. store result score #eoflib.game_ver eoflib.game_ver run data get entity @a[limit=1] DataVersion
 

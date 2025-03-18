@@ -24,6 +24,10 @@
         {
             "condition": "minecraft:reference",
             "name": "eoflib:server_version/1_21_3"
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "eoflib:server_version/1_21_4"
         }
     ]
 }
