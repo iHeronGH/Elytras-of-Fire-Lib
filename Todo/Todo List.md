@@ -1,10 +1,10 @@
 # Elytras of Fire TODO
 
-- [ ] Change all abilities to use ~~ender eyes and using_item [07/06/24]~~ WFOAS [07/28/24]
+- [x] Change all abilities to use ~~ender eyes and using_item [07/06/24]~~ WFOAS [07/28/24]
 - [x] HiveWings' Sting Strike hits user before target if target has thorns [06/12/24]
 - [x] HiveWings' Sting Strike cooldown can be manipulated(?) [07/06/24]
 - [x] MudWings should be able to breath underwater for longer [07/06/24]
-- [ ] Finish adding ability lore data
+- [x] Finish adding ability lore data
 - [ ] SeaWings' True Blessing charges SkyWings' Skyborn and/or vice versa
 - [ ] SeaWings' Ocean's Blessing is just. broken lmao
 - [x] SilkWings' Silk Spinner persists through tribe change []
@@ -17,3 +17,6 @@
 - [x] Edit admin settings to use triggers instead of function calls for non-ops [07/11/24]
 - [x] Prompt uninstall settings on uninstall [07/18/24]
 - [ ] Add option to enable tribe diets
+- [x] Update ability texture compatibility for 1.21.4 [03/24/25]
+- [ ] Add disable mode to soft-uninstall the data pack and any dependencies
+- [ ] Tribes with Flame Breath cook items in their other hand when Flame Breath is held
