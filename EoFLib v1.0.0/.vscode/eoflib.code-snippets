@@ -16,7 +16,7 @@
     "infomsg": {
         "prefix": ["info", "im"],
         "body": [
-            "tellraw @s [{\"text\": \"[\", \"color\": \"gray\"}, {\"text\": \"E\", \"color\": \"red\"}, {\"text\": \"o\", \"color\": \"gold\"}, {\"text\": \"F\", \"color\": \"red\"}, {\"text\": \"] \", \"color\": \"gray\"}, {\"text\": \"Information\", \"color\": \"gray\"}]"
+            "tellraw @s [{\"text\": \"[\", \"color\": \"gray\"}, {\"text\": \"E\", \"color\": \"red\"}, {\"text\": \"o\", \"color\": \"gold\"}, {\"text\": \"F\", \"color\": \"red\"}, {\"text\": \"] \", \"color\": \"gray\"}, {\"text\": \"${Information}\", \"color\": \"gray\"}]"
         ],
         "scope": "mcfunction"
     },

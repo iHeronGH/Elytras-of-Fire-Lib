@@ -11,6 +11,10 @@
                     {
                         "condition": "minecraft:reference",
                         "name": "eoflib:inventory/ability/has_primary"
+                    },
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:inventory/ability/primary_empty"
                     }
                 ]
             }
@@ -26,6 +30,10 @@
                     {
                         "condition": "minecraft:reference",
                         "name": "eoflib:inventory/ability/has_secondary"
+                    },
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:inventory/ability/secondary_empty"
                     }
                 ]
             }
@@ -41,6 +49,10 @@
                     {
                         "condition": "minecraft:reference",
                         "name": "eoflib:inventory/ability/has_tertiary"
+                    },
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "eoflib:inventory/ability/tertiary_empty"
                     }
                 ]
             }

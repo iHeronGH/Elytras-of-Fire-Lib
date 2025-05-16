@@ -5,11 +5,12 @@
 #region
     # Debug
 execute if entity @s run tellraw @s[tag=eoflib.debug, scores={eoflib.debug_mode=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:del/scoreboards.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "You ran the following function:\n- eoflib:load/del/scoreboards.mcfunction", "color": "aqua"}}}]
-execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:del/scoreboards.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " ran the following function:\n- eoflib:load/del/scoreboards.mcfunction", "color": "aqua"}]}}]
+execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:del/scoreboards.mcf", "color": "#967228", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " ran the following function:\n- eoflib:load/del/scoreboards.mcfunction", "color": "aqua"}]}}]
 execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:del/scoreboards.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server ran the following function:\n- eoflib:load/del/scoreboards.mcfunction", "color": "aqua"}}}]
 
     # Scoreboards
         ## Global Objectives
+scoreboard objectives remove eoflib.check
 scoreboard objectives remove eoflib.damage
 scoreboard objectives remove eoflib.death
 scoreboard objectives remove eoflib.debug_mode
@@ -20,11 +21,11 @@ scoreboard objectives remove eoflib.hunger
 scoreboard objectives remove eoflib.leave_game
 scoreboard objectives remove eoflib.numbers
 scoreboard objectives remove eoflib.game_ver
-scoreboard objectives remove eoflib.worldtime
-scoreboard objectives remove eoflib.check
 scoreboard objectives remove eoflib.set_slot.primary
 scoreboard objectives remove eoflib.set_slot.secondary
 scoreboard objectives remove eoflib.set_slot.tertiary
+scoreboard objectives remove eoflib.silly_goofy_mode
+scoreboard objectives remove eoflib.worldtime
 
         ## Trigger Objectives
 scoreboard objectives remove eof.abilities

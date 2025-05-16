@@ -5,7 +5,7 @@
 #region
     # Debug
 execute if entity @s run tellraw @s[tag=eoflib.debug, scores={eoflib.debug_mode=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:objectives/global.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "You ran the following function:\n- eoflib:load/gen/scoreboards/objectives/global.mcfunction", "color": "aqua"}}}]
-execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:objectives/global.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " ran the following function:\n- eoflib:load/gen/scoreboards/objectives/global.mcfunction", "color": "aqua"}]}}]
+execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:objectives/global.mcf", "color": "#967228", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " ran the following function:\n- eoflib:load/gen/scoreboards/objectives/global.mcfunction", "color": "aqua"}]}}]
 execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=1..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:objectives/global.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server ran the following function:\n- eoflib:load/gen/scoreboards/objectives/global.mcfunction", "color": "aqua"}}}]
 
     # Global
@@ -50,6 +50,9 @@ scoreboard objectives add eoflib.set_slot.secondary dummy
 
 #define objective eoflib.set_slot.tertiary Tracks player-assigned ability slot for their tribe's tertiary ability.
 scoreboard objectives add eoflib.set_slot.tertiary dummy
+
+#define objective eoflib.silly_goofy_mode Tracks different values associated with Silly Goofy Mode.
+scoreboard objectives add eoflib.silly_goofy_mode dummy
 
 #define objective eoflib.worldtime Contains variables to track major worldtime events.
 scoreboard objectives add eoflib.worldtime dummy

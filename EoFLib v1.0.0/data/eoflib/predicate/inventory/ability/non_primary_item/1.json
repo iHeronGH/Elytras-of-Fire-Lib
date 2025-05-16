@@ -18,7 +18,7 @@
                         "condition": "minecraft:entity_properties",
                         "entity": "this",
                         "predicate": {
-                            "nbt": "{Inventory: [{Slot: 1b, tag: {\"eof_data\": {\"ability_data\": {\"archetype\": \"primary\"}}}}]}"
+                            "nbt": "{Inventory: [{Slot: 1b, components: {\"minecraft:custom_data\": {\"eof_data\": {\"ability_data\": {\"archetype\": \"primary\"}}}}}]}"
                         }
                     }
                 ]
