@@ -4,9 +4,9 @@
 
 #region
     # Debug
-execute if entity @s run tellraw @s[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/credits.mcf", "color": "gold", "hoverEvent": {"action": "show_text", "value": {"text": "You ran the following function:\n- eoflib:load/credits.mcfunction", "color": "aqua"}}}]
-execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/credits.mcf", "color": "#967228", "hoverEvent": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " ran the following function:\n- eoflib:load/credits.mcfunction", "color": "aqua"}]}}]
-execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/credits.mcf", "color": "gray", "hoverEvent": {"action": "show_text", "value": {"text": "Server ran the following function:\n- eoflib:load/credits.mcfunction", "color": "aqua"}}}]
+execute if entity @s run tellraw @s[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/credits.mcf", "color": "gold", "hover_event": {"action": "show_text", "value": {"text": "You ran the following function:\n- eoflib:load/credits.mcfunction", "color": "aqua"}}}]
+execute if entity @s at @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=3..}, distance=0.1..] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/credits.mcf", "color": "#967228", "hover_event": {"action": "show_text", "value": [{"selector": "@s", "color": "aqua"}, {"text": " ran the following function:\n- eoflib:load/credits.mcfunction", "color": "aqua"}]}}]
+execute unless entity @s run tellraw @a[tag=eoflib.debug, scores={eoflib.debug_mode=2..}] [{"text": "[", "color": "dark_gray"}, {"text": "Debug", "color": "gold"}, {"text": "] - ", "color": "dark_gray"}, {"text": "eoflib:load/credits.mcf", "color": "gray", "hover_event": {"action": "show_text", "value": {"text": "Server ran the following function:\n- eoflib:load/credits.mcfunction", "color": "aqua"}}}]
 
     # Credits for Elytras of Fire
 tellraw @s [{"text": "\n[", "color": "gray"}, {"text": "E", "color": "red"}, {"text": "o", "color": "gold"}, {"text": "F", "color": "red"}, {"text": "] ", "color": "gray"}, {"text": "Credits for Elytras of Fire", "color": "gold"}]
@@ -15,6 +15,6 @@ tellraw @s [{"text": "\nThank you to ", "color": "gray"}, {"text": "Godzilla1005
 tellraw @s [{"text": "\nThank you to ", "color": "gray"}, {"text": "PhenTheFireGirl", "color": "gold"}, {"text": ", ", "color": "gray"}, {"text": "tetchytick", "color": "gold"}, {"text": ", ", "color": "gray"}, {"text": "PeekaPlay", "color": "gold"}, {"text": ", and ", "color": "gray"}, {"text": "Fatechaser119", "color": "gold"}, {"text": " for creating wonderful textures for the Elytras of Fire abilities.", "color": "gray"}]
 tellraw @s [{"text": "\nThank you to ", "color": "gray"}, {"text": "tetchytick", "color": "gold"}, {"text": " for cleaning up many written and lore elements.", "color": "gray"}]
 tellraw @s [{"text": "\nThank you to the many future — and current — playtesters for the datapack.", "color": "gray"}]
-tellraw @s [{"text": "\nThank you to you, ", "color": "gray"}, {"selector": "@s", "color": "aqua", "hoverEvent": {"action": "show_text", "contents": "♥"}}, {"text": ", for installing, supporting, and using Elytras of Fire!", "color": "gray"}]
+tellraw @s [{"text": "\nThank you to you, ", "color": "gray"}, {"selector": "@s", "color": "aqua", "hover_event": {"action": "show_text", "value": "♥"}}, {"text": ", for installing, supporting, and using Elytras of Fire!", "color": "gray"}]
 
 #endregion
